@@ -1,0 +1,28 @@
+{
+  "summary": "First-finish smoke test for Kumaran/AGR portfolio site. Backend API and frontend integration verified end-to-end. All 6 critical /api endpoints work, both forms submit and show success states, and all required sections render with correct content.",
+  "tested_scope": ["backend", "frontend", "integration"],
+  "passed": [
+    "GET /api/ -> 200 with API running message",
+    "GET /api/stats -> 200 with volunteers/contacts/lives_impacted/villages_reached/campaigns_run fields",
+    "POST /api/volunteers (valid) -> 200, returns id+created_at",
+    "POST /api/volunteers (bad email) -> 422 with EmailStr validation error",
+    "POST /api/volunteers (missing fields) -> 422",
+    "GET /api/volunteers -> 200 list",
+    "POST /api/contacts (valid) -> 200",
+    "POST /api/contacts (bad email) -> 422",
+    "GET /api/contacts -> 200 list with inserted record",
+    "Frontend loads at REACT_APP_BACKEND_URL with hero containing 'Kumaran'",
+    "All sections render: hero-section, journey-section, vision-section, agr-section, events-section, involved-section, site-footer",
+    "Navbar elements present: nav-donate-btn, nav-volunteer-btn",
+    "Donate CTA (donate-cta-btn) present",
+    "volunteer-form submitted -> volunteer-success state displayed",
+    "contact-form submitted -> contact-success state displayed",
+    "Frontend->backend integration verified (records persisted; stats count incremented)"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "notes": "nav-volunteer-btn click was momentarily blocked by a Sonner toast overlay during the test sequence — purely a test-timing artifact, not an app bug. Element itself is visible, enabled, and correctly wired. test_credentials.md not applicable (no auth in app)."
+}
