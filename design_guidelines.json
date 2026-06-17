@@ -1,0 +1,112 @@
+{
+  "theme": "LIGHT",
+  "archetype": "4 (Swiss & High-Contrast) - Modified for Authority & Campaign",
+  "design_philosophy": "A modern, editorial, and highly credible political campaign website. Prioritizes clear typography, asymmetric 'bento' layouts, and a single dominant CTA. Avoids standard templates by using stark contrast and refined typography to build trust and authority.",
+  "typography": {
+    "headings": {
+      "family": "Outfit",
+      "import_source": "Google Fonts",
+      "weight_strategy": "Radical contrast: Black (800/900) for hero/main headings, Medium (500) for cards.",
+      "letter_spacing": "tracking-tighter for large headings",
+      "transform": "uppercase for sub-labels and overlines with tracking-[0.2em]"
+    },
+    "quotes_and_serifs": {
+      "family": "Cormorant Garamond",
+      "import_source": "Google Fonts",
+      "usage": "Testimonials, manifesto quotes, dignified sub-headers."
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "import_source": "Google Fonts",
+      "line_height": "leading-relaxed"
+    }
+  },
+  "colors": {
+    "background_main": "#FAFAFA",
+    "background_ngo_section": "#FDFBF7",
+    "background_dark": "#0A1128",
+    "text_primary": "#0A1128",
+    "text_secondary": "#4B5563",
+    "text_on_dark": "#FFFFFF",
+    "accent_primary": "#EA580C",
+    "accent_hover": "#C2410C",
+    "border_light": "#E5E7EB",
+    "border_dark": "#0A1128"
+  },
+  "spacing_and_layout": {
+    "container": "Use max-w-7xl mx-auto for main constraints, but allow hero images to break out (bleed).",
+    "padding": "Generous spacing. Use py-20 or py-32 for section vertical padding.",
+    "grid_system": "Bento-style modular grid. Use grid-cols-1 md:grid-cols-12 with varied spans (e.g., col-span-8 and col-span-4) to create asymmetry.",
+    "borders": "Expose the skeleton in data/timeline areas. Use border-b border-[#0A1128]/10 to separate items."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#EA580C] text-white hover:bg-[#C2410C] rounded-sm px-8 py-3 font-semibold transition-all",
+      "secondary": "bg-transparent text-[#0A1128] border border-[#0A1128] hover:bg-[#0A1128] hover:text-white rounded-sm px-8 py-3 transition-all"
+    },
+    "cards": "Flat background (bg-white), 1px solid border (border-border), no shadows by default. Hover adds shadow-lg and slight lift.",
+    "forms": "Shadcn standard but customized: square/sharp corners, 1px border, focus:ring-[#0A1128].",
+    "navigation": "Sticky, crystal glassmorphism (backdrop-blur-xl bg-white/80). 1px border-b border-[#0A1128]/10."
+  },
+  "media": {
+    "image_urls": {
+      "hero_portrait": "https://images.unsplash.com/photo-1648817976768-a2fdcba20f9a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBtYW4lMjBwb3J0cmFpdCUyMGxlYWRlcnxlbnwwfHx8fDE3ODE3MDk0MTV8MA&ixlib=rb-4.1.0&q=85",
+      "about_portrait": "https://images.unsplash.com/photo-1618306842557-a2515acf2112?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBtYW4lMjBwb3J0cmFpdCUyMGxlYWRlcnxlbnwwfHx8fDE3ODE3MDk0MTV8MA&ixlib=rb-4.1.0&q=85",
+      "rally_crowd_1": "https://images.unsplash.com/photo-1715351151262-6b1e1cee2318?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+      "rally_crowd_2": "https://images.unsplash.com/photo-1713001075225-8c490e800e29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8NjA2MjJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+      "ngo_children_1": "https://images.unsplash.com/photo-1497486751825-1233686d5d80?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+      "ngo_children_2": "https://images.unsplash.com/photo-1692609659165-1ec4d8108c0e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwzfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+      "ngo_event": "https://images.unsplash.com/photo-1524069290683-0457abfe42c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "animations": {
+    "scroll": "Use framer-motion for smooth, staggered upward fade-ins (y: 20, opacity: 0 to y: 0, opacity: 1).",
+    "interactive": "Buttons should have slight scale effect (scale: 0.98 on tap)."
+  },
+  "pages_and_sections": [
+    {
+      "name": "Header Navigation",
+      "components": "Logo (Kumaran), Links (Journey, Vision, AGR Trust, Media), CTA (Donate, Volunteer)",
+      "notes": "Sticky with backdrop blur."
+    },
+    {
+      "name": "Hero Section",
+      "layout": "Grid-based. Left: text-6xl+ Headline, subhead, CTA row. Right: 'hero_portrait' inside a sharp-edged container bleeding to the edge.",
+      "content_hints": "Headline: 'A Vision for Tomorrow. Rooted in Today.' CTA: 'Join the Movement'"
+    },
+    {
+      "name": "About / Journey Timeline",
+      "layout": "Vertical timeline with 1px border lines connecting nodes. Text on one side, small images ('about_portrait') or icons on the other.",
+      "content_hints": "Highlight early life, political entry, and major milestones."
+    },
+    {
+      "name": "Vision & Manifesto",
+      "layout": "Bento Grid (Control Room style). 3 to 4 key pillars (e.g., Education, Economy, Infrastructure).",
+      "notes": "Use 'Cormorant Garamond' for an inspirational quote block here."
+    },
+    {
+      "name": "AGR NGO Trust Section",
+      "layout": "Background changes to #FDFBF7. Features impact numbers (Counter components) and a masonry image gallery using 'ngo_children_1', 'ngo_children_2', and 'ngo_event'.",
+      "content_hints": "Focus on ground-level social work. 'Transforming lives through AGR Trust'."
+    },
+    {
+      "name": "Campaign Events & News",
+      "layout": "Card list. Images from 'rally_crowd_1' and 'rally_crowd_2'."
+    },
+    {
+      "name": "Get Involved (Forms)",
+      "layout": "Two-column grid. Left: Volunteer Signup. Right: Contact. Uses Shadcn form elements.",
+      "notes": "Ensure forms have solid, accessible focus states and submit buttons."
+    },
+    {
+      "name": "Footer",
+      "layout": "Massive typography 'KUMARAN' (text-[10vw]). Dark background (#0A1128) with white text. Social icons (Lucide)."
+    }
+  ],
+  "technical_requirements": {
+    "testing": "All interactive elements (buttons, inputs, links) MUST have a 'data-testid' attribute.",
+    "icons": "Use 'lucide-react'.",
+    "forms": "Use customized Shadcn UI forms.",
+    "motion": "Wrap grid items in framer-motion components where appropriate, keeping HTML direct child rules in mind."
+  }
+}
