@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const HERO_IMG =
-  "https://images.unsplash.com/photo-1648817976768-a2fdcba20f9a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBtYW4lMjBwb3J0cmFpdCUyMGxlYWRlcnxlbnwwfHx8fDE3ODE3MDk0MTV8MA&ixlib=rb-4.1.0&q=85";
+  "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/htnjn8mo_hero.jpeg";
 
 export const Hero = () => {
   return (
@@ -77,12 +77,21 @@ export const Hero = () => {
         <div className="lg:col-span-5 fade-up" style={{ animationDelay: "120ms" }}>
           <div className="relative">
             <div className="absolute -top-4 -left-4 right-8 bottom-8 border border-[#0A1128] -z-0" />
-            <img
-              src={HERO_IMG}
-              alt="Kumaran portrait"
-              data-testid="hero-portrait"
-              className="relative w-full h-[420px] sm:h-[520px] lg:h-[620px] object-cover grayscale-[10%]"
-            />
+            <div
+              className="relative w-full h-[420px] sm:h-[520px] lg:h-[620px] overflow-hidden"
+              style={{
+                background:
+                  "linear-gradient(180deg, #FDFBF7 0%, #F5E9D6 60%, #EA580C 100%)",
+              }}
+            >
+              <img
+                src={HERO_IMG}
+                alt="Kumaran portrait"
+                data-testid="hero-portrait"
+                className="absolute inset-0 w-full h-full object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1128]/55 via-transparent to-transparent" />
+            </div>
             <div className="absolute bottom-4 left-4 right-4 lg:right-12 bg-[#0A1128] text-white p-5">
               <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C] mb-2">Manifesto, 2026</div>
               <p className="font-serif-quote italic text-lg lg:text-xl leading-snug">
