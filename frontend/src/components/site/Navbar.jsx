@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { href: "#journey", label: "Journey" },
-  { href: "#vision", label: "Vision" },
-  { href: "#agr", label: "AGR Trust" },
-  { href: "#events", label: "Events" },
-  { href: "#involved", label: "Get Involved" },
-];
+import { site } from "../../content/site.config";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -18,6 +11,8 @@ export const Navbar = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const links = site.nav.links;
 
   return (
     <header
@@ -34,7 +29,7 @@ export const Navbar = () => {
           data-testid="nav-logo"
           className="font-display font-black tracking-tighter text-xl text-[#0A1128]"
         >
-          KUMARAN<span className="text-[#EA580C]">.</span>
+          {site.brand.name.toUpperCase()}<span className="text-[#EA580C]">{site.brand.accent}</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

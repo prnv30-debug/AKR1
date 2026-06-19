@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Heart, Send, CheckCircle2, Loader2 } from "lucide-react";
 import { submitContact, submitVolunteer } from "../../lib/api";
 import { toast } from "sonner";
+import { site } from "../../content/site.config";
 
 export const Involved = () => {
+  const i = site.involved;
   return (
     <section id="involved" data-testid="involved-section" className="py-24 lg:py-32 bg-[#0A1128] text-white relative overflow-hidden">
       <div className="absolute inset-0 grain opacity-20 pointer-events-none" />
@@ -13,48 +15,46 @@ export const Involved = () => {
             <div className="flex items-center gap-3 mb-5">
               <span className="h-px w-8 bg-[#EA580C]" />
               <span className="font-display uppercase tracking-[0.2em] text-xs font-medium text-[#EA580C]">
-                05 — Get Involved
+                {i.eyebrow}
               </span>
             </div>
             <h2 className="font-display font-black tracking-tighter text-4xl lg:text-5xl leading-[1.05]">
-              This movement belongs
+              {i.titleLine1}
               <br />
-              to <span className="font-serif-quote italic font-medium text-[#EA580C]">you.</span>
+              to <span className="font-serif-quote italic font-medium text-[#EA580C]">{i.titleItalic}</span>
             </h2>
             <p className="mt-6 text-white/70 text-lg max-w-2xl">
-              Volunteer your time, share your story, or simply say hello. Every
-              voice makes the wave.
+              {i.description}
             </p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-white/10 border border-white/10">
-          <VolunteerForm />
+          <VolunteerForm interests={i.volunteerInterests} />
           <ContactForm />
         </div>
 
         {/* Donate strip */}
         <div id="donate" data-testid="donate-strip" className="mt-16 border border-white/15 p-8 lg:p-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="md:col-span-2">
-            <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C] mb-2">Stand with us</div>
+            <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C] mb-2">{i.donate.eyebrow}</div>
             <h3 className="font-display font-black tracking-tighter text-3xl lg:text-4xl">
-              Donate to the AGR Trust today.
+              {i.donate.title}
             </h3>
             <p className="mt-3 text-white/70 max-w-xl">
-              100% of contributions go directly to programmes on the ground —
-              education, healthcare, and women-led livelihoods.
+              {i.donate.description}
             </p>
           </div>
           <div className="md:text-right">
             <a
-              href="#volunteer"
+              href={i.donate.ctaHref}
               data-testid="donate-cta-btn"
               className="inline-flex items-center gap-2 bg-[#EA580C] hover:bg-[#C2410C] text-white px-8 py-4 font-semibold text-lg transition-all"
             >
-              <Heart size={18} /> Donate Now
+              <Heart size={18} /> {i.donate.ctaLabel}
             </a>
             <div className="mt-3 text-xs text-white/50 uppercase tracking-widest">
-              80G tax exemption available
+              {i.donate.footnote}
             </div>
           </div>
         </div>
@@ -63,10 +63,10 @@ export const Involved = () => {
   );
 };
 
-const initVol = { name: "", email: "", phone: "", city: "", interest: "Door to door campaign", message: "" };
 const initCon = { name: "", email: "", subject: "", message: "" };
 
-const VolunteerForm = () => {
+const VolunteerForm = ({ interests }) => {
+  const initVol = { name: "", email: "", phone: "", city: "", interest: interests[0], message: "" };
   const [form, setForm] = useState(initVol);
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
@@ -121,7 +121,7 @@ const VolunteerForm = () => {
           onChange={update("interest")}
           className="w-full bg-transparent border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#EA580C]"
         >
-          {["Door to door campaign", "Event coordination", "Social media", "AGR Trust programmes", "Translation", "Other"].map((o) => (
+          {interests.map((o) => (
             <option key={o} value={o} className="bg-[#0A1128]">{o}</option>
           ))}
         </select>
@@ -164,7 +164,7 @@ const ContactForm = () => {
       await submitContact(form);
       setDone(true);
       setForm(initCon);
-      toast.success("Message sent. We&apos;ll be in touch.");
+      toast.success("Message sent. We'll be in touch.");
     } catch (err) {
       const msg = err?.response?.data?.detail || "Submission failed. Please try again.";
       toast.error(typeof msg === "string" ? msg : "Submission failed.");
