@@ -10,9 +10,9 @@ export const Hero = () => {
       className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden"
     >
       <div className="absolute inset-0 grain opacity-40 pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         {/* Left */}
-        <div className="lg:col-span-7 fade-up">
+        <div className="lg:col-span-7 fade-up order-2 lg:order-1">
           <div className="flex items-center gap-3 mb-8">
             <span className="h-px w-10 bg-[#0A1128]" />
             <span className="font-display uppercase tracking-[0.2em] text-xs font-medium text-[#0A1128]">
@@ -73,11 +73,11 @@ export const Hero = () => {
         </div>
 
         {/* Right - portrait */}
-        <div className="lg:col-span-5 fade-up" style={{ animationDelay: "120ms" }}>
+        <div className="lg:col-span-5 fade-up order-1 lg:order-2" style={{ animationDelay: "120ms" }}>
           <div className="relative">
             <div className="absolute -top-4 -left-4 right-8 bottom-8 border border-[#0A1128] -z-0" />
             <div
-              className="relative w-full h-[420px] sm:h-[520px] lg:h-[620px] overflow-hidden"
+              className="relative w-full h-[380px] sm:h-[480px] lg:h-[560px] overflow-hidden"
               style={{
                 background:
                   "linear-gradient(180deg, #FDFBF7 0%, #F5E9D6 60%, #EA580C 100%)",
@@ -87,7 +87,8 @@ export const Hero = () => {
                 src={h.image}
                 alt={`${site.brand.name} portrait`}
                 data-testid="hero-portrait"
-                className="absolute inset-0 w-full h-full object-cover object-top"
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{ objectPosition: "center 18%" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A1128]/55 via-transparent to-transparent" />
             </div>
