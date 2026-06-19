@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Heart, ArrowUpRight } from "lucide-react";
+import { Heart, ArrowUpRight, Mail, BadgeCheck } from "lucide-react";
 import { site } from "../../content/site.config";
 
 const useCounter = (target, duration = 1500) => {
@@ -64,11 +64,57 @@ export const AGR = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {a.stats.map((s, i) => (
             <Stat key={i} value={s.value} suffix={s.suffix} label={s.label} testId={`agr-stat-${i}`} />
           ))}
         </div>
+
+        {/* Beneficiary Badge + mailto */}
+        {a.beneficiaries && (
+          <a
+            href={`mailto:${a.beneficiaries.email}?subject=${encodeURIComponent(a.beneficiaries.mailSubject)}&body=${encodeURIComponent(a.beneficiaries.mailBody)}`}
+            data-testid="agr-beneficiary-mail"
+            className="group relative block mb-20 bg-[#0A1128] text-white overflow-hidden hover:bg-[#0A1128]/95 transition-colors"
+          >
+            <div
+              aria-hidden
+              className="absolute inset-0 opacity-[0.06] pointer-events-none"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(135deg, #ffffff 0 2px, transparent 2px 18px)",
+              }}
+            />
+            <div className="relative grid grid-cols-1 md:grid-cols-12 gap-6 p-7 lg:p-10 items-center">
+              <div className="md:col-span-1 flex md:justify-center">
+                <div className="w-12 h-12 bg-[#EA580C] text-white flex items-center justify-center">
+                  <BadgeCheck size={24} />
+                </div>
+              </div>
+              <div className="md:col-span-7">
+                <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C] mb-2">
+                  {a.beneficiaries.label}
+                </div>
+                <div className="font-display font-black tracking-tighter text-2xl lg:text-3xl">
+                  {a.beneficiaries.range}
+                </div>
+                <div className="mt-2 text-sm text-white/70">
+                  Verified, registered beneficiaries across education, healthcare &amp; livelihood programmes.
+                </div>
+              </div>
+              <div className="md:col-span-4 md:text-right">
+                <span className="inline-flex items-center gap-2 bg-white text-[#0A1128] group-hover:bg-[#EA580C] group-hover:text-white px-5 py-3 font-semibold transition-all">
+                  <Mail size={16} />
+                  {a.beneficiaries.ctaLabel}
+                  <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </span>
+                <div className="mt-2 text-[11px] text-white/50 tracking-wider">
+                  {a.beneficiaries.email}
+                </div>
+              </div>
+            </div>
+          </a>
+        )}
 
         {/* Bento gallery */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6">

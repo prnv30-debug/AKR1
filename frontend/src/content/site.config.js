@@ -126,6 +126,14 @@ export const site = {
     titleLine2: "at a time.",
     description:
       "Founded in 2009, AGR Trust is a non-political grassroots organisation dedicated to education, healthcare and women empowerment. Powered by 2,400+ volunteers — funded entirely by individual donors.",
+    beneficiaries: {
+      label: "Till date beneficiaries",
+      range: "AKRSWT0001 — AKRSWT2020",
+      email: "akrsocialwelfaretrust@gmail.com",
+      mailSubject: "AGR Trust — Beneficiary enquiry",
+      mailBody: "Hello AGR Trust team,\n\nI would like to know more about the beneficiary programmes (AKRSWT0001 — AKRSWT2020).\n\nThanks.",
+      ctaLabel: "Write to the Trust",
+    },
     stats: [
       { value: 52000, suffix: "+", label: "Lives impacted" },
       { value: 184, suffix: "", label: "Villages reached" },
@@ -234,7 +242,7 @@ export const site = {
       "AGR Trust Bhavan, 14 Gandhi Road,",
       "Madurai 625001, Tamil Nadu, India",
     ],
-    email: "hello@kumaran.in",
+    email: "akrsocialwelfaretrust@gmail.com",
     social: [
       { icon: "Facebook", label: "facebook", href: "#" },
       { icon: "Twitter", label: "twitter", href: "#" },
