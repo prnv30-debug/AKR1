@@ -74,11 +74,16 @@ export const Hero = () => {
 
         {/* Right - portrait */}
         <div className="lg:col-span-5 fade-up order-1 lg:order-2" style={{ animationDelay: "120ms" }}>
-          <div className="relative">
-            <div className="absolute -top-4 -left-4 right-4 bottom-4 border border-[#0A1128] -z-0" />
+          <div className="relative" style={{ overflow: "visible" }}>
+            <div
+              aria-hidden
+              className="hidden md:block absolute pointer-events-none border border-[#0A1128]/70"
+              style={{ top: "16px", left: "16px", right: "-16px", bottom: "-16px", zIndex: 0 }}
+            />
             <div
               className="relative w-full h-[460px] sm:h-[560px] lg:h-[640px] overflow-hidden"
               style={{
+                zIndex: 1,
                 background:
                   "linear-gradient(180deg, #FDFBF7 0%, #F5E9D6 55%, #EA580C 100%)",
               }}
