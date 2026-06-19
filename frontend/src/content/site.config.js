@@ -1,8 +1,8 @@
 /**
- * SITE CONFIG — Kumaran · AGR Trust
+ * SITE CONFIG — Kumaran M.A. · AKR Social Welfare Trust
  * -----------------------------------------------------------
+ * Single source of truth for all site copy & imagery.
  * Edit any value here and the whole site updates automatically.
- * Replace image URLs by uploading new pics — I'll paste the URL.
  * -----------------------------------------------------------
  */
 
@@ -10,52 +10,52 @@ export const site = {
   // Brand
   brand: {
     name: "Kumaran",
-    accent: ".", // small accent after the name in logo/footer
-    tagline: "People's Leader · Public Servant",
-    trustName: "AGR Trust",
+    fullName: "Kumaran M.A.",
+    accent: ".",
+    tagline: "People's Servant Madhavaram · BJP Chennai West",
+    trustName: "AKR Social Welfare Trust",
+    role: "General Secretary, BJP Chennai West District",
+  },
+
+  // SEO meta
+  seo: {
+    title: "Kumaran M.A. — People's Servant Madhavaram | BJP Chennai West & AKR Social Welfare Trust",
+    description:
+      "Kumaran M.A., General Secretary of BJP Chennai West District and Founder of AKR Social Welfare Trust, Madhavaram. Serving 2,000+ beneficiaries through education, healthcare, employment guidance, senior citizen pension and daily welfare.",
+    keywords:
+      "Kumaran MA, Madhavaram, BJP Chennai West, AKR Social Welfare Trust, Madhavaram politician, social service Chennai, Annamalai BJP, Rajini Makkal Mandram, DAT Constructions",
+    ogImage:
+      "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/qtiemh4n_main.jpeg",
+    siteUrl: "https://kumaran-ma.in",
   },
 
   // Hero
   hero: {
-    image: "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/htnjn8mo_hero.jpeg",
-    headlineLine1: "A vision for",
-    headlineLine2Prefix: "tomorrow.",
-    headlineItalic: "Rooted",
-    headlineLine3: "in the people.",
+    image:
+      "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/htnjn8mo_hero.jpeg",
+    headlineLine1: "Work for",
+    headlineLine2Prefix: "the people.",
+    headlineItalic: "Serve.",
+    headlineLine3: "Uplift.",
     description:
-      "Kumaran — a tireless voice for the under-served, founder of the AGR Trust, and a leader committed to dignity, opportunity and progress for every household.",
+      "Kumaran M.A. — a self-made entrepreneur, founder of DAT Constructions & Transport, General Secretary of BJP Chennai West District, and Founder-Chairman of AKR Social Welfare Trust serving 2,000+ families across Madhavaram.",
     primaryCta: { label: "Join the Movement", href: "#volunteer" },
     secondaryCta: { label: "Read the Journey", href: "#journey" },
-    manifestoLabel: "Manifesto, 2026",
-    manifestoQuote: "Service is not a season. It is a way of life.",
+    manifestoLabel: "My Mission",
+    manifestoQuote:
+      "Work for the people, serve the people, and uplift the people.",
     stats: [
-      { value: "22+", label: "Years of service" },
-      { value: "184", label: "Villages reached" },
-      { value: "52K+", label: "Lives impacted" },
+      { value: "9+", label: "Years AKR Trust" },
+      { value: "2K+", label: "Beneficiaries served" },
+      { value: "650", label: "Families served daily" },
     ],
     ticker: [
-      "Education for every child",
-      "Healthcare at the doorstep",
-      "Skills · Jobs · Dignity",
-      "Clean water for every village",
-      "Empowering women entrepreneurs",
-      "Sustainable agriculture",
-    ],
-  },
-
-  // Featured banner (between Journey and Vision)
-  feature: {
-    image:
-      "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/qtiemh4n_main.jpeg",
-    eyebrow: "Vanakkam · A salute to every voter",
-    quote:
-      "I do not stand above the people. I stand with them, beside them, and for them — every single day.",
-    author: "Kumaran",
-    role: "Founder · AGR Trust",
-    badges: [
-      { value: "100%", label: "For the people" },
-      { value: "0", label: "Hidden agenda" },
-      { value: "24/7", label: "On the ground" },
+      "Senior citizen pension",
+      "Free drinking water · 650 families",
+      "Educational assistance",
+      "Medical aid & health camps",
+      "Employment guidance for youth",
+      "Sewing machines · Tricycles · Livelihood",
     ],
   },
 
@@ -64,137 +64,199 @@ export const site = {
     image:
       "https://images.unsplash.com/photo-1618306842557-a2515acf2112?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBtYW4lMjBwb3J0cmFpdCUyMGxlYWRlcnxlbnwwfHx8fDE3ODE3MDk0MTV8MA&ixlib=rb-4.1.0&q=85",
     eyebrow: "01 — The Journey",
-    title: "From a farming village to the people's benches.",
+    title:
+      "From a middle-class home in Madhavaram to BJP's Chennai West leadership.",
     description:
-      "Four decades of public service — built quietly, brick by brick — across classrooms, panchayats, hospitals and parliament floors.",
+      "Born to a school teacher and a school clerk. Three decades in business. A father, a son of Madhavaram, and an unrelenting public servant — Kumaran M.A.'s story is built brick by brick, with service at its core.",
     milestones: [
       {
-        year: "1978",
-        title: "Born in a small farming village",
-        body: "Growing up in a household of teachers and farmers, Kumaran learned the meaning of community and shared sacrifice early on.",
-      },
-      {
-        year: "2001",
-        title: "First grassroots campaign",
-        body: "Organised a clean-water initiative across 14 villages, mobilising youth volunteers and local administration to deliver lasting infrastructure.",
+        year: "1996",
+        title: "Started in travel & transport",
+        body: "Launched a small business in the travel and transportation sector, laying the foundation for what would become DAT Constructions & Transport.",
       },
       {
         year: "2009",
-        title: "Founded the AGR Trust",
-        body: "A non-political NGO focused on education, women empowerment and rural healthcare — now active across 184 villages.",
+        title: "Major business success",
+        body: "Achieved a defining milestone in his career — including the purchase of a Mitsubishi Montero — symbolising years of disciplined entrepreneurship.",
       },
       {
-        year: "2014",
-        title: "Elected representative",
-        body: "Won a landslide constituency mandate. Championed legislation on rural schooling, MSME credit access and women safety.",
+        year: "2011",
+        title: "Peak of the transport industry",
+        body: "Established himself as a leading voice in Tamil Nadu's transportation industry. Currently Chief Advisor, Tamil Nadu Bitumen Lorry Association.",
+      },
+      {
+        year: "2016",
+        title: "A father's grief, a leader's resolve",
+        body: "Lost his elder son Karthik Raja in a car accident. The pain became the seed of a deeper public purpose — the AKR Social Welfare Trust, founded in his memory.",
+      },
+      {
+        year: "2017",
+        title: "Public life begins",
+        body: "Joined Rajini Makkal Mandram. Served as Assembly Secretary (Madhavaram, 2017–2020) and led welfare for 200–300 senior citizens, water and ration distribution.",
       },
       {
         year: "2020",
-        title: "Pandemic response",
-        body: "Coordinated relief for over 200,000 families, delivering rations, oxygen and emergency medical aid through the AGR network.",
+        title: "Joined the BJP",
+        body: "Joined the Bharatiya Janata Party along with 1,500 RMM members in the presence of Mrs. Khushbu Ji and Mr. Sudhakar Reddy Ji.",
       },
       {
-        year: "Today",
-        title: "Building a brighter tomorrow",
-        body: "Leading a renewed campaign focused on jobs, education and dignity — written and shaped by the people themselves.",
+        year: "2021",
+        title: "Founded AKR Social Welfare Trust",
+        body: "Founded the AKR Social Welfare Trust — named after his father Mr. Adikesavan and his late son Karthik Raja — to formalise his public service mission.",
+      },
+      {
+        year: "2022",
+        title: "BJP Treasurer · Ward 19 contest",
+        body: "Appointed Treasurer of BJP Chennai West District. Contested the Greater Chennai Corporation Councilor Election (Ward 19), securing ~3,000 votes and finishing in second place.",
+      },
+      {
+        year: "2024",
+        title: "General Secretary, BJP Chennai West",
+        body: "Promoted to General Secretary of BJP Chennai West District. Appointed BJP Assembly Constituency In-Charge for Ambattur.",
+      },
+      {
+        year: "2026",
+        title: "Joined 'WE THE LEADER'",
+        body: "Joined the 'WE THE LEADER' movement under his political mentor Mr. Annamalai Kuppusamy, continuing the fight for clean, service-driven politics.",
       },
     ],
   },
 
-  // Vision & Manifesto pillars (icon names from lucide-react)
-  vision: {
-    eyebrow: "02 — Vision & Manifesto",
-    title: ["Six promises.", "Written with the people, for the people."],
+  // Featured banner (between Journey and Vision)
+  feature: {
+    image:
+      "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/qtiemh4n_main.jpeg",
+    eyebrow: "Vanakkam · A salute to every voter of Madhavaram",
     quote:
-      "A manifesto is not a list. It is a contract — signed in trust, redeemed in action.",
-    quoteAuthor: "Kumaran",
-    pillars: [
-      { icon: "GraduationCap", title: "Education for every child", body: "Modern classrooms, English-medium options, and scholarships for every deserving student across rural India." },
-      { icon: "HeartPulse", title: "Healthcare at the doorstep", body: "Mobile clinics, free diagnostics, and dignified maternal care delivered to every village." },
-      { icon: "Briefcase", title: "Jobs & livelihoods", body: "Skill centres, MSME credit access, and entrepreneurship grants for youth and women." },
-      { icon: "Sprout", title: "Sustainable farming", body: "Fair prices, water security and modern techniques to make agriculture profitable again." },
-      { icon: "Users", title: "Women & safety", body: "Stronger laws, self-defence training, and microfinance circles to put power in women's hands." },
-      { icon: "Building2", title: "Infrastructure that lasts", body: "All-weather roads, clean drinking water, and digital connectivity for every panchayat." },
+      "Work for the people, serve the people, and uplift the people.",
+    author: "Kumaran M.A.",
+    role: "General Secretary · BJP Chennai West District",
+    badges: [
+      { value: "9", label: "Years AKR Trust" },
+      { value: "2K+", label: "Beneficiaries" },
+      { value: "106", label: "Months running" },
     ],
   },
 
-  // AGR NGO Trust
+  // Vision & Manifesto pillars
+  vision: {
+    eyebrow: "02 — Mission & Services",
+    title: ["Six pillars.", "Daily, monthly & annual — for every family."],
+    quote:
+      "My journey has been filled with struggles, but every challenge has made me stronger. Service, Charity and Hard Work — that is my creed.",
+    quoteAuthor: "Kumaran M.A.",
+    pillars: [
+      {
+        icon: "GraduationCap",
+        title: "Educational assistance",
+        body: "Scholarships, supplies and guidance for students from underprivileged families across Madhavaram and Chennai West.",
+      },
+      {
+        icon: "HeartPulse",
+        title: "Medical aid & health camps",
+        body: "Free medical camps, diagnostic support and emergency medical assistance for the elderly and underprivileged.",
+      },
+      {
+        icon: "Briefcase",
+        title: "Employment guidance",
+        body: "Career counselling, skill referrals and entrepreneurship support for the youth of Madhavaram and surrounding wards.",
+      },
+      {
+        icon: "Home",
+        title: "Food, shelter & elderly care",
+        body: "Daily food distribution, shelter support, and dignified elderly care programmes for senior citizens of the community.",
+      },
+      {
+        icon: "Users",
+        title: "Underprivileged welfare",
+        body: "Targeted welfare schemes for the most marginalised — widows, persons with disabilities, and economically distressed families.",
+      },
+      {
+        icon: "Shield",
+        title: "Senior citizen pension",
+        body: "₹500 financial assistance + 5kg rice to 2,000+ senior citizens (65+), 9 AM – 6 PM on the 5th of every month.",
+      },
+    ],
+  },
+
+  // AKR NGO Trust
   agr: {
-    eyebrow: "03 — AGR NGO Trust",
+    eyebrow: "03 — AKR Social Welfare Trust",
     titleLine1: "Transforming lives,",
-    titleItalic: "one village",
+    titleItalic: "one family",
     titleLine2: "at a time.",
     description:
-      "Founded in 2009, AGR Trust is a non-political grassroots organisation dedicated to education, healthcare and women empowerment. Powered by 2,400+ volunteers — funded entirely by individual donors.",
+      "Founded in 2021 and named after my father Mr. Adikesavan and my late son Karthik Raja, AKR Social Welfare Trust is a non-political organisation dedicated to senior citizen welfare, education, healthcare and livelihood — currently in its 106th month of unbroken service.",
     beneficiaries: {
       label: "Till date beneficiaries",
       range: "AKRSWT0001 — AKRSWT2020",
       email: "akrsocialwelfaretrust@gmail.com",
-      mailSubject: "AGR Trust — Beneficiary enquiry",
-      mailBody: "Hello AGR Trust team,\n\nI would like to know more about the beneficiary programmes (AKRSWT0001 — AKRSWT2020).\n\nThanks.",
+      mailSubject: "AKR Social Welfare Trust — Beneficiary enquiry",
+      mailBody:
+        "Hello AKR Trust team,\n\nI would like to know more about the beneficiary programmes (AKRSWT0001 — AKRSWT2020).\n\nThanks.",
       ctaLabel: "Write to the Trust",
     },
     stats: [
-      { value: 52000, suffix: "+", label: "Lives impacted" },
-      { value: 184, suffix: "", label: "Villages reached" },
-      { value: 36, suffix: "", label: "Schools supported" },
-      { value: 2400, suffix: "+", label: "Active volunteers" },
+      { value: 2000, suffix: "+", label: "Beneficiaries today" },
+      { value: 650, suffix: "", label: "Families served daily" },
+      { value: 106, suffix: "", label: "Months of operation" },
+      { value: 9, suffix: "", label: "Years foundation" },
     ],
     gallery: {
       large: {
         image:
           "https://images.unsplash.com/photo-1497486751825-1233686d5d80?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
         label: "Education",
-        caption: "Sponsoring 12,400 students across 36 schools",
+        caption: "Educational support across all ages",
       },
       small1: {
         image:
           "https://images.unsplash.com/photo-1692609659165-1ec4d8108c0e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwzfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
-        label: "Women",
-        caption: "1,800+ women in self-help groups",
+        label: "Pension",
+        caption: "₹500 + 5kg rice to 2,000+ seniors monthly",
       },
       small2: {
         image:
           "https://images.unsplash.com/photo-1524069290683-0457abfe42c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
-        label: "Healthcare",
-        caption: "112 free medical camps last year",
+        label: "Daily water",
+        caption: "20L cans to 650 families on alternate days",
       },
     },
   },
 
   // Events
   events: {
-    eyebrow: "04 — Events & Campaign",
-    title: "On the road. Meet us next.",
-    ctaLabel: "Host us in your town",
+    eyebrow: "04 — Events & Welfare",
+    title: "Service in action. Month after month.",
+    ctaLabel: "Host us in your ward",
     ctaHref: "#involved",
     items: [
       {
         image:
           "https://images.unsplash.com/photo-1715351151262-6b1e1cee2318?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
-        date: "Dec 22, 2025",
-        location: "Madurai Town Hall",
-        title: "Youth & Jobs — Open Town Hall",
-        desc: "An open dialogue with first-time voters, entrepreneurs and college students on skills, startups and the road ahead.",
-        tag: "Town Hall",
+        date: "5th of every month",
+        location: "Madhavaram · 9 AM – 6 PM",
+        title: "Senior Citizen Pension Drive",
+        desc: "₹500 financial assistance and 5kg rice distributed to every registered senior citizen (65+). 2,000+ beneficiaries served each month.",
+        tag: "Monthly",
       },
       {
         image:
           "https://images.unsplash.com/photo-1713001075225-8c490e800e29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8NjA2MjJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
-        date: "Jan 08, 2026",
-        location: "Trichy District Ground",
-        title: "Vision 2030 — Public Address",
-        desc: "Launching the 10-year roadmap for education, agriculture and women-led entrepreneurship in the region.",
-        tag: "Rally",
+        date: "Annual",
+        location: "Madhavaram",
+        title: "9th Foundation Day · 97th Monthly Celebration",
+        desc: "Chief Guest Mr. K. Annamalai — distributed food to 3,000+ people, sewing machines & ironing boxes for livelihood, tricycles for persons with disabilities and walking sticks for seniors.",
+        tag: "Annual",
       },
       {
         image:
           "https://images.unsplash.com/photo-1715351151262-6b1e1cee2318?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
-        date: "Jan 26, 2026",
-        location: "Pondicherry Beach Promenade",
-        title: "Republic Day Yatra",
-        desc: "A coastal march for unity, dignity and the dreams of a new India — joined by AGR Trust volunteers and youth groups.",
-        tag: "Yatra",
+        date: "Year-round",
+        location: "Chennai West",
+        title: "Livelihood support — Auto drivers & women",
+        desc: "₹30,000 to male auto drivers, ₹50,000 to female auto drivers — 13 beneficiaries supported. Two sewing machines distributed in 2026, including one to a differently-abled beneficiary.",
+        tag: "Livelihood",
       },
     ],
   },
@@ -205,23 +267,24 @@ export const site = {
     titleLine1: "This movement belongs",
     titleItalic: "you.",
     description:
-      "Volunteer your time, share your story, or simply say hello. Every voice makes the wave.",
+      "Volunteer your time, share your story, or simply say hello. Every voice strengthens Madhavaram.",
     volunteerInterests: [
       "Door to door campaign",
+      "AKR Trust welfare programmes",
+      "Senior citizen pension day",
       "Event coordination",
-      "Social media",
-      "AGR Trust programmes",
-      "Translation",
+      "Social media & outreach",
+      "Translation (Tamil ↔ English)",
       "Other",
     ],
     donate: {
       eyebrow: "Stand with us",
-      title: "Donate to the AGR Trust today.",
+      title: "Support AKR Social Welfare Trust.",
       description:
-        "100% of contributions go directly to programmes on the ground — education, healthcare, and women-led livelihoods.",
+        "100% of your contribution reaches the ground — pension day, water cans, food, education, and livelihood for 2,000+ families.",
       ctaLabel: "Donate Now",
       ctaHref: "#volunteer",
-      footnote: "80G tax exemption available",
+      footnote: "80G tax exemption · Receipts on request",
     },
   },
 
@@ -229,8 +292,8 @@ export const site = {
   nav: {
     links: [
       { href: "#journey", label: "Journey" },
-      { href: "#vision", label: "Vision" },
-      { href: "#agr", label: "AGR Trust" },
+      { href: "#vision", label: "Mission" },
+      { href: "#agr", label: "AKR Trust" },
       { href: "#events", label: "Events" },
       { href: "#involved", label: "Get Involved" },
     ],
@@ -239,8 +302,9 @@ export const site = {
   // Footer / Contact
   footer: {
     address: [
-      "AGR Trust Bhavan, 14 Gandhi Road,",
-      "Madurai 625001, Tamil Nadu, India",
+      "AKR Social Welfare Trust",
+      "457, Mathur MMDA,",
+      "Chennai – 600068, Tamil Nadu, India",
     ],
     email: "akrsocialwelfaretrust@gmail.com",
     social: [
