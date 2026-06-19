@@ -75,12 +75,12 @@ export const Hero = () => {
         {/* Right - portrait */}
         <div className="lg:col-span-5 fade-up order-1 lg:order-2" style={{ animationDelay: "120ms" }}>
           <div className="relative">
-            <div className="absolute -top-4 -left-4 right-8 bottom-8 border border-[#0A1128] -z-0" />
+            <div className="absolute -top-4 -left-4 right-4 bottom-4 border border-[#0A1128] -z-0" />
             <div
-              className="relative w-full h-[380px] sm:h-[480px] lg:h-[560px] overflow-hidden"
+              className="relative w-full h-[460px] sm:h-[560px] lg:h-[640px] overflow-hidden"
               style={{
                 background:
-                  "linear-gradient(180deg, #FDFBF7 0%, #F5E9D6 60%, #EA580C 100%)",
+                  "linear-gradient(180deg, #FDFBF7 0%, #F5E9D6 55%, #EA580C 100%)",
               }}
             >
               <img
@@ -88,15 +88,16 @@ export const Hero = () => {
                 alt={`${site.brand.name} portrait`}
                 data-testid="hero-portrait"
                 className="absolute inset-0 w-full h-full object-cover"
-                style={{ objectPosition: "center 18%" }}
+                style={{ objectPosition: "center top" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A1128]/55 via-transparent to-transparent" />
-            </div>
-            <div className="absolute bottom-4 left-4 right-4 lg:right-12 bg-[#0A1128] text-white p-5">
-              <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C] mb-2">{h.manifestoLabel}</div>
-              <p className="font-serif-quote italic text-lg lg:text-xl leading-snug">
-                &ldquo;{h.manifestoQuote}&rdquo;
-              </p>
+              <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0A1128]/80 via-[#0A1128]/30 to-transparent" />
+
+              <div className="absolute bottom-0 inset-x-0 bg-[#0A1128] text-white p-5 lg:p-6">
+                <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C] mb-2">{h.manifestoLabel}</div>
+                <p className="font-serif-quote italic text-lg lg:text-xl leading-snug">
+                  &ldquo;{h.manifestoQuote}&rdquo;
+                </p>
+              </div>
             </div>
           </div>
         </div>
