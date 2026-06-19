@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "./components/site/Navbar";
 import { Hero } from "./components/site/Hero";
 import { Journey } from "./components/site/Journey";
+import { Feature } from "./components/site/Feature";
 import { Vision } from "./components/site/Vision";
 import { AGR } from "./components/site/AGR";
 import { Events } from "./components/site/Events";
@@ -16,6 +17,7 @@ const Home = () => (
     <main>
       <Hero />
       <Journey />
+      <Feature />
       <Vision />
       <AGR />
       <Events />

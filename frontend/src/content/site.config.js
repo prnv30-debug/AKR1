@@ -43,6 +43,22 @@ export const site = {
     ],
   },
 
+  // Featured banner (between Journey and Vision)
+  feature: {
+    image:
+      "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/qtiemh4n_main.jpeg",
+    eyebrow: "Vanakkam · A salute to every voter",
+    quote:
+      "I do not stand above the people. I stand with them, beside them, and for them — every single day.",
+    author: "Kumaran",
+    role: "Founder · AGR Trust",
+    badges: [
+      { value: "100%", label: "For the people" },
+      { value: "0", label: "Hidden agenda" },
+      { value: "24/7", label: "On the ground" },
+    ],
+  },
+
   // About / Journey
   journey: {
     image:
