@@ -1,0 +1,13 @@
+# Skip the local Emergent /backend folder — Vercel uses /api/ instead
+backend/
+
+# Skip test reports + dev artifacts
+test_reports/
+memory/
+tests/
+scripts/
+design_guidelines.json
+
+# Local env files
+**/.env
+**/.env.local
