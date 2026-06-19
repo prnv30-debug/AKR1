@@ -10,7 +10,7 @@ import {
   Home,
   BookOpen,
 } from "lucide-react";
-import { site } from "../../content/site.config";
+import { useSite } from "../../content/site.config";
 
 const ICONS = {
   GraduationCap,
@@ -26,6 +26,7 @@ const ICONS = {
 };
 
 export const Vision = () => {
+  const site = useSite();
   const v = site.vision;
   return (
     <section id="vision" data-testid="vision-section" className="py-24 lg:py-32 bg-white">

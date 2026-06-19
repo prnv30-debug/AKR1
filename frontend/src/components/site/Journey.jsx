@@ -1,6 +1,7 @@
-import { site } from "../../content/site.config";
+import { useSite } from "../../content/site.config";
 
 export const Journey = () => {
+  const site = useSite();
   const j = site.journey;
   return (
     <section id="journey" data-testid="journey-section" className="py-24 lg:py-32 bg-[#FAFAFA]">

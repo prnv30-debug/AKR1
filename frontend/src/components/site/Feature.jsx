@@ -1,7 +1,8 @@
 import { Quote } from "lucide-react";
-import { site } from "../../content/site.config";
+import { useSite } from "../../content/site.config";
 
 export const Feature = () => {
+  const site = useSite();
   const img = site.feature?.image ||
     "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/qtiemh4n_main.jpeg";
   const f = site.feature || {};

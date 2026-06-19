@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Heart, ArrowUpRight, Mail, BadgeCheck } from "lucide-react";
-import { site } from "../../content/site.config";
+import { useSite } from "../../content/site.config";
 
 const useCounter = (target, duration = 1500) => {
   const [val, setVal] = useState(0);
@@ -32,6 +32,7 @@ const Stat = ({ value, suffix = "", label, testId }) => {
 };
 
 export const AGR = () => {
+  const site = useSite();
   const a = site.agr;
   return (
     <section id="agr" data-testid="agr-section" className="py-24 lg:py-32 bg-[#FDFBF7]">

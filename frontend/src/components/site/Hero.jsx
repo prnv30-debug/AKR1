@@ -1,7 +1,8 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { site } from "../../content/site.config";
+import { useSite } from "../../content/site.config";
 
 export const Hero = () => {
+  const site = useSite();
   const h = site.hero;
   return (
     <section

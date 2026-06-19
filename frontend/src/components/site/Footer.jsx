@@ -1,16 +1,17 @@
 import { Facebook, Twitter, Instagram, Youtube, Linkedin, Mail, MapPin } from "lucide-react";
-import { site } from "../../content/site.config";
+import { useSite } from "../../content/site.config";
 
 const ICONS = { Facebook, Twitter, Instagram, Youtube, Linkedin };
 
 export const Footer = () => {
+  const site = useSite();
   const f = site.footer;
   return (
     <footer data-testid="site-footer" className="bg-[#0A1128] text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
           <div className="lg:col-span-6">
-            <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-4">Office</div>
+            <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-4">{f.officeLabel || "Office"}</div>
             <div className="flex items-start gap-3 text-white/80 mb-3">
               <MapPin size={16} className="mt-1 shrink-0" />
               <span>
@@ -31,10 +32,10 @@ export const Footer = () => {
           </div>
 
           <div className="lg:col-span-3">
-            <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-4">Explore</div>
+            <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-4">{f.exploreLabel || "Explore"}</div>
             <ul className="space-y-2 text-white/80">
-              {site.nav.links.map((l) => (
-                <li key={l.href}>
+              {site.nav.links.map((l, i) => (
+                <li key={`${l.href}-${i}`}>
                   <a href={l.href} className="hover:text-[#EA580C] transition-colors">{l.label}</a>
                 </li>
               ))}
@@ -42,7 +43,7 @@ export const Footer = () => {
           </div>
 
           <div className="lg:col-span-3">
-            <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-4">Follow</div>
+            <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-4">{f.followLabel || "Follow"}</div>
             <div className="flex gap-3 flex-wrap">
               {f.social.map((s) => {
                 const Icon = ICONS[s.icon] || Facebook;

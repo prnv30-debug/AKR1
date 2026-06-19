@@ -1,7 +1,8 @@
 import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
-import { site } from "../../content/site.config";
+import { useSite } from "../../content/site.config";
 
 export const Events = () => {
+  const site = useSite();
   const e = site.events;
   return (
     <section id="events" data-testid="events-section" className="py-24 lg:py-32 bg-white">

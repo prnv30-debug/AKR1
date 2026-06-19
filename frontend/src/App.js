@@ -1,6 +1,7 @@
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
+import { LanguageProvider } from "./content/site.config";
 import { Navbar } from "./components/site/Navbar";
 import { Hero } from "./components/site/Hero";
 import { Journey } from "./components/site/Journey";
@@ -30,12 +31,14 @@ const Home = () => (
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-      <Toaster position="top-right" richColors />
+      <LanguageProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </BrowserRouter>
+        <Toaster position="top-right" richColors />
+      </LanguageProvider>
     </div>
   );
 }
