@@ -1,0 +1,3 @@
+# Log files are written here at runtime (gitignored)
+# - access.log  — every API request
+# - error.log   — failed requests and exceptions
