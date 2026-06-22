@@ -61,7 +61,7 @@ export const site = {
 
   // About / Journey
   journey: {
-    image: "/journey_image.jpg",,
+    image: "/journey_image.jpg",
     eyebrow: "01 — பயணம்",
     title:
       "மாதவரத்தின் ஒரு நடுத்தர குடும்பத்திலிருந்து பாஜக சென்னை மேற்கு தலைமை வரை.",

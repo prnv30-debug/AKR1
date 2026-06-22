@@ -60,7 +60,7 @@ export const site = {
 
   // About / Journey
   journey: {
-    image: "/journey_image.jpg",,
+    image: "/journey_image.jpg",
     eyebrow: "01 — The Journey",
     title:
       "From a middle-class home in Madhavaram to BJP's Chennai West leadership.",
