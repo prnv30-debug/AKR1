@@ -18,6 +18,10 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from pymongo.errors import PyMongoError
 from starlette.middleware.base import BaseHTTPMiddleware
+from html import escape
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
 from api.logging_config import setup_logging
 
@@ -42,8 +46,8 @@ if not MONGO_URL:
     )
 
 # ---------- DB ----------
-client = AsyncIOMotorClient(MONGO_URL)
-db = client[DB_NAME]
+client = None
+db = None
 
 # ---------- App ----------
 app = FastAPI(title="Kumaran M.A. · AKR Trust API")
@@ -96,13 +100,21 @@ class AccessLogMiddleware(BaseHTTPMiddleware):
 
 app.add_middleware(AccessLogMiddleware)
 
+origins = os.environ.get("CORS_ORIGINS", "*").split(",")
+if os.environ.get("VERCEL_URL"):
+    origins.append(f"https://{os.environ.get('VERCEL_URL')}")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_credentials=True,
-    allow_origins=os.environ.get("CORS_ORIGINS", "*").split(","),
+    allow_credentials=False if "*" in origins else True,
+    allow_origins=origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 
 @app.exception_handler(PyMongoError)
@@ -125,8 +137,11 @@ async def general_exception_handler(_request: Request, exc: Exception):
 
 @app.on_event("startup")
 async def on_startup():
+    global client, db
     logger.info("AKR Trust API starting — db=%s", DB_NAME)
     try:
+        client = AsyncIOMotorClient(MONGO_URL)
+        db = client[DB_NAME]
         await asyncio.wait_for(client.admin.command("ping"), timeout=5.0)
         logger.info("MongoDB connection verified")
     except (PyMongoError, asyncio.TimeoutError, OSError) as exc:
@@ -214,7 +229,11 @@ async def get_status_checks():
 
 
 @api_router.post("/volunteers", response_model=Volunteer)
-async def create_volunteer(payload: VolunteerCreate):
+@limiter.limit("5/minute")
+async def create_volunteer(request: Request, payload: VolunteerCreate):
+    payload.name = escape(payload.name)
+    if payload.message:
+        payload.message = escape(payload.message)
     obj = Volunteer(**payload.model_dump())
     doc = obj.model_dump()
     doc["created_at"] = doc["created_at"].isoformat()
@@ -241,7 +260,11 @@ async def list_volunteers():
 
 
 @api_router.post("/contacts", response_model=Contact)
-async def create_contact(payload: ContactCreate):
+@limiter.limit("5/minute")
+async def create_contact(request: Request, payload: ContactCreate):
+    payload.name = escape(payload.name)
+    payload.subject = escape(payload.subject)
+    payload.message = escape(payload.message)
     obj = Contact(**payload.model_dump())
     doc = obj.model_dump()
     doc["created_at"] = doc["created_at"].isoformat()

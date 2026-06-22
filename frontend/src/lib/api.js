@@ -10,5 +10,4 @@ export const api = axios.create({
 });
 
 export const submitVolunteer = (data) => api.post("/volunteers", data).then((r) => r.data);
-export const submitContact = (data) => api.post("/contacts", data).then((r) => r.data);
 export const getStats = () => api.get("/stats").then((r) => r.data);

@@ -1,10 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Heart, ArrowUpRight, Mail, BadgeCheck } from "lucide-react";
 import { useSite } from "../../content/site.config";
+import { getStats } from "../../lib/api";
 
 const useCounter = (target, duration = 1500) => {
   const [val, setVal] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
   useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true);
+        observer.disconnect();
+      }
+    }, { threshold: 0.1 });
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
     let raf;
     const start = performance.now();
     const tick = (now) => {
@@ -14,14 +30,14 @@ const useCounter = (target, duration = 1500) => {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [target, duration]);
-  return val;
+  }, [target, duration, isVisible]);
+  return { val, ref };
 };
 
 const Stat = ({ value, suffix = "", label, testId }) => {
-  const n = useCounter(value);
+  const { val: n, ref } = useCounter(value);
   return (
-    <div data-testid={testId} className="border-t border-[#0A1128]/15 pt-5">
+    <div data-testid={testId} ref={ref} className="border-t border-[#0A1128]/15 pt-5">
       <div className="font-display font-black tracking-tighter text-5xl lg:text-6xl text-[#0A1128]">
         {n.toLocaleString()}
         <span className="text-[#EA580C]">{suffix}</span>
@@ -34,6 +50,23 @@ const Stat = ({ value, suffix = "", label, testId }) => {
 export const AGR = () => {
   const site = useSite();
   const a = site.agr;
+  const [liveStats, setLiveStats] = useState(null);
+
+  useEffect(() => {
+    getStats().then(data => {
+      if (data) {
+        setLiveStats([
+          { value: data.lives_impacted, suffix: "+", label: "Beneficiaries today" },
+          { value: data.families_daily, suffix: "", label: "Families served daily" },
+          { value: data.months_running, suffix: "", label: "Months of operation" },
+          { value: data.volunteers, suffix: "", label: "Registered Volunteers" },
+        ]);
+      }
+    }).catch(console.error);
+  }, []);
+
+  const statsToUse = liveStats || a.stats;
+
   return (
     <section id="agr" data-testid="agr-section" className="py-24 lg:py-32 bg-[#FDFBF7]">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -66,7 +99,7 @@ export const AGR = () => {
 
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {a.stats.map((s, i) => (
+          {statsToUse.map((s, i) => (
             <Stat key={i} value={s.value} suffix={s.suffix} label={s.label} testId={`agr-stat-${i}`} />
           ))}
         </div>
@@ -122,7 +155,7 @@ export const AGR = () => {
         {/* Bento gallery */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6">
           <div className="md:col-span-7 relative overflow-hidden group">
-            <img src={a.gallery.large.image} alt={a.gallery.large.label} data-testid="agr-img-1" className="w-full h-[300px] md:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700" />
+            <img src={a.gallery.large.image} alt={a.gallery.large.label} data-testid="agr-img-1" className="w-full h-[300px] md:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent text-white">
               <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C]">{a.gallery.large.label}</div>
               <div className="font-display text-xl font-semibold mt-1">{a.gallery.large.caption}</div>
@@ -131,7 +164,7 @@ export const AGR = () => {
           <div className="md:col-span-5 grid grid-rows-2 gap-4 lg:gap-6">
             {[a.gallery.small1, a.gallery.small2].map((g, i) => (
               <div key={i} className="relative overflow-hidden group">
-                <img src={g.image} alt={g.label} data-testid={`agr-img-${i + 2}`} className="w-full h-[230px] object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={g.image} alt={g.label} data-testid={`agr-img-${i + 2}`} className="w-full h-[230px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C]">{g.label}</div>
                   <div className="font-display text-sm font-semibold mt-1">{g.caption}</div>

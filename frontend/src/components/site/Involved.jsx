@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Heart, Send, CheckCircle2, Loader2 } from "lucide-react";
 import { submitVolunteer } from "../../lib/api";
 import { toast } from "sonner";
@@ -66,21 +67,21 @@ export const Involved = () => {
 };
 
 const VolunteerForm = ({ interests, labels = {} }) => {
-  const initVol = { name: "", email: "", phone: "", city: "", interest: interests[0], message: "" };
-  const [form, setForm] = useState(initVol);
+  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+    defaultValues: {
+      name: "", email: "", phone: "", city: "", interest: interests[0], message: ""
+    }
+  });
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
   const lf = labels.fields || {};
 
-  const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
-
-  const submit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
     setLoading(true);
     try {
-      await submitVolunteer(form);
+      await submitVolunteer(data);
       setDone(true);
-      setForm(initVol);
+      reset();
       toast.success(labels.toastSuccess || "Thank you!");
     } catch (err) {
       const msg = err?.response?.data?.detail || labels.toastError || "Submission failed.";
@@ -103,23 +104,22 @@ const VolunteerForm = ({ interests, labels = {} }) => {
     );
 
   return (
-    <form id="volunteer" onSubmit={submit} data-testid="volunteer-form" className="bg-[#0A1128] p-8 lg:p-12">
+    <form id="volunteer" onSubmit={handleSubmit(onSubmit)} data-testid="volunteer-form" className="bg-[#0A1128] p-8 lg:p-12">
       <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-2">{labels.eyebrow}</div>
       <h3 className="font-display font-black text-3xl mb-8">{labels.title}</h3>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Field label={lf.name} value={form.name} onChange={update("name")} required testId="vol-name" />
-        <Field label={lf.email} type="email" value={form.email} onChange={update("email")} required testId="vol-email" />
-        <Field label={lf.phone} value={form.phone} onChange={update("phone")} required testId="vol-phone" />
-        <Field label={lf.city} value={form.city} onChange={update("city")} required testId="vol-city" />
+        <Field label={lf.name} name="name" register={register} errors={errors} rules={{ required: "Name is required" }} testId="vol-name" />
+        <Field label={lf.email} name="email" type="email" register={register} errors={errors} rules={{ required: "Email is required", pattern: { value: /^\\S+@\\S+$/i, message: "Invalid email" } }} testId="vol-email" />
+        <Field label={lf.phone} name="phone" register={register} errors={errors} rules={{ required: "Phone is required", minLength: { value: 6, message: "Phone too short" } }} testId="vol-phone" />
+        <Field label={lf.city} name="city" register={register} errors={errors} rules={{ required: "City is required" }} testId="vol-city" />
       </div>
 
       <div className="mt-4">
         <label className="block text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">{lf.interest}</label>
         <select
           data-testid="vol-interest"
-          value={form.interest}
-          onChange={update("interest")}
+          {...register("interest")}
           className="w-full bg-transparent border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#EA580C]"
         >
           {interests.map((o) => (
@@ -132,8 +132,7 @@ const VolunteerForm = ({ interests, labels = {} }) => {
         <label className="block text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">{lf.message}</label>
         <textarea
           data-testid="vol-message"
-          value={form.message}
-          onChange={update("message")}
+          {...register("message")}
           rows={3}
           className="w-full bg-transparent border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#EA580C] resize-none"
         />
@@ -186,16 +185,15 @@ const ContactForm = ({ labels = {} }) => {
   );
 };
 
-const Field = ({ label, type = "text", value, onChange, required, testId, className = "" }) => (
+const Field = ({ label, type = "text", register, name, rules, errors, testId, className = "" }) => (
   <div className={className}>
     <label className="block text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">{label}</label>
     <input
       type={type}
-      value={value}
-      onChange={onChange}
-      required={required}
+      {...register(name, rules)}
       data-testid={testId}
-      className="w-full bg-transparent border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#EA580C] placeholder:text-white/30"
+      className={`w-full bg-transparent border ${errors[name] ? 'border-red-500' : 'border-white/20'} px-4 py-3 text-white focus:outline-none focus:border-[#EA580C] placeholder:text-white/30`}
     />
+    {errors[name] && <span className="text-red-500 text-[10px] mt-1.5 block">{errors[name].message}</span>}
   </div>
 );

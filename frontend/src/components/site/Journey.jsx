@@ -26,6 +26,8 @@ export const Journey = () => {
               data-testid="about-portrait"
               className="mt-8 w-full rounded-xl shadow-md object-contain"
               style={{ display: "block", maxHeight: "600px", objectPosition: "center top" }}
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
