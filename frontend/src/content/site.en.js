@@ -202,20 +202,17 @@ export const site = {
     ],
     gallery: {
       large: {
-        image:
-          "https://images.unsplash.com/photo-1497486751825-1233686d5d80?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/agr_large.jpg",
         label: "Education",
         caption: "Educational support across all ages",
       },
       small1: {
-        image:
-          "https://images.unsplash.com/photo-1692609659165-1ec4d8108c0e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwzfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/agr_small1.jpg",
         label: "Pension",
         caption: "₹500 + 5kg rice to 2,000+ seniors monthly",
       },
       small2: {
-        image:
-          "https://images.unsplash.com/photo-1524069290683-0457abfe42c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/agr_small2.jpg",
         label: "Daily water",
         caption: "20L cans to 650 families on alternate days",
       },
@@ -230,8 +227,7 @@ export const site = {
     ctaHref: "#involved",
     items: [
       {
-        image:
-          "https://images.unsplash.com/photo-1715351151262-6b1e1cee2318?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/event_pension.jpg",
         date: "5th of every month",
         location: "Madhavaram · 9 AM – 6 PM",
         title: "Senior Citizen Pension Drive",
@@ -239,8 +235,7 @@ export const site = {
         tag: "Monthly",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1713001075225-8c490e800e29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8NjA2MjJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/event_foundation.jpg",
         date: "Annual",
         location: "Madhavaram",
         title: "9th Foundation Day · 97th Monthly Celebration",
@@ -248,8 +243,7 @@ export const site = {
         tag: "Annual",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1715351151262-6b1e1cee2318?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/event_livelihood.jpg",
         date: "Year-round",
         location: "Chennai West",
         title: "Livelihood support — Auto drivers & women",
