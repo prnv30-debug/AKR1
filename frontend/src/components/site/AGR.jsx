@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Heart, ArrowUpRight, Mail, BadgeCheck } from "lucide-react";
-import { useSite } from "../../SiteContext";
+import { useSite } from "../../content/site.config";
 
 const useCounter = (target, duration = 1500) => {
   const [val, setVal] = useState(0);

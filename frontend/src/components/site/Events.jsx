@@ -1,5 +1,5 @@
 import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
-import { useSite } from "../../SiteContext";
+import { useSite } from "../../content/site.config";
 
 export const Events = () => {
   const site = useSite();

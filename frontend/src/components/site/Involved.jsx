@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Heart, Send, CheckCircle2, Loader2 } from "lucide-react";
-import { submitContact, submitVolunteer } from "../../lib/api";
+import { submitVolunteer } from "../../lib/api";
 import { toast } from "sonner";
-import { useSite } from "../../SiteContext";
+import { useSite } from "../../content/site.config";
 
 export const Involved = () => {
   const site = useSite();
