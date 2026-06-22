@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Heart, Send, CheckCircle2, Loader2 } from "lucide-react";
 import { submitContact, submitVolunteer } from "../../lib/api";
 import { toast } from "sonner";
-import { useSite } from "../../content/site.config";
+import { useSite } from "../../SiteContext";
 
 export const Involved = () => {
   const site = useSite();
@@ -153,74 +153,36 @@ const VolunteerForm = ({ interests, labels = {} }) => {
 };
 
 const ContactForm = ({ labels = {} }) => {
-  const initCon = { name: "", email: "", subject: "", message: "" };
-  const [form, setForm] = useState(initCon);
-  const [loading, setLoading] = useState(false);
-  const [done, setDone] = useState(false);
-  const lf = labels.fields || {};
-  const update = (k) => (e) => setForm({ ...form, [k]: e.target.value });
-
-  const submit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      await submitContact(form);
-      setDone(true);
-      setForm(initCon);
-      toast.success(labels.toastSuccess || "Message sent.");
-    } catch (err) {
-      const msg = err?.response?.data?.detail || labels.toastError || "Submission failed.";
-      toast.error(typeof msg === "string" ? msg : labels.toastError || "Submission failed.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (done)
-    return (
-      <div data-testid="contact-success" className="bg-[#0A1128] p-10 lg:p-12 flex flex-col items-start gap-4">
-        <CheckCircle2 size={40} className="text-[#EA580C]" />
-        <h3 className="font-display font-black text-3xl">{labels.successTitle}</h3>
-        <p className="text-white/70">{labels.successBody}</p>
-        <button onClick={() => setDone(false)} data-testid="contact-reset" className="mt-4 text-sm font-semibold text-[#EA580C] underline underline-offset-4">
-          {labels.successReset}
-        </button>
-      </div>
-    );
-
   return (
-    <form id="contact" onSubmit={submit} data-testid="contact-form" className="bg-[#0A1128] p-8 lg:p-12">
-      <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-2">{labels.eyebrow}</div>
-      <h3 className="font-display font-black text-3xl mb-8">{labels.title}</h3>
+    <div id="contact" data-testid="contact-form" className="bg-[#0A1128] p-8 lg:p-12 flex flex-col h-full">
+      <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-2">{labels.eyebrow || "Contact"}</div>
+      <h3 className="font-display font-black text-3xl mb-8">{labels.title || "Write to us"}</h3>
+      
+      <p className="text-white/70 mb-10 leading-relaxed text-lg">
+        Prefer to reach out directly? You can DM us on WhatsApp at the numbers below. Our team responds within 2-3 working days.
+      </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <Field label={lf.name} value={form.name} onChange={update("name")} required testId="con-name" />
-        <Field label={lf.email} type="email" value={form.email} onChange={update("email")} required testId="con-email" />
+      <div className="flex flex-col gap-4 mt-auto">
+        <a
+          href="https://wa.me/918925847185"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1DA851] text-white px-7 py-4 font-semibold transition-all"
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          WhatsApp 8925847185
+        </a>
+        <a
+          href="https://wa.me/919444389777"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1DA851] text-white px-7 py-4 font-semibold transition-all"
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+          WhatsApp 9444389777
+        </a>
       </div>
-      <Field label={lf.subject} value={form.subject} onChange={update("subject")} required testId="con-subject" className="mt-4" />
-
-      <div className="mt-4">
-        <label className="block text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">{lf.message}</label>
-        <textarea
-          data-testid="con-message"
-          value={form.message}
-          onChange={update("message")}
-          required
-          rows={5}
-          className="w-full bg-transparent border border-white/20 px-4 py-3 text-white focus:outline-none focus:border-[#EA580C] resize-none"
-        />
-      </div>
-
-      <button
-        type="submit"
-        data-testid="con-submit"
-        disabled={loading}
-        className="mt-8 inline-flex items-center gap-2 bg-white hover:bg-[#EA580C] hover:text-white text-[#0A1128] px-7 py-3.5 font-semibold transition-all disabled:opacity-60"
-      >
-        {loading ? <Loader2 className="animate-spin" size={18} /> : <Send size={18} />}
-        {loading ? labels.submitting : labels.submit}
-      </button>
-    </form>
+    </div>
   );
 };
 

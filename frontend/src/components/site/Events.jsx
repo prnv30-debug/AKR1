@@ -1,5 +1,5 @@
 import { Calendar, MapPin, ArrowUpRight } from "lucide-react";
-import { useSite } from "../../content/site.config";
+import { useSite } from "../../SiteContext";
 
 export const Events = () => {
   const site = useSite();
@@ -51,7 +51,7 @@ export const Events = () => {
                   {ev.title}
                 </h3>
                 <p className="text-[#4B5563] text-sm leading-relaxed flex-1">{ev.desc}</p>
-                <a href="#involved" className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-[#EA580C] hover:gap-2 transition-all">
+                <a href="https://wa.me/918925847185" target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-1 text-sm font-semibold text-[#EA580C] hover:gap-2 transition-all">
                   RSVP <ArrowUpRight size={14} />
                 </a>
               </div>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Heart, ArrowUpRight, Mail, BadgeCheck } from "lucide-react";
-import { useSite } from "../../content/site.config";
+import { useSite } from "../../SiteContext";
 
 const useCounter = (target, duration = 1500) => {
   const [val, setVal] = useState(0);
@@ -74,7 +74,9 @@ export const AGR = () => {
         {/* Beneficiary Badge + mailto */}
         {a.beneficiaries && (
           <a
-            href={`mailto:${a.beneficiaries.email}?subject=${encodeURIComponent(a.beneficiaries.mailSubject)}&body=${encodeURIComponent(a.beneficiaries.mailBody)}`}
+            href="https://wa.me/919444389777"
+            target="_blank"
+            rel="noopener noreferrer"
             data-testid="agr-beneficiary-mail"
             className="group relative block mb-20 bg-[#0A1128] text-white overflow-hidden hover:bg-[#0A1128]/95 transition-colors"
           >
