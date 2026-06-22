@@ -24,7 +24,8 @@ export const Journey = () => {
               src={j.image}
               alt={`${site.brand.name} in conversation`}
               data-testid="about-portrait"
-              className="mt-8 w-full h-64 object-cover"
+              className="mt-8 w-full rounded-xl shadow-md object-contain"
+              style={{ display: "block", maxHeight: "600px", objectPosition: "center top" }}
             />
           </div>
         </div>
