@@ -93,7 +93,11 @@ export const Footer = () => {
         </div>
 
         <div className="mt-10 flex flex-col md:flex-row justify-between gap-4 text-xs uppercase tracking-[0.2em] text-white/50">
-          <span>© {new Date().getFullYear()} {site.brand.name} · {site.brand.trustName}. {f.rights}</span>
+          <div className="flex flex-wrap gap-4 items-center">
+            <span>© {new Date().getFullYear()} {site.brand.name} · {site.brand.trustName}. {f.rights}</span>
+            <a href="/terms" className="hover:text-white transition-colors">Terms</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
+          </div>
           <span>{f.designedBy}</span>
         </div>
       </div>

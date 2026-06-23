@@ -7,6 +7,8 @@ import { Navbar } from "./components/site/Navbar";
 import { Hero } from "./components/site/Hero";
 import { Journey } from "./components/site/Journey";
 import { Connect } from "./pages/Connect";
+import { Terms } from "./pages/Terms";
+import { Privacy } from "./pages/Privacy";
 import React, { Suspense } from "react";
 
 const Feature = React.lazy(() => import("./components/site/Feature").then(m => ({ default: m.Feature })));
@@ -47,6 +49,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/connect" element={<Connect />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
             </Routes>
           </BrowserRouter>
           <Toaster position="top-right" richColors />
