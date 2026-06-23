@@ -13,7 +13,7 @@ export const Connect = () => {
     <div className="min-h-screen bg-[#FDFBF7] text-[#0A1128]">
       <Navbar />
       <main className="pt-32 lg:pt-40 pb-20">
-        {/* HERO SECTION */}
+
         <div className="max-w-4xl mx-auto px-6 lg:px-10 text-center mb-16">
           <div className="w-24 h-24 mx-auto bg-[#EA580C] text-white flex items-center justify-center rounded-full text-3xl font-display font-black tracking-tighter mb-6 shadow-lg">
             MK
@@ -29,12 +29,12 @@ export const Connect = () => {
           </p>
         </div>
 
-        {/* SOCIAL CARDS GRID */}
+
         <div className="max-w-5xl mx-auto px-6 lg:px-10 mb-16">
           <SocialLinks />
         </div>
 
-        {/* WHATSAPP STRIP */}
+
         <div className="max-w-5xl mx-auto px-6 lg:px-10">
           <div className="bg-[#25D366] text-white p-8 lg:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl rounded-xl">
             <div className="flex flex-col md:flex-row items-center gap-5 text-center md:text-left">
