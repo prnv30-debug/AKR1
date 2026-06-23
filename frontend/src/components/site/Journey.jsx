@@ -33,7 +33,7 @@ export const Journey = () => {
         </div>
 
         <div className="border-t border-[#0A1128]/10">
-          {j.milestones.map((m, idx) => (
+          {(j.milestones || []).map((m, idx) => (
             <div
               key={`${m.year}-${idx}`}
               data-testid={`timeline-item-${idx}`}

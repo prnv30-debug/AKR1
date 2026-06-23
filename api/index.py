@@ -104,9 +104,10 @@ origins = os.environ.get("CORS_ORIGINS", "*").split(",")
 if os.environ.get("VERCEL_URL"):
     origins.append(f"https://{os.environ.get('VERCEL_URL')}")
 
+is_wildcard = "*" in origins or origins == ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_credentials=False if "*" in origins else True,
+    allow_credentials=not is_wildcard,
     allow_origins=origins,
     allow_methods=["*"],
     allow_headers=["*"],

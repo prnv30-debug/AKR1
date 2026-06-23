@@ -29,7 +29,7 @@ export const Events = () => {
           </a>
         </div>
 
-        {e.items.length === 0 ? (
+        {!e.items || e.items.length === 0 ? (
           <div className="py-12 text-center border border-[#0A1128]/10 bg-[#FDFBF7]">
             <p className="text-[#4B5563] text-lg">No upcoming events at this time. Check back soon!</p>
           </div>

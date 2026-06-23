@@ -11,6 +11,23 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
           <div className="lg:col-span-6">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-white flex items-center justify-center rounded-full overflow-hidden p-0.5 border border-white/20 shadow-sm">
+                <img
+                  src="/akr_logo.jpg"
+                  alt="AKR Logo"
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </div>
+              <div>
+                <div className="font-display font-black tracking-wider text-white text-base">
+                  AKR SOCIAL WELFARE TRUST
+                </div>
+                <div className="text-[10px] uppercase tracking-[0.2em] text-white/50">
+                  Registered Trust
+                </div>
+              </div>
+            </div>
             <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-4">{f.officeLabel || "Office"}</div>
             <div className="flex items-start gap-3 text-white/80 mb-3">
               <MapPin size={16} className="mt-1 shrink-0" />
@@ -51,6 +68,8 @@ export const Footer = () => {
                   <a
                     key={s.label}
                     href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     data-testid={`social-${s.label}`}
                     className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-[#EA580C] hover:border-[#EA580C] transition-all"
                     aria-label={s.label}

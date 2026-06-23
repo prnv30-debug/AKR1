@@ -28,11 +28,18 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
         <a
-          href="#top"
+          href="/#top"
           data-testid="nav-logo"
-          className="font-display font-black tracking-tighter text-xl text-[#0A1128]"
+          className="flex items-center font-display font-black tracking-tighter text-xl text-[#0A1128]"
         >
-          {site.brand.name.toUpperCase()}<span className="text-[#EA580C]">{site.brand.accent}</span>
+          <img
+            src="/akr_logo.jpg"
+            alt="AKR Logo"
+            className="h-9 w-9 object-contain mr-2.5 rounded-full border border-[#0A1128]/10 bg-white p-0.5 shadow-sm"
+          />
+          <span>
+            {site.brand.name.toUpperCase()}<span className="text-[#EA580C]">{site.brand.accent}</span>
+          </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -59,14 +66,14 @@ export const Navbar = () => {
             <span className="tracking-widest">{lang === "en" ? "தமிழ்" : "EN"}</span>
           </button>
           <a
-            href="#donate"
+            href="/#donate"
             data-testid="nav-donate-btn"
             className="px-5 py-2 text-sm font-semibold border border-[#0A1128] text-[#0A1128] hover:bg-[#0A1128] hover:text-white transition-all"
           >
             {site.nav.donate}
           </a>
           <a
-            href="#volunteer"
+            href="/#volunteer"
             data-testid="nav-volunteer-btn"
             className="px-5 py-2 text-sm font-semibold bg-[#EA580C] text-white hover:bg-[#C2410C] transition-all"
           >
@@ -87,7 +94,7 @@ export const Navbar = () => {
           <button
             data-testid="nav-mobile-toggle"
             onClick={() => setOpen(!open)}
-            className="p-2 text-[#0A1128]"
+            className="p-3 min-w-[44px] min-h-[44px] flex items-center justify-center text-[#0A1128]"
             aria-label="menu"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
@@ -109,10 +116,10 @@ export const Navbar = () => {
               </a>
             ))}
             <div className="flex gap-3 pt-2">
-              <a href="#donate" onClick={() => setOpen(false)} className="flex-1 text-center py-2 border border-[#0A1128] text-sm font-semibold">
+              <a href="/#donate" onClick={() => setOpen(false)} className="flex-1 text-center py-2 border border-[#0A1128] text-sm font-semibold">
                 {site.nav.donate}
               </a>
-              <a href="#volunteer" onClick={() => setOpen(false)} className="flex-1 text-center py-2 bg-[#EA580C] text-white text-sm font-semibold">
+              <a href="/#volunteer" onClick={() => setOpen(false)} className="flex-1 text-center py-2 bg-[#EA580C] text-white text-sm font-semibold">
                 {site.nav.volunteer}
               </a>
             </div>

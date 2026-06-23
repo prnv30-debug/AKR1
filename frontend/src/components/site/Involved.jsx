@@ -187,8 +187,9 @@ const ContactForm = ({ labels = {} }) => {
 
 const Field = ({ label, type = "text", register, name, rules, errors, testId, className = "" }) => (
   <div className={className}>
-    <label className="block text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">{label}</label>
+    <label htmlFor={name} className="block text-[10px] uppercase tracking-[0.2em] text-white/60 mb-2">{label}</label>
     <input
+      id={name}
       type={type}
       {...register(name, rules)}
       data-testid={testId}
