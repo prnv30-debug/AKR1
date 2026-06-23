@@ -24,13 +24,16 @@ export const Journey = () => {
               src={j.image}
               alt={`${site.brand.name} in conversation`}
               data-testid="about-portrait"
-              className="mt-8 w-full max-h-[520px] object-cover object-top rounded-xl shadow-lg"
+              className="mt-8 w-full rounded-xl shadow-md object-contain"
+              style={{ display: "block", maxHeight: "600px", objectPosition: "center top" }}
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
 
         <div className="border-t border-[#0A1128]/10">
-          {j.milestones.map((m, idx) => (
+          {(j.milestones || []).map((m, idx) => (
             <div
               key={`${m.year}-${idx}`}
               data-testid={`timeline-item-${idx}`}

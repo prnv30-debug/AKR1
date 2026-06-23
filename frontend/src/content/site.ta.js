@@ -203,20 +203,17 @@ export const site = {
     ],
     gallery: {
       large: {
-        image:
-          "https://images.unsplash.com/photo-1497486751825-1233686d5d80?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/agr_large.jpg",
         label: "கல்வி",
         caption: "எல்லா வயதினருக்கும் கல்வி ஆதரவு",
       },
       small1: {
-        image:
-          "https://images.unsplash.com/photo-1692609659165-1ec4d8108c0e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwzfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/agr_small1.jpg",
         label: "ஓய்வூதியம்",
         caption: "2,000+ மூத்தோருக்கு ₹500 + 5கிலோ அரிசி மாதந்தோறும்",
       },
       small2: {
-        image:
-          "https://images.unsplash.com/photo-1524069290683-0457abfe42c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/agr_small2.jpg",
         label: "தினசரி நீர்",
         caption: "மாற்று நாட்களில் 650 குடும்பங்களுக்கு 20லி கேன்கள்",
       },
@@ -231,8 +228,7 @@ export const site = {
     ctaHref: "#involved",
     items: [
       {
-        image:
-          "https://images.unsplash.com/photo-1715351151262-6b1e1cee2318?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/event_pension.jpg",
         date: "ஒவ்வொரு மாதமும் 5ஆம் தேதி",
         location: "மாதவரம் · காலை 9 – மாலை 6",
         title: "மூத்த குடிமக்கள் ஓய்வூதிய நாள்",
@@ -240,8 +236,7 @@ export const site = {
         tag: "மாதந்தோறும்",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1713001075225-8c490e800e29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8NjA2MjJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/event_foundation.jpg",
         date: "ஆண்டுதோறும்",
         location: "மாதவரம்",
         title: "9வது நிறுவன நாள் · 97வது மாத கொண்டாட்டம்",
@@ -249,8 +244,7 @@ export const site = {
         tag: "ஆண்டு",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1715351151262-6b1e1cee2318?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/event_livelihood.jpg",
         date: "ஆண்டு முழுவதும்",
         location: "சென்னை மேற்கு",
         title: "வாழ்வாதார ஆதரவு — ஆட்டோ ஓட்டுநர்கள் & பெண்கள்",
@@ -332,11 +326,12 @@ export const site = {
     donate: "நன்கொடை",
     volunteer: "தன்னார்வலர்",
     links: [
-      { href: "#journey", label: "பயணம்" },
-      { href: "#vision", label: "நோக்கம்" },
-      { href: "#agr", label: "AKR அறக்கட்டளை" },
-      { href: "#events", label: "நிகழ்வுகள்" },
-      { href: "#involved", label: "பங்கேற்க" },
+      { href: "/#journey", label: "பயணம்" },
+      { href: "/#vision", label: "நோக்கம்" },
+      { href: "/#agr", label: "AKR அறக்கட்டளை" },
+      { href: "/#events", label: "நிகழ்வுகள்" },
+      { href: "/#involved", label: "பங்கேற்க" },
+      { href: "/connect", label: "இணையுங்கள்" },
     ],
   },
 
@@ -352,10 +347,10 @@ export const site = {
     ],
     email: "akrsocialwelfaretrust@gmail.com",
     social: [
-      { icon: "Facebook", label: "facebook", href: "https://www.facebook.com/share/p/1EB3jrrMGH/?mibextid=wwXIfr" },
-      { icon: "Twitter", label: "twitter", href: "https://wa.me/918925847185" },
-      { icon: "Instagram", label: "instagram", href: "https://www.instagram.com/madhavaram_kumaran_ma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
-      { icon: "Youtube", label: "youtube", href: "https://wa.me/919444389777" },
+      { icon: "Twitter", label: "X (Twitter)", href: "https://x.com/kumaran__bjp" },
+      { icon: "Instagram", label: "Instagram", href: "https://www.instagram.com/madhavaram_kumaran_ma/?hl=en" },
+      { icon: "Facebook", label: "Facebook", href: "https://www.facebook.com/profile.php?id=61584917536840" },
+      { icon: "Youtube", label: "YouTube", href: "https://www.youtube.com/@akrtrust3129" },
     ],
     rights: "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
     designedBy: "மக்களுக்காக வடிவமைக்கப்பட்டது · நம்பிக்கையுடன் கட்டப்பட்டது",

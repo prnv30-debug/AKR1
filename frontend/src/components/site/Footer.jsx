@@ -68,6 +68,8 @@ export const Footer = () => {
                   <a
                     key={s.label}
                     href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     data-testid={`social-${s.label}`}
                     className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-[#EA580C] hover:border-[#EA580C] transition-all"
                     aria-label={s.label}

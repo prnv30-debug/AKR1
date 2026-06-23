@@ -202,20 +202,17 @@ export const site = {
     ],
     gallery: {
       large: {
-        image:
-          "https://images.unsplash.com/photo-1497486751825-1233686d5d80?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwyfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/agr_large.jpg",
         label: "Education",
         caption: "Educational support across all ages",
       },
       small1: {
-        image:
-          "https://images.unsplash.com/photo-1692609659165-1ec4d8108c0e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwzfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/agr_small1.jpg",
         label: "Pension",
         caption: "₹500 + 5kg rice to 2,000+ seniors monthly",
       },
       small2: {
-        image:
-          "https://images.unsplash.com/photo-1524069290683-0457abfe42c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxpbmRpYSUyMGNoYXJpdHklMjBuZ28lMjBzb2NpYWwlMjB3b3JrfGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/agr_small2.jpg",
         label: "Daily water",
         caption: "20L cans to 650 families on alternate days",
       },
@@ -230,8 +227,7 @@ export const site = {
     ctaHref: "#involved",
     items: [
       {
-        image:
-          "https://images.unsplash.com/photo-1715351151262-6b1e1cee2318?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/event_pension.jpg",
         date: "5th of every month",
         location: "Madhavaram · 9 AM – 6 PM",
         title: "Senior Citizen Pension Drive",
@@ -239,8 +235,7 @@ export const site = {
         tag: "Monthly",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1713001075225-8c490e800e29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8NjA2MjJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/event_foundation.jpg",
         date: "Annual",
         location: "Madhavaram",
         title: "9th Foundation Day · 97th Monthly Celebration",
@@ -248,8 +243,7 @@ export const site = {
         tag: "Annual",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1715351151262-6b1e1cee2318?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBjcm93ZCUyMHB1YmxpYyUyMHJhbGx5fGVufDB8fHx8MTc4MTcwOTQxNXww&ixlib=rb-4.1.0&q=85",
+        image: "/event_livelihood.jpg",
         date: "Year-round",
         location: "Chennai West",
         title: "Livelihood support — Auto drivers & women",
@@ -331,11 +325,12 @@ export const site = {
     donate: "Donate",
     volunteer: "Volunteer",
     links: [
-      { href: "#journey", label: "Journey" },
-      { href: "#vision", label: "Mission" },
-      { href: "#agr", label: "AKR Trust" },
-      { href: "#events", label: "Events" },
-      { href: "#involved", label: "Get Involved" },
+      { href: "/#journey", label: "Journey" },
+      { href: "/#vision", label: "Mission" },
+      { href: "/#agr", label: "AKR Trust" },
+      { href: "/#events", label: "Events" },
+      { href: "/#involved", label: "Get Involved" },
+      { href: "/connect", label: "Connect" },
     ],
   },
 
@@ -351,10 +346,10 @@ export const site = {
     ],
     email: "akrsocialwelfaretrust@gmail.com",
     social: [
-      { icon: "Facebook", label: "facebook", href: "https://www.facebook.com/share/p/1EB3jrrMGH/?mibextid=wwXIfr" },
-      { icon: "Twitter", label: "twitter", href: "https://wa.me/918925847185" },
-      { icon: "Instagram", label: "instagram", href: "https://www.instagram.com/madhavaram_kumaran_ma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
-      { icon: "Youtube", label: "youtube", href: "https://wa.me/919444389777" },
+      { icon: "Twitter", label: "X (Twitter)", href: "https://x.com/kumaran__bjp" },
+      { icon: "Instagram", label: "Instagram", href: "https://www.instagram.com/madhavaram_kumaran_ma/?hl=en" },
+      { icon: "Facebook", label: "Facebook", href: "https://www.facebook.com/profile.php?id=61584917536840" },
+      { icon: "Youtube", label: "YouTube", href: "https://www.youtube.com/@akrtrust3129" },
     ],
     rights: "All rights reserved.",
     designedBy: "Designed for the people · Built with conviction",
