@@ -39,11 +39,22 @@ export const AGR = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-3 mb-5">
-              <span className="h-px w-8 bg-[#EA580C]" />
-              <span className="font-display uppercase tracking-[0.2em] text-xs font-medium text-[#EA580C]">
-                {a.eyebrow}
-              </span>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 bg-white flex items-center justify-center rounded-full shadow-md p-1 border border-[#EA580C]/10">
+                <img
+                  src="/akr_logo.jpg"
+                  alt="AKR Trust Logo"
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </div>
+              <div>
+                <div className="font-display uppercase tracking-[0.25em] text-xs font-bold text-[#EA580C]">
+                  {a.eyebrow}
+                </div>
+                <div className="text-[10px] uppercase tracking-widest text-[#4B5563] mt-0.5">
+                  Official NGO Partner
+                </div>
+              </div>
             </div>
             <h2 className="font-display font-black tracking-tighter text-4xl lg:text-5xl text-[#0A1128] leading-[1.05]">
               {a.titleLine1}{" "}
@@ -88,8 +99,12 @@ export const AGR = () => {
             />
             <div className="relative grid grid-cols-1 md:grid-cols-12 gap-6 p-7 lg:p-10 items-center">
               <div className="md:col-span-1 flex md:justify-center">
-                <div className="w-12 h-12 bg-[#EA580C] text-white flex items-center justify-center">
-                  <BadgeCheck size={24} />
+                <div className="w-12 h-12 bg-white flex items-center justify-center rounded-sm overflow-hidden p-1 border border-white/20">
+                  <img
+                    src="/akr_logo.jpg"
+                    alt="AKR Logo"
+                    className="w-full h-full object-contain rounded-full"
+                  />
                 </div>
               </div>
               <div className="md:col-span-7">

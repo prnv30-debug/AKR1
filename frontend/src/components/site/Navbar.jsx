@@ -30,9 +30,16 @@ export const Navbar = () => {
         <a
           href="#top"
           data-testid="nav-logo"
-          className="font-display font-black tracking-tighter text-xl text-[#0A1128]"
+          className="flex items-center font-display font-black tracking-tighter text-xl text-[#0A1128]"
         >
-          {site.brand.name.toUpperCase()}<span className="text-[#EA580C]">{site.brand.accent}</span>
+          <img
+            src="/akr_logo.jpg"
+            alt="AKR Logo"
+            className="h-9 w-9 object-contain mr-2.5 rounded-full border border-[#0A1128]/10 bg-white p-0.5 shadow-sm"
+          />
+          <span>
+            {site.brand.name.toUpperCase()}<span className="text-[#EA580C]">{site.brand.accent}</span>
+          </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

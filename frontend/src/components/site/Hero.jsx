@@ -14,9 +14,23 @@ export const Hero = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         {/* Left */}
         <div className="lg:col-span-7 fade-up order-2 lg:order-1">
+          <div className="mb-6 flex items-center gap-3">
+            <div className="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-sm border border-[#0A1128]/5 p-0.5">
+              <img
+                src="/akr_logo.jpg"
+                alt="AKR Logo"
+                className="w-full h-full object-contain rounded-full"
+              />
+            </div>
+            <span className="h-px w-8 bg-[#EA580C]/30" />
+            <span className="font-display uppercase tracking-[0.25em] text-[11px] font-black text-[#EA580C]">
+              AKR SOCIAL WELFARE TRUST
+            </span>
+          </div>
+
           <div className="flex items-center gap-3 mb-8">
-            <span className="h-px w-10 bg-[#0A1128]" />
-            <span className="font-display uppercase tracking-[0.2em] text-xs font-medium text-[#0A1128]">
+            <span className="h-px w-10 bg-[#0A1128]/25" />
+            <span className="font-display uppercase tracking-[0.2em] text-xs font-semibold text-[#0A1128]/80">
               {site.brand.tagline}
             </span>
           </div>
