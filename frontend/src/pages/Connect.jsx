@@ -49,23 +49,12 @@ export const Connect = () => {
           <p className="text-gray-500 text-sm mb-6">Updates from Anna — newest first, across all his channels.</p>
 
           <div className="bg-[#F3F4F6] rounded-xl p-6 border border-gray-100">
-            <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+            <div className="flex flex-col md:flex-row md:items-center gap-4">
               <span className="text-sm font-semibold text-gray-500 w-24">Follow Anna:</span>
               <div className="flex flex-wrap gap-2">
                 <Pill icon={XIcon} label="X" href="https://x.com/kumaran__bjp" />
                 <Pill icon={YoutubeIcon} label="YouTube" href="https://www.youtube.com/@akrtrust3129" />
                 <Pill icon={InstagramIcon} label="Instagram" href="https://www.instagram.com/madhavaram_kumaran_ma/?hl=en" />
-                <Pill icon={FacebookIcon} label="Facebook" href="https://www.facebook.com/profile.php?id=61584917536840" />
-                <Pill icon={LinkedinIcon} label="LinkedIn" href="#" />
-              </div>
-            </div>
-
-            <div className="flex flex-col md:flex-row md:items-center gap-4 pt-4 border-t border-gray-200">
-              <span className="text-sm font-semibold text-gray-500 w-24">Follow WTL:</span>
-              <div className="flex flex-wrap gap-2">
-                <Pill icon={WhatsappIcon} label="WhatsApp" iconColor="text-[#25D366]" href="https://wa.me/918925847185" />
-                <Pill icon={InstagramIcon} label="Instagram" href="https://www.instagram.com/madhavaram_kumaran_ma/?hl=en" />
-                <Pill icon={XIcon} label="X (Twitter)" href="https://x.com/kumaran__bjp" />
                 <Pill icon={FacebookIcon} label="Facebook" href="https://www.facebook.com/profile.php?id=61584917536840" />
               </div>
             </div>
