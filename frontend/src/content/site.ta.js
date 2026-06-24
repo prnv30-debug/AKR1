@@ -236,7 +236,7 @@ export const site = {
         tag: "மாதந்தோறும்",
       },
       {
-        image: "/event_foundation.jpg",
+        image: "/9th_day_celebration.jpg",
         date: "ஆண்டுதோறும்",
         location: "மாதவரம்",
         title: "9வது நிறுவன நாள் · 97வது மாத கொண்டாட்டம்",

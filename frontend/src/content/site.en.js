@@ -235,7 +235,7 @@ export const site = {
         tag: "Monthly",
       },
       {
-        image: "/event_foundation.jpg",
+        image: "/9th_day_celebration.jpg",
         date: "Annual",
         location: "Madhavaram",
         title: "9th Foundation Day · 97th Monthly Celebration",
