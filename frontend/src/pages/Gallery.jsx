@@ -349,15 +349,15 @@ export const Gallery = () => {
               </p>
             </div>
 
-            {/* Clean Minimalistic Tabs */}
-            <div className="flex flex-wrap items-center gap-2 mb-8">
+            {/* Clean Minimalistic Tabs (Scrollable on Mobile) */}
+            <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-8 scrollbar-none -mx-6 px-6 sm:mx-0 sm:px-0 sm:flex-wrap">
               {CATEGORIES.map(category => {
                 const isActive = activeTab === category;
                 return (
                   <button
                     key={category}
                     onClick={() => setActiveTab(category)}
-                    className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
+                    className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all whitespace-nowrap ${
                       isActive
                         ? "bg-[#0A1128] text-white shadow-sm"
                         : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
@@ -423,12 +423,12 @@ export const Gallery = () => {
       {currentItem && (
         <div 
           onClick={() => setSelectedIndex(null)}
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 sm:p-8 animate-fade-in select-none"
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-2 sm:p-6 lg:p-10 animate-fade-in select-none"
         >
           {/* Close button */}
           <button
             onClick={() => setSelectedIndex(null)}
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
             aria-label={t.close}
           >
             <X className="w-5 h-5" />
@@ -440,9 +440,9 @@ export const Gallery = () => {
               e.stopPropagation();
               setSelectedIndex((prev) => (prev - 1 + filteredItems.length) % filteredItems.length);
             }}
-            className="absolute left-3 sm:left-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            className="absolute left-2 sm:left-6 z-50 p-2 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Next arrow */}
@@ -451,40 +451,43 @@ export const Gallery = () => {
               e.stopPropagation();
               setSelectedIndex((prev) => (prev + 1) % filteredItems.length);
             }}
-            className="absolute right-3 sm:right-6 z-50 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            className="absolute right-2 sm:right-6 z-50 p-2 sm:p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Image & Caption container */}
           <div 
             onClick={(e) => e.stopPropagation()}
-            className="max-w-4xl w-full bg-[#0A1128] rounded-2xl overflow-hidden border border-white/15 shadow-2xl flex flex-col"
+            className="max-w-4xl w-full bg-[#0A1128] rounded-2xl overflow-hidden border border-white/15 shadow-2xl flex flex-col max-h-[85vh] sm:max-h-[90vh]"
           >
-            <div className="bg-black flex items-center justify-center min-h-[300px] max-h-[70vh] p-4 relative">
-              <img
-                src={currentItem.src}
-                alt={isTa ? currentItem.titleTa : currentItem.titleEn}
-                className="max-h-[65vh] w-auto object-contain rounded"
-                onError={(e) => {
-                  if (e.target.src !== window.location.origin + currentItem.fallbackSrc) {
-                    e.target.src = currentItem.fallbackSrc;
-                  } else {
-                    e.target.src = "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80";
-                  }
-                }}
-              />
-            </div>
-            <div className="p-5 sm:p-6 text-white bg-[#0A1128]">
-              <span className="text-[11px] font-bold text-[#EA580C] uppercase tracking-wider block mb-1">
-                {getCategoryLabel(currentItem.category)}
-              </span>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-1.5">
-                {isTa ? currentItem.titleTa : currentItem.titleEn}
-              </h3>
-              <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
-                {isTa ? currentItem.descTa : currentItem.descEn}
-              </p>
+            {/* Scrollable container for whole modal on very small mobile viewports */}
+            <div className="overflow-y-auto flex flex-col w-full h-full">
+              <div className="bg-black flex items-center justify-center min-h-[220px] max-h-[45vh] sm:max-h-[60vh] p-3 relative">
+                <img
+                  src={currentItem.src}
+                  alt={isTa ? currentItem.titleTa : currentItem.titleEn}
+                  className="max-h-[40vh] sm:max-h-[55vh] w-auto object-contain rounded"
+                  onError={(e) => {
+                    if (e.target.src !== window.location.origin + currentItem.fallbackSrc) {
+                      e.target.src = currentItem.fallbackSrc;
+                    } else {
+                      e.target.src = "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80";
+                    }
+                  }}
+                />
+              </div>
+              <div className="p-4 sm:p-6 text-white bg-[#0A1128] border-t border-white/5">
+                <span className="text-[10px] sm:text-[11px] font-bold text-[#EA580C] uppercase tracking-wider block mb-1">
+                  {getCategoryLabel(currentItem.category)}
+                </span>
+                <h3 className="text-base sm:text-lg font-bold text-white mb-1">
+                  {isTa ? currentItem.titleTa : currentItem.titleEn}
+                </h3>
+                <p className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                  {isTa ? currentItem.descTa : currentItem.descEn}
+                </p>
+              </div>
             </div>
           </div>
         </div>
