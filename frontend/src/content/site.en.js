@@ -11,16 +11,16 @@ export const site = {
     name: "Kumaran",
     fullName: "Kumaran M.A.",
     accent: ".",
-    tagline: "People's Servant Madhavaram · BJP Chennai West",
+    tagline: "Founder-Chairman of AKR Social Welfare Trust · Former BJP Chennai West Leader",
     trustName: "AKR Social Welfare Trust",
-    role: "General Secretary, BJP Chennai West District",
+    role: "Founder-Chairman of AKR Social Welfare Trust (Former General Secretary, BJP Chennai West District)",
   },
 
   // SEO meta
   seo: {
-    title: "Kumaran M.A. — People's Servant Madhavaram | BJP Chennai West & AKR Social Welfare Trust",
+    title: "Kumaran M.A. — Founder-Chairman of AKR Social Welfare Trust & Former BJP Leader, Madhavaram",
     description:
-      "Kumaran M.A., General Secretary of BJP Chennai West District and Founder of AKR Social Welfare Trust, Madhavaram. Serving 2,000+ beneficiaries through education, healthcare, employment guidance, senior citizen pension and daily welfare.",
+      "Kumaran M.A. is the Founder-Chairman of AKR Social Welfare Trust, Madhavaram. Formerly General Secretary of BJP Chennai West District, he has served 2,000+ beneficiaries through education, healthcare, senior citizen pension and daily welfare.",
     keywords:
       "Kumaran MA, Madhavaram, BJP Chennai West, AKR Social Welfare Trust, Madhavaram politician, social service Chennai, Annamalai BJP, Rajini Makkal Mandram, DAT Constructions",
     ogImage:
@@ -37,7 +37,7 @@ export const site = {
     headlineItalic: "Serve.",
     headlineLine3: "Uplift.",
     description:
-      "Kumaran M.A. — a self-made entrepreneur, founder of DAT Constructions & Transport, General Secretary of BJP Chennai West District, and Founder-Chairman of AKR Social Welfare Trust serving 2,000+ families across Madhavaram.",
+      "Kumaran M.A. — a self-made entrepreneur, founder of DAT Constructions & Transport, Founder-Chairman of AKR Social Welfare Trust serving 2,000+ families across Madhavaram, and former General Secretary of BJP Chennai West District.",
     primaryCta: { label: "Join the Movement", href: "#volunteer" },
     secondaryCta: { label: "Read the Journey", href: "#journey" },
     manifestoLabel: "My Mission",
