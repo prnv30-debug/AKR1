@@ -26,11 +26,12 @@ export const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 flex items-center justify-between gap-4">
+        {/* Brand Logo - Added shrink-0 to prevent collapsing */}
         <a
           href="/#top"
           data-testid="nav-logo"
-          className="flex items-center font-display font-black tracking-tighter text-xl text-[#0A1128]"
+          className="flex items-center font-display font-black tracking-tighter text-xl text-[#0A1128] shrink-0"
         >
           <img
             src="/akr_logo.jpg"
@@ -42,25 +43,27 @@ export const Navbar = () => {
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Links - Upgraded breakpoint from md:flex to lg:flex, and reduced gap to prevent overcrowding */}
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
           {links.map((l, i) => (
             <a
               key={`${l.href}-${i}`}
               href={l.href}
               data-testid={`nav-link-${i}`}
-              className="text-sm font-medium text-[#0A1128]/80 hover:text-[#EA580C] transition-colors"
+              className="text-xs xl:text-sm font-semibold text-[#0A1128]/80 hover:text-[#EA580C] transition-colors whitespace-nowrap"
             >
               {l.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
+        {/* Action Buttons - Upgraded breakpoint from md:flex to lg:flex */}
+        <div className="hidden lg:flex items-center gap-2 xl:gap-3 shrink-0">
           <button
             onClick={toggleLang}
             data-testid="nav-lang-toggle"
             aria-label="Toggle language"
-            className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold border border-[#0A1128]/30 text-[#0A1128] hover:bg-[#0A1128] hover:text-white transition-all"
+            className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold border border-[#0A1128]/30 text-[#0A1128] hover:bg-[#0A1128] hover:text-white transition-all whitespace-nowrap"
           >
             <Languages size={14} />
             <span className="tracking-widest">{lang === "en" ? "தமிழ்" : "EN"}</span>
@@ -68,20 +71,21 @@ export const Navbar = () => {
           <a
             href="/gallery"
             data-testid="nav-donate-btn"
-            className="px-5 py-2 text-sm font-semibold border border-[#0A1128] text-[#0A1128] hover:bg-[#0A1128] hover:text-white transition-all"
+            className="px-3 xl:px-5 py-2 text-xs xl:text-sm font-semibold border border-[#0A1128] text-[#0A1128] hover:bg-[#0A1128] hover:text-white transition-all whitespace-nowrap"
           >
             {site.nav.donate}
           </a>
           <a
             href="/#volunteer"
             data-testid="nav-volunteer-btn"
-            className="px-5 py-2 text-sm font-semibold bg-[#EA580C] text-white hover:bg-[#C2410C] transition-all"
+            className="px-3 xl:px-5 py-2 text-xs xl:text-sm font-semibold bg-[#EA580C] text-white hover:bg-[#C2410C] transition-all whitespace-nowrap"
           >
             {site.nav.volunteer}
           </a>
         </div>
 
-        <div className="md:hidden flex items-center gap-2">
+        {/* Mobile menu trigger - Visible on screens smaller than lg */}
+        <div className="lg:hidden flex items-center gap-2">
           <button
             onClick={toggleLang}
             data-testid="nav-lang-toggle-mobile"
@@ -103,7 +107,7 @@ export const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden bg-white border-t border-[#0A1128]/10" data-testid="nav-mobile-menu">
+        <div className="lg:hidden bg-white border-t border-[#0A1128]/10" data-testid="nav-mobile-menu">
           <div className="px-6 py-4 flex flex-col gap-4">
             {links.map((l, i) => (
               <a
