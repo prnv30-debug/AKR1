@@ -66,7 +66,7 @@ export const Navbar = () => {
             <span className="tracking-widest">{lang === "en" ? "தமிழ்" : "EN"}</span>
           </button>
           <a
-            href="/#donate"
+            href="/gallery"
             data-testid="nav-donate-btn"
             className="px-5 py-2 text-sm font-semibold border border-[#0A1128] text-[#0A1128] hover:bg-[#0A1128] hover:text-white transition-all"
           >
@@ -116,7 +116,7 @@ export const Navbar = () => {
               </a>
             ))}
             <div className="flex gap-3 pt-2">
-              <a href="/#donate" onClick={() => setOpen(false)} className="flex-1 text-center py-2 border border-[#0A1128] text-sm font-semibold">
+              <a href="/gallery" onClick={() => setOpen(false)} className="flex-1 text-center py-2 border border-[#0A1128] text-sm font-semibold">
                 {site.nav.donate}
               </a>
               <a href="/#volunteer" onClick={() => setOpen(false)} className="flex-1 text-center py-2 bg-[#EA580C] text-white text-sm font-semibold">

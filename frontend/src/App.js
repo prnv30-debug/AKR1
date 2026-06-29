@@ -9,6 +9,7 @@ import { Journey } from "./components/site/Journey";
 import { Connect } from "./pages/Connect";
 import { Terms } from "./pages/Terms";
 import { Privacy } from "./pages/Privacy";
+import { Gallery } from "./pages/Gallery";
 import React, { Suspense } from "react";
 
 const Feature = React.lazy(() => import("./components/site/Feature").then(m => ({ default: m.Feature })));
@@ -49,6 +50,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/connect" element={<Connect />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="/terms" element={<Terms />} />
               <Route path="/privacy" element={<Privacy />} />
             </Routes>

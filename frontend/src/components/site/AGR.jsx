@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { Heart, ArrowUpRight, Mail, BadgeCheck } from "lucide-react";
+import { Heart, ArrowUpRight, Mail, BadgeCheck, Camera } from "lucide-react";
 import { useSite } from "../../content/site.config";
 import { getStats } from "../../lib/api";
 
@@ -99,12 +99,12 @@ export const AGR = () => {
           <div className="lg:col-span-6 lg:col-start-7">
             <p className="text-[#4B5563] text-lg leading-relaxed">{a.description}</p>
             <a
-              href="#donate"
+              href="/gallery"
               data-testid="agr-donate-btn"
               className="mt-8 inline-flex items-center gap-2 bg-[#0A1128] hover:bg-[#EA580C] text-white px-7 py-3.5 font-semibold transition-all group"
             >
-              <Heart size={18} />
-              Support the Trust
+              <Camera size={18} />
+              Explore Photo Gallery
               <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
           </div>

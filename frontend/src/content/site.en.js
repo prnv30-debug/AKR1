@@ -270,13 +270,13 @@ export const site = {
       "Other",
     ],
     donate: {
-      eyebrow: "Stand with us",
-      title: "Support AKR Social Welfare Trust.",
+      eyebrow: "Visual Chronicle",
+      title: "Witness our service in action.",
       description:
-        "100% of your contribution reaches the ground — pension day, water cans, food, education, and livelihood for 2,000+ families.",
-      ctaLabel: "Donate Now",
-      ctaHref: "#volunteer",
-      footnote: "80G tax exemption · Receipts on request",
+        "Explore moments from three decades of public life, grassroots welfare, and political milestones across Madhavaram.",
+      ctaLabel: "View Photo Gallery",
+      ctaHref: "/gallery",
+      footnote: "70+ moments captured",
     },
   },
 
@@ -322,7 +322,7 @@ export const site = {
 
   // Navigation
   nav: {
-    donate: "Donate",
+    donate: "Gallery",
     volunteer: "Volunteer",
     links: [
       { href: "/#journey", label: "Journey" },
@@ -330,6 +330,7 @@ export const site = {
       { href: "/#agr", label: "AKR Trust" },
       { href: "/#events", label: "Events" },
       { href: "/#involved", label: "Get Involved" },
+      { href: "/gallery", label: "Gallery" },
       { href: "/connect", label: "Connect" },
     ],
   },

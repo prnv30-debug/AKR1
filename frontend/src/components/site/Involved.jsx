@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Heart, Send, CheckCircle2, Loader2 } from "lucide-react";
+import { Camera, Send, CheckCircle2, Loader2 } from "lucide-react";
 import { submitVolunteer } from "../../lib/api";
 import { toast } from "sonner";
 import { useSite } from "../../content/site.config";
@@ -37,7 +37,7 @@ export const Involved = () => {
           <ContactForm labels={f.contact} />
         </div>
 
-        {/* Donate strip */}
+        {/* Gallery strip */}
         <div id="donate" data-testid="donate-strip" className="mt-16 border border-white/15 p-8 lg:p-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           <div className="md:col-span-2">
             <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C] mb-2">{i.donate.eyebrow}</div>
@@ -54,7 +54,7 @@ export const Involved = () => {
               data-testid="donate-cta-btn"
               className="inline-flex items-center gap-2 bg-[#EA580C] hover:bg-[#C2410C] text-white px-8 py-4 font-semibold text-lg transition-all"
             >
-              <Heart size={18} /> {i.donate.ctaLabel}
+              <Camera size={18} /> {i.donate.ctaLabel}
             </a>
             <div className="mt-3 text-xs text-white/50 uppercase tracking-widest">
               {i.donate.footnote}
