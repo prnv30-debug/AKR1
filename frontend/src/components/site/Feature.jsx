@@ -87,7 +87,7 @@ export const Feature = () => {
           {/* The portrait */}
           <img
             src={img}
-            alt="Kumaran M.A., Founder of AKR Social Welfare Trust & Former BJP Chennai West District General Secretary"
+            alt="Kumaran M.A., Founder of AKR Social Welfare Trust"
             data-testid="feature-portrait"
             loading="lazy"
             width="600"

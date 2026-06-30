@@ -55,10 +55,10 @@ const GALLERY_ITEMS = [
     src: "/kumaran_profile_images/slide16_img46.png",
     fallbackSrc: "/journey_image.jpg",
     category: "Political",
-    titleEn: "Official Induction at BJP State Headquarters",
-    titleTa: "பாஜக மாநில தலைமையகத்தில் அதிகாரப்பூர்வ இணைப்பு",
-    descEn: "Formal entry into active national politics in the presence of senior state leadership.",
-    descTa: "மாநில மூத்த தலைவர்கள் முன்னிலையில் பாஜகவில் இணைந்த வரலாற்று தருணம்."
+    titleEn: "Official Induction at State Headquarters",
+    titleTa: "மாநில தலைமையகத்தில் அதிகாரப்பூர்வ இணைப்பு",
+    descEn: "Formal entry into active politics in the presence of senior state leadership.",
+    descTa: "மாநில மூத்த தலைவர்கள் முன்னிலையில் இணைந்த வரலாற்று தருணம்."
   },
   {
     id: 3,
@@ -108,7 +108,7 @@ const GALLERY_ITEMS = [
     fallbackSrc: "/9th_day_celebration.jpg",
     category: "AKR Trust Events",
     titleEn: "State President K. Annamalai Gracing AKR Event",
-    titleTa: "பாஜக மாநில தலைவர் கே. அண்ணாமலை பங்கேற்பு",
+    titleTa: "மாநில தலைவர் கே. அண்ணாமலை பங்கேற்பு",
     descEn: "Commending 106 consecutive months of self-funded public welfare in Madhavaram.",
     descTa: "மாதவரத்தில் தொடர்ந்து 106 மாதங்களாக நடைபெறும் மக்கள் சேவையை பாராட்டிய தருணம்."
   },

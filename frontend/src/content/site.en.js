@@ -11,18 +11,18 @@ export const site = {
     name: "Kumaran",
     fullName: "Kumaran M.A.",
     accent: ".",
-    tagline: "Founder-Chairman of AKR Social Welfare Trust · Former BJP Chennai West Leader",
+    tagline: "Founder-Chairman of AKR Social Welfare Trust · Public Servant",
     trustName: "AKR Social Welfare Trust",
-    role: "Founder-Chairman of AKR Social Welfare Trust (Former General Secretary, BJP Chennai West District)",
+    role: "Founder-Chairman of AKR Social Welfare Trust",
   },
 
   // SEO meta
   seo: {
-    title: "Kumaran M.A. — Founder-Chairman of AKR Social Welfare Trust & Former BJP Leader, Madhavaram",
+    title: "Kumaran M.A. — Founder-Chairman of AKR Social Welfare Trust",
     description:
-      "Kumaran M.A. is the Founder-Chairman of AKR Social Welfare Trust, Madhavaram. Formerly General Secretary of BJP Chennai West District, he has served 52,000+ beneficiaries through education, healthcare, senior citizen pension and daily welfare.",
+      "Kumaran M.A. is the Founder-Chairman of AKR Social Welfare Trust. He has served 52,000+ beneficiaries through education, healthcare, senior citizen pension and daily welfare.",
     keywords:
-      "Kumaran MA, BJP Chennai West, AKR Social Welfare Trust, Chennai politician, BJP Tamil Nadu, social welfare Chennai, volunteer Chennai, BJP General Secretary, BJP Chennai West volunteer, social welfare trust Chennai, Kumaran MA BJP, AKR Trust Chennai contact",
+      "Kumaran MA, AKR Social Welfare Trust, Chennai politician, social welfare Chennai, volunteer Chennai, social welfare trust Chennai, AKR Trust Chennai contact",
     ogImage:
       "https://akrtrust.org/og-image.jpg",
     siteUrl: "https://akrtrust.org",
@@ -37,7 +37,7 @@ export const site = {
     headlineItalic: "be the one",
     headlineLine3: "who loves.",
     description:
-      "Kumaran M.A. — a self-made entrepreneur, founder of DAT Constructions & Transport, Founder-Chairman of AKR Social Welfare Trust serving 52,000+ lives across 184 villages, and former General Secretary of BJP Chennai West District.",
+      "Kumaran M.A. — a self-made entrepreneur, founder of DAT Constructions & Transport, and Founder-Chairman of AKR Social Welfare Trust serving 52,000+ lives across 184 villages.",
     primaryCta: { label: "Join the Movement", href: "#volunteer" },
     secondaryCta: { label: "Read the Journey", href: "#journey" },
     manifestoLabel: "My Mission",
@@ -49,7 +49,7 @@ export const site = {
       { value: "650", label: "Families served daily" },
     ],
     ticker: [
-      "Chennai · Tamil Nadu · BJP · Social Welfare · 52,000+ Lives",
+      "Chennai · Tamil Nadu · Social Welfare · 52,000+ Lives",
       "Serving 184 villages across Chennai & Tamil Nadu",
       "Senior citizen pension & daily clean water for 650 families",
       "Educational assistance & medical aid camps",
@@ -62,60 +62,40 @@ export const site = {
     image: "/journey_image.jpg",
     eyebrow: "01 — The Journey",
     title:
-      "From a middle-class home in Madhavaram to BJP's Chennai West leadership.",
+      "Born in Tiruvottiyur (Chennai) and dedicated to public service.",
     description:
-      "Born to a school teacher and a school clerk. Three decades in business. A father, a son of Madhavaram, and an unrelenting public servant — Kumaran M.A.'s story is built brick by brick, with service at its core.",
+      "Born to a school teacher and a school clerk. Three decades in business. A father, and an unrelenting public servant — Kumaran M.A.'s story is built brick by brick, with service at its core.",
     milestones: [
       {
+        year: "1972",
+        title: "Born into a large family",
+        body: "Kumaran M.A. was born on September 8, 1972, the sixth child of his family. He completed his early education across three schools — Classes 1-5 at a local higher secondary school, Classes 6-10 at Velayan Chettiyar school, and Classes 11-12 at a school named after Swami Vivekananda."
+      },
+      {
+        year: "College",
+        title: "Higher education and family life",
+        body: "He pursued his college education at a Government College, then married and started a family that would include three children."
+      },
+      {
         year: "1996",
-        title: "Started in travel & transport",
-        body: "Launched a small business in the travel and transportation sector, laying the foundation for what would become DAT Constructions & Transport.",
-      },
-      {
-        year: "2009",
-        title: "Major business success",
-        body: "Achieved a defining milestone in his career — including the purchase of a Mitsubishi Montero — symbolising years of disciplined entrepreneurship.",
-      },
-      {
-        year: "2011",
-        title: "Peak of the transport industry",
-        body: "Established himself as a leading voice in Tamil Nadu's transportation industry. Currently Chief Advisor, Tamil Nadu Bitumen Lorry Association.",
+        title: "First business — transport & roads",
+        body: "Kumaran founded his first business in the transport and road-construction sector, working as a registered Class-1 road contractor — laying the foundation for years of hands-on community and infrastructure work."
       },
       {
         year: "2016",
-        title: "A father's grief, a leader's resolve",
-        body: "Lost his elder son Karthik Raja in a car accident. The pain became the seed of a deeper public purpose — the AKR Social Welfare Trust, founded in his memory.",
+        title: "A profound personal loss",
+        body: "He lost his eldest son, Karthik Raja, in a car accident — a loss that deepened his resolve to serve others."
       },
       {
         year: "2017",
-        title: "Public life begins",
-        body: "Joined Rajini Makkal Mandram. Served as Assembly Secretary (Madhavaram, 2017–2020) and led welfare for 200–300 senior citizens, water and ration distribution.",
+        title: "Entry into active politics",
+        body: "Kumaran stepped into active political life, registering as a party member and rising to become an active office-bearer, channeling his energy into grassroots service."
       },
       {
-        year: "2020",
-        title: "Joined the BJP",
-        body: "Joined the Bharatiya Janata Party along with 1,500 RMM members in the presence of Mrs. Khushbu Ji and Mr. Sudhakar Reddy Ji.",
-      },
-      {
-        year: "2021",
-        title: "Founded AKR Social Welfare Trust",
-        body: "Founded the AKR Social Welfare Trust — named after his father Mr. Adikesavan and his late son Karthik Raja — to formalise his public service mission.",
-      },
-      {
-        year: "2022",
-        title: "BJP Treasurer · Ward 19 contest",
-        body: "Appointed Treasurer of BJP Chennai West District. Contested the Greater Chennai Corporation Councilor Election (Ward 19), securing ~3,000 votes and finishing in second place.",
-      },
-      {
-        year: "2024",
-        title: "General Secretary, BJP Chennai West",
-        body: "Promoted to General Secretary of BJP Chennai West District. Appointed BJP Assembly Constituency In-Charge for Ambattur.",
-      },
-      {
-        year: "2026",
-        title: "Joined 'WE THE LEADER'",
-        body: "Joined the 'WE THE LEADER' movement under his political mentor Mr. Annamalai Kuppusamy, continuing the fight for clean, service-driven politics.",
-      },
+        year: "Onward",
+        title: "Seeds of the AKR Trust",
+        body: "His commitment to people led him to launch focused welfare initiatives for women in his community — including free sewing machine distribution and free ration kits — the early seeds of what would grow into the AKR Social Welfare Trust."
+      }
     ],
   },
 
@@ -123,11 +103,11 @@ export const site = {
   feature: {
     image:
       "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/qtiemh4n_main.jpeg",
-    eyebrow: "Vanakkam · A salute to every voter of Madhavaram",
+    eyebrow: "Vanakkam · A salute to every citizen",
     quote:
       "Work for the people, serve the people, and uplift the people.",
     author: "Kumaran M.A.",
-    role: "General Secretary · BJP Chennai West District",
+    role: "Founder-Chairman · AKR Social Welfare Trust",
     badges: [
       { value: "9", label: "Years AKR Trust" },
       { value: "2K+", label: "Beneficiaries" },
@@ -341,7 +321,7 @@ export const site = {
     followLabel: "Follow",
     address: [
       "AKR Social Welfare Trust",
-      "457, Mathur MMDA,",
+      "457, 1st Main Road, MMDA, Manali Mathur,",
       "Chennai – 600068, Tamil Nadu, India",
     ],
     email: "akrsocialwelfaretrust@gmail.com",

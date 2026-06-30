@@ -108,7 +108,7 @@ export const Hero = () => {
             >
               <img
                 src={h.image}
-                alt="Kumaran M.A., General Secretary BJP Chennai West District"
+                alt="Kumaran M.A., Founder of AKR Social Welfare Trust"
                 data-testid="hero-portrait"
                 loading="eager"
                 fetchPriority="high"

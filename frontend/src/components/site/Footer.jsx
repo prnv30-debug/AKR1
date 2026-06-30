@@ -119,7 +119,7 @@ export const Footer = () => {
             "image": "https://akrtrust.org/og-image.jpg",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "457, Mathur MMDA",
+              "streetAddress": "457, 1st Main Road, MMDA, Manali Mathur",
               "addressLocality": "Chennai",
               "addressRegion": "TN",
               "postalCode": "600068",
