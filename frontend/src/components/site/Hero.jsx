@@ -95,55 +95,69 @@ export const Hero = () => {
         {/* Right - portrait */}
         <div className="lg:col-span-5 fade-up order-1 lg:order-2" style={{ animationDelay: "120ms" }}>
           <div className="relative" style={{ overflow: "visible" }}>
+            {/* Outer decorative offset border framing the entire card perfectly */}
             <div
               aria-hidden
               className="hidden md:block absolute pointer-events-none border border-[#0A1128]/70"
               style={{ top: "16px", left: "16px", right: "-16px", bottom: "-16px", zIndex: 0 }}
             />
-            <div
-              className="relative w-full h-[460px] sm:h-[560px] lg:h-[640px] overflow-hidden"
-              style={{
-                zIndex: 1,
-                background:
-                  "linear-gradient(180deg, #FDFBF7 0%, #F5E9D6 55%, #EA580C 100%)",
-              }}
-            >
-              <img
-                src={h.image}
-                alt="Kumaran M.A., Founder of AKR Social Welfare Trust"
-                data-testid="hero-portrait"
-                loading="eager"
-                fetchPriority="high"
-                width="640"
-                height="640"
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{ objectPosition: "center top" }}
-              />
-              <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0A1128]/80 via-[#0A1128]/30 to-transparent" />
 
-              <div className="absolute bottom-0 inset-x-0 bg-[#0A1128] text-white p-5 lg:p-6">
-                <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C] mb-2">{h.manifestoLabel}</div>
-                <p className="font-serif-quote italic text-lg lg:text-xl leading-snug">
-                  &ldquo;{h.manifestoQuote}&rdquo;
-                </p>
-              </div>
-            </div>
-
-            {/* Bold Founder & Chairman Badge */}
+            {/* Unified Hero Portrait Card */}
             <div
-              className="relative z-10 mt-3 sm:mt-4 bg-[#0A1128] border-2 border-[#EA580C] px-5 py-4 shadow-xl flex items-center justify-between gap-4 transition-all duration-300 hover:border-[#EA580C]/80 group"
-              style={{ zIndex: 2 }}
+              className="relative w-full bg-[#0A1128] overflow-hidden shadow-2xl border border-[#0A1128]"
+              style={{ zIndex: 1 }}
             >
-              <div>
-                <h3 className="font-display font-black text-white text-xl sm:text-2xl tracking-tight uppercase group-hover:text-[#EA580C] transition-colors">
-                  {isTa ? "குமரன் M.A." : "KUMARAN M.A."}
-                </h3>
-                <p className="font-display font-bold text-[#EA580C] text-xs sm:text-sm uppercase tracking-[0.15em] mt-1">
-                  {isTa ? "ஏ.கே.ஆர் அறக்கட்டளை நிறுவனர் & தலைவர்" : "FOUNDER & CHAIRMAN OF AKR TRUST"}
-                </p>
+              {/* Image Section */}
+              <div
+                className="relative w-full h-[420px] sm:h-[500px] lg:h-[560px] overflow-hidden"
+                style={{
+                  background:
+                    "linear-gradient(180deg, #FDFBF7 0%, #F5E9D6 55%, #EA580C 100%)",
+                }}
+              >
+                <img
+                  src={h.image}
+                  alt="Kumaran M.A., Founder of AKR Social Welfare Trust"
+                  data-testid="hero-portrait"
+                  loading="eager"
+                  fetchPriority="high"
+                  width="640"
+                  height="640"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  style={{ objectPosition: "center top" }}
+                />
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#0A1128] via-[#0A1128]/50 to-transparent" />
               </div>
-              <div className="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-[#EA580C]/15 border border-[#EA580C]/40 text-[#EA580C] font-black text-sm shrink-0">
-                ★
+
+              {/* Cohesive Dark Navy Footer Panel */}
+              <div className="p-6 sm:p-8 bg-[#0A1128] text-white border-t-4 border-[#EA580C]">
+                {/* Founder & Chairman Row */}
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="font-display font-black text-white text-2xl sm:text-3xl tracking-tight uppercase">
+                      {isTa ? "குமரன் M.A." : "KUMARAN M.A."}
+                    </h3>
+                    <p className="font-display font-bold text-[#EA580C] text-xs sm:text-sm uppercase tracking-[0.2em] mt-1.5">
+                      {isTa ? "ஏ.கே.ஆர் அறக்கட்டளை நிறுவனர் & தலைவர்" : "FOUNDER & CHAIRMAN OF AKR TRUST"}
+                    </p>
+                  </div>
+                  <div className="hidden sm:flex items-center justify-center w-11 h-11 rounded-full bg-[#EA580C]/15 border border-[#EA580C]/40 text-[#EA580C] font-black text-base shrink-0">
+                    ★
+                  </div>
+                </div>
+
+                {/* Subtle Divider */}
+                <div className="h-px bg-white/15 my-5" />
+
+                {/* Mission Quote Row */}
+                <div>
+                  <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#EA580C] mb-2">
+                    {h.manifestoLabel}
+                  </div>
+                  <p className="font-serif-quote italic text-lg sm:text-xl text-white/95 leading-snug">
+                    &ldquo;{h.manifestoQuote}&rdquo;
+                  </p>
+                </div>
               </div>
             </div>
           </div>
