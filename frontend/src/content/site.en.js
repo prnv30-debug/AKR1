@@ -62,40 +62,60 @@ export const site = {
     image: "/journey_image.jpg",
     eyebrow: "01 — The Journey",
     title:
-      "Born in Tiruvottiyur (Chennai) and dedicated to public service.",
+      "From a middle-class home in Tiruvottiyur to BJP's Chennai West leadership.",
     description:
-      "Born to a school teacher and a school clerk. Three decades in business. A father, and an unrelenting public servant — Kumaran M.A.'s story is built brick by brick, with service at its core.",
+      "Born to a school teacher and a school clerk. Three decades in business. A father, a son of Tiruvottiyur, and an unrelenting public servant — Kumaran M.A.'s story is built brick by brick, with service at its core.",
     milestones: [
       {
-        year: "1972",
-        title: "Born into a large family",
-        body: "Kumaran M.A. was born on September 8, 1972, the sixth child of his family. He completed his early education across three schools — Classes 1-5 at a local higher secondary school, Classes 6-10 at Velayan Chettiyar school, and Classes 11-12 at a school named after Swami Vivekananda."
-      },
-      {
-        year: "College",
-        title: "Higher education and family life",
-        body: "He pursued his college education at a Government College, then married and started a family that would include three children."
-      },
-      {
         year: "1996",
-        title: "First business — transport & roads",
-        body: "Kumaran founded his first business in the transport and road-construction sector, working as a registered Class-1 road contractor — laying the foundation for years of hands-on community and infrastructure work."
+        title: "Started in travel & transport",
+        body: "Launched a small business in the travel and transportation sector, laying the foundation for what would become DAT Constructions & Transport.",
+      },
+      {
+        year: "2009",
+        title: "Major business success",
+        body: "Achieved a defining milestone in his career — including the purchase of a Mitsubishi Montero — symbolising years of disciplined entrepreneurship.",
+      },
+      {
+        year: "2011",
+        title: "Peak of the transport industry",
+        body: "Established himself as a leading voice in Tamil Nadu's transportation industry. Currently Chief Advisor, Tamil Nadu Bitumen Lorry Association.",
       },
       {
         year: "2016",
-        title: "A profound personal loss",
-        body: "He lost his eldest son, Karthik Raja, in a car accident — a loss that deepened his resolve to serve others."
+        title: "A father's grief, a leader's resolve",
+        body: "Lost his elder son Karthik Raja in a car accident. The pain became the seed of a deeper public purpose — the AKR Social Welfare Trust, founded in his memory.",
       },
       {
         year: "2017",
-        title: "Entry into active politics",
-        body: "Kumaran stepped into active political life, registering as a party member and rising to become an active office-bearer, channeling his energy into grassroots service."
+        title: "Public life begins",
+        body: "Joined Rajini Makkal Mandram. Served as Assembly Secretary (Tiruvottiyur, 2017–2020) and led welfare for 200–300 senior citizens, water and ration distribution.",
       },
       {
-        year: "Onward",
-        title: "Seeds of the AKR Trust",
-        body: "His commitment to people led him to launch focused welfare initiatives for women in his community — including free sewing machine distribution and free ration kits — the early seeds of what would grow into the AKR Social Welfare Trust."
-      }
+        year: "2020",
+        title: "Joined the BJP",
+        body: "Joined the Bharatiya Janata Party along with 1,500 RMM members in the presence of Mrs. Khushbu Ji and Mr. Sudhakar Reddy Ji.",
+      },
+      {
+        year: "2021",
+        title: "Founded AKR Social Welfare Trust",
+        body: "Founded the AKR Social Welfare Trust — named after his father Mr. Adikesavan and his late son Karthik Raja — to formalise his public service mission.",
+      },
+      {
+        year: "2022",
+        title: "BJP Treasurer · Ward 19 contest",
+        body: "Appointed Treasurer of BJP Chennai West District. Contested the Greater Chennai Corporation Councilor Election (Ward 19), securing ~3,000 votes and finishing in second place.",
+      },
+      {
+        year: "2024",
+        title: "General Secretary, BJP Chennai West",
+        body: "Promoted to General Secretary of BJP Chennai West District. Appointed BJP Assembly Constituency In-Charge for Ambattur.",
+      },
+      {
+        year: "2026",
+        title: "Joined 'WE THE LEADER'",
+        body: "Joined the 'WE THE LEADER' movement under his political mentor Mr. Annamalai Kuppusamy, continuing the fight for clean, service-driven politics.",
+      },
     ],
   },
 
