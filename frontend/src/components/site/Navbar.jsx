@@ -35,7 +35,10 @@ export const Navbar = () => {
         >
           <img
             src="/akr_logo.jpg"
-            alt="AKR Logo"
+            alt="AKR Social Welfare Trust Logo - Chennai Tamil Nadu"
+            width="36"
+            height="36"
+            loading="eager"
             className="h-9 w-9 object-contain mr-2.5 rounded-full border border-[#0A1128]/10 bg-white p-0.5 shadow-sm"
           />
           <span>

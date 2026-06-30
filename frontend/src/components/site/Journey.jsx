@@ -22,12 +22,14 @@ export const Journey = () => {
             <p className="text-[#4B5563] text-lg leading-relaxed">{j.description}</p>
             <img
               src={j.image}
-              alt={`${site.brand.name} in conversation`}
+              alt="Kumaran M.A., BJP Chennai West District leader and AKR Social Welfare Trust Chairman"
               data-testid="about-portrait"
               className="mt-8 w-full rounded-xl shadow-md object-contain"
               style={{ display: "block", maxHeight: "600px", objectPosition: "center top" }}
               loading="lazy"
               decoding="async"
+              width="600"
+              height="400"
             />
           </div>
         </div>

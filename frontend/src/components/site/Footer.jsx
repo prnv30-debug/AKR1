@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Youtube, Linkedin, Mail, MapPin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Youtube, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 import { useSite } from "../../content/site.config";
 
 const ICONS = { Facebook, Twitter, Instagram, Youtube, Linkedin };
@@ -15,7 +15,10 @@ export const Footer = () => {
               <div className="w-12 h-12 bg-white flex items-center justify-center rounded-full overflow-hidden p-0.5 border border-white/20 shadow-sm">
                 <img
                   src="/akr_logo.jpg"
-                  alt="AKR Logo"
+                  alt="AKR Social Welfare Trust Logo - Chennai Tamil Nadu"
+                  width="48"
+                  height="48"
+                  loading="lazy"
                   className="w-full h-full object-contain rounded-full"
                 />
               </div>
@@ -46,6 +49,14 @@ export const Footer = () => {
                 {f.email}
               </a>
             </div>
+            {f.phone && (
+              <div className="flex items-center gap-3 text-white/80 mt-3">
+                <Phone size={16} />
+                <a href={`tel:${f.phone}`} className="hover:text-[#EA580C] transition-colors">
+                  {f.phone}
+                </a>
+              </div>
+            )}
           </div>
 
           <div className="lg:col-span-3">
@@ -100,6 +111,26 @@ export const Footer = () => {
           </div>
           <span>{f.designedBy}</span>
         </div>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "AKR Social Welfare Trust",
+            "image": "https://akrtrust.org/og-image.jpg",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "457, Mathur MMDA",
+              "addressLocality": "Chennai",
+              "addressRegion": "TN",
+              "postalCode": "600068",
+              "addressCountry": "IN"
+            },
+            "telephone": f.phone || "+91 94440 12345",
+            "email": f.email || "akrsocialwelfaretrust@gmail.com",
+            "url": "https://akrtrust.org",
+            "openingHours": "Mo-Sa 09:00-18:00"
+          })}
+        </script>
       </div>
     </footer>
   );

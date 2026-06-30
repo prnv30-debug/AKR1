@@ -78,7 +78,10 @@ export const AGR = () => {
               <div className="w-16 h-16 bg-white flex items-center justify-center rounded-full shadow-md p-1 border border-[#EA580C]/10">
                 <img
                   src="/akr_logo.jpg"
-                  alt="AKR Trust Logo"
+                  alt="AKR Social Welfare Trust Logo - Chennai Tamil Nadu"
+                  width="64"
+                  height="64"
+                  loading="lazy"
                   className="w-full h-full object-contain rounded-full"
                 />
               </div>
@@ -139,7 +142,10 @@ export const AGR = () => {
                 <div className="w-12 h-12 bg-white flex items-center justify-center rounded-sm overflow-hidden p-1 border border-white/20">
                   <img
                     src="/akr_logo.jpg"
-                    alt="AKR Logo"
+                    alt="AKR Social Welfare Trust Logo - Chennai Tamil Nadu"
+                    width="48"
+                    height="48"
+                    loading="lazy"
                     className="w-full h-full object-contain rounded-full"
                   />
                 </div>
@@ -172,7 +178,7 @@ export const AGR = () => {
         {/* Bento gallery */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 lg:gap-6">
           <div className="md:col-span-7 relative overflow-hidden group">
-            <img src={a.gallery.large.image} alt={a.gallery.large.label} data-testid="agr-img-1" className="w-full h-[300px] md:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
+            <img src={a.gallery.large.image} alt={a.gallery.large.label} data-testid="agr-img-1" className="w-full h-[300px] md:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" width="600" height="480" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent text-white">
               <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C]">{a.gallery.large.label}</div>
               <div className="font-display text-xl font-semibold mt-1">{a.gallery.large.caption}</div>
@@ -181,7 +187,7 @@ export const AGR = () => {
           <div className="md:col-span-5 grid grid-rows-2 gap-4 lg:gap-6">
             {[a.gallery.small1, a.gallery.small2].map((g, i) => (
               <div key={i} className="relative overflow-hidden group">
-                <img src={g.image} alt={g.label} data-testid={`agr-img-${i + 2}`} className="w-full h-[230px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" />
+                <img src={g.image} alt={g.label} data-testid={`agr-img-${i + 2}`} className="w-full h-[230px] object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" decoding="async" width="400" height="230" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent text-white">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C]">{g.label}</div>
                   <div className="font-display text-sm font-semibold mt-1">{g.caption}</div>

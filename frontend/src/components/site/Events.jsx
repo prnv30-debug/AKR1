@@ -42,7 +42,7 @@ export const Events = () => {
                 className="border border-[#0A1128]/10 bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
                 <div className="relative h-56 overflow-hidden">
-                  <img src={ev.image} alt={ev.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
+                  <img src={ev.image} alt={ev.title} className="w-full h-full object-cover" loading="lazy" decoding="async" width="600" height="400" />
                   <span className="absolute top-4 left-4 bg-white text-[#0A1128] text-[10px] uppercase tracking-[0.2em] font-semibold px-3 py-1.5">
                     {ev.tag}
                   </span>

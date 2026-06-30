@@ -390,6 +390,9 @@ export const Gallery = () => {
                       <img
                         src={item.src}
                         alt={title}
+                        loading="lazy"
+                        width="600"
+                        height="450"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         onError={(e) => {
                           if (e.target.src !== window.location.origin + item.fallbackSrc) {

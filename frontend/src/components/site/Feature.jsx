@@ -87,8 +87,11 @@ export const Feature = () => {
           {/* The portrait */}
           <img
             src={img}
-            alt={`${site.brand.name} portrait`}
+            alt="Kumaran M.A., Founder of AKR Social Welfare Trust & Former BJP Chennai West District General Secretary"
             data-testid="feature-portrait"
+            loading="lazy"
+            width="600"
+            height="700"
             className="absolute inset-0 w-full h-full object-cover object-bottom lg:-mr-10"
             style={{ objectPosition: "center 30%" }}
           />

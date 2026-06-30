@@ -18,7 +18,10 @@ export const Hero = () => {
             <div className="w-12 h-12 bg-white flex items-center justify-center rounded-full shadow-sm border border-[#0A1128]/5 p-0.5">
               <img
                 src="/akr_logo.jpg"
-                alt="AKR Logo"
+                alt="AKR Social Welfare Trust Logo - Chennai Tamil Nadu"
+                width="48"
+                height="48"
+                loading="eager"
                 className="w-full h-full object-contain rounded-full"
               />
             </div>
@@ -105,8 +108,12 @@ export const Hero = () => {
             >
               <img
                 src={h.image}
-                alt={`${site.brand.name} portrait`}
+                alt="Kumaran M.A., General Secretary BJP Chennai West District"
                 data-testid="hero-portrait"
+                loading="eager"
+                fetchPriority="high"
+                width="640"
+                height="640"
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{ objectPosition: "center top" }}
               />

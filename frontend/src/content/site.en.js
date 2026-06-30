@@ -20,41 +20,40 @@ export const site = {
   seo: {
     title: "Kumaran M.A. — Founder-Chairman of AKR Social Welfare Trust & Former BJP Leader, Madhavaram",
     description:
-      "Kumaran M.A. is the Founder-Chairman of AKR Social Welfare Trust, Madhavaram. Formerly General Secretary of BJP Chennai West District, he has served 2,000+ beneficiaries through education, healthcare, senior citizen pension and daily welfare.",
+      "Kumaran M.A. is the Founder-Chairman of AKR Social Welfare Trust, Madhavaram. Formerly General Secretary of BJP Chennai West District, he has served 52,000+ beneficiaries through education, healthcare, senior citizen pension and daily welfare.",
     keywords:
-      "Kumaran MA, Madhavaram, BJP Chennai West, AKR Social Welfare Trust, Madhavaram politician, social service Chennai, Annamalai BJP, Rajini Makkal Mandram, DAT Constructions",
+      "Kumaran MA, BJP Chennai West, AKR Social Welfare Trust, Chennai politician, BJP Tamil Nadu, social welfare Chennai, volunteer Chennai, BJP General Secretary, BJP Chennai West volunteer, social welfare trust Chennai, Kumaran MA BJP, AKR Trust Chennai contact",
     ogImage:
-      "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/qtiemh4n_main.jpeg",
-    siteUrl: "https://kumaran-ma.in",
+      "https://akrtrust.org/og-image.jpg",
+    siteUrl: "https://akrtrust.org",
   },
 
   // Hero
   hero: {
     image:
       "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/htnjn8mo_hero.jpeg",
-    headlineLine1: "Work for",
-    headlineLine2Prefix: "the people.",
-    headlineItalic: "Serve.",
-    headlineLine3: "Uplift.",
+    headlineLine1: "No matter who",
+    headlineLine2Prefix: "hates you,",
+    headlineItalic: "be the one",
+    headlineLine3: "who loves.",
     description:
-      "Kumaran M.A. — a self-made entrepreneur, founder of DAT Constructions & Transport, Founder-Chairman of AKR Social Welfare Trust serving 2,000+ families across Madhavaram, and former General Secretary of BJP Chennai West District.",
+      "Kumaran M.A. — a self-made entrepreneur, founder of DAT Constructions & Transport, Founder-Chairman of AKR Social Welfare Trust serving 52,000+ lives across 184 villages, and former General Secretary of BJP Chennai West District.",
     primaryCta: { label: "Join the Movement", href: "#volunteer" },
     secondaryCta: { label: "Read the Journey", href: "#journey" },
     manifestoLabel: "My Mission",
     manifestoQuote:
-      "Work for the people, serve the people, and uplift the people.",
+      "No matter who hates you, be the one who loves.",
     stats: [
       { value: "9+", label: "Years AKR Trust" },
-      { value: "2K+", label: "Beneficiaries served" },
+      { value: "52K+", label: "Beneficiaries served" },
       { value: "650", label: "Families served daily" },
     ],
     ticker: [
-      "Senior citizen pension",
-      "Free drinking water · 650 families",
-      "Educational assistance",
-      "Medical aid & health camps",
-      "Employment guidance for youth",
-      "Sewing machines · Tricycles · Livelihood",
+      "Chennai · Tamil Nadu · BJP · Social Welfare · 52,000+ Lives",
+      "Serving 184 villages across Chennai & Tamil Nadu",
+      "Senior citizen pension & daily clean water for 650 families",
+      "Educational assistance & medical aid camps",
+      "Employment guidance & livelihood support for youth",
     ],
   },
 
