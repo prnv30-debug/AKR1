@@ -14,8 +14,12 @@
     --kumaran-border: #e5e7eb;
 }
 
-body {
+html, body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
     font-family: "IBM Plex Sans", system-ui, sans-serif;
     background-color: var(--kumaran-bg);
     color: var(--kumaran-text);
