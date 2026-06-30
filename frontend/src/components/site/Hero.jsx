@@ -92,10 +92,10 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Right - portrait */}
+        {/* Right - portrait & badge */}
         <div className="lg:col-span-5 fade-up order-1 lg:order-2" style={{ animationDelay: "120ms" }}>
-          {/* Crystal Clear Portrait Image Container (Zero blur, zero dark overlay) */}
-          <div className="relative w-full h-[460px] sm:h-[540px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-[#0A1128]/10 bg-[#FDFBF7]">
+          {/* Main Portrait Frame */}
+          <div className="relative w-full h-[460px] sm:h-[540px] lg:h-[600px] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(10,17,40,0.18)] border border-[#0A1128]/10 bg-[#FDFBF7]">
             <img
               src={h.image}
               alt="Kumaran M.A., Founder of AKR Social Welfare Trust"
@@ -105,27 +105,47 @@ export const Hero = () => {
               className="w-full h-full object-cover"
               style={{ objectPosition: "center top" }}
             />
+
+            {/* Subtle bottom gradient just behind the glass card */}
+            <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-[#0A1128]/80 via-[#0A1128]/30 to-transparent pointer-events-none" />
+
+            {/* Floating Glassmorphism Founder Card */}
+            <div className="absolute inset-x-4 bottom-4 sm:inset-x-6 sm:bottom-6 bg-[#0A1128]/90 backdrop-blur-md border border-white/15 rounded-2xl p-5 sm:p-6 text-white shadow-2xl">
+              <div className="flex items-center justify-between gap-4">
+                <div>
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#EA580C]" />
+                    <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] text-[#EA580C]">
+                      {isTa ? "நிறுவனர் & தலைவர்" : "FOUNDER & CHAIRMAN"}
+                    </span>
+                  </div>
+                  <h3 className="font-display font-black text-white text-2xl sm:text-3xl tracking-tight uppercase leading-none">
+                    {isTa ? "குமரன் M.A." : "KUMARAN M.A."}
+                  </h3>
+                  <p className="font-display text-[11px] sm:text-xs text-white/75 tracking-wider uppercase mt-1.5">
+                    {site.brand.trustName}
+                  </p>
+                </div>
+
+                <div className="hidden sm:flex flex-col items-end justify-center shrink-0 border-l border-white/15 pl-5">
+                  <span className="text-xl font-black text-[#EA580C] font-display uppercase tracking-wider">Est.</span>
+                  <span className="text-2xl font-black text-white font-display leading-none">2009</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Editorial Founder & Chairman Title & Manifesto Quote — Merged cleanly into page background */}
-          <div className="mt-6 px-1">
-            <h2 className="font-display font-black text-[#0A1128] text-2xl sm:text-3xl lg:text-[32px] tracking-tight leading-none uppercase">
-              {isTa ? "குமரன் M.A." : "KUMARAN M.A."}
-            </h2>
-            <div className="flex items-center gap-3 mt-2.5">
-              <span className="h-0.5 w-8 bg-[#EA580C] shrink-0" />
-              <p className="font-display font-bold text-[#EA580C] text-xs sm:text-sm uppercase tracking-[0.22em]">
-                {isTa ? "ஏ.கே.ஆர் சமூக நலத் தொண்டு நிறுவனத்தின் நிறுவனர் & தலைவர்" : "FOUNDER & CHAIRMAN OF AKR TRUST"}
-              </p>
+          {/* Clean Organized Manifesto Quote Card */}
+          <div className="mt-5 sm:mt-6 bg-white rounded-2xl p-6 sm:p-7 border border-[#0A1128]/10 shadow-sm flex items-start gap-4 sm:gap-5">
+            <div className="w-11 h-11 rounded-xl bg-[#EA580C]/10 flex items-center justify-center text-[#EA580C] font-serif font-bold text-2xl shrink-0 mt-0.5">
+              &ldquo;
             </div>
-
-            {/* Manifesto Quote integrated below */}
-            <div className="mt-5 pt-4 border-t border-[#0A1128]/10 flex flex-col gap-1.5">
-              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#EA580C]">
+            <div>
+              <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.28em] text-[#EA580C] mb-1.5">
                 {h.manifestoLabel}
-              </span>
-              <p className="font-serif-quote italic text-lg sm:text-xl text-[#0A1128]/90 leading-snug">
-                &ldquo;{h.manifestoQuote}&rdquo;
+              </div>
+              <p className="font-serif-quote italic text-lg sm:text-xl text-[#0A1128]/95 leading-snug">
+                {h.manifestoQuote}
               </p>
             </div>
           </div>
