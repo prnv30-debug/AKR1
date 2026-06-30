@@ -129,7 +129,7 @@ export const Hero = () => {
 
                 <div className="hidden sm:flex flex-col items-end justify-center shrink-0 border-l border-white/15 pl-5">
                   <span className="text-xl font-black text-[#EA580C] font-display uppercase tracking-wider">Est.</span>
-                  <span className="text-2xl font-black text-white font-display leading-none">2009</span>
+                  <span className="text-2xl font-black text-white font-display leading-none">2021</span>
                 </div>
               </div>
             </div>
