@@ -64,7 +64,7 @@ export const site = {
     title:
       "From a middle-class home in Tiruvottiyur to BJP's Chennai West leadership.",
     description:
-      "Born to a school teacher and a school clerk. Three decades in business. A father, a son of Tiruvottiyur, and an unrelenting public servant — Kumaran M.A.'s story is built brick by brick, with service at its core.",
+      "Born to respected parents Shri Adhikesavan and Smt. Valliammal. Three decades in business. A devoted father, a proud son of Tiruvottiyur, and a leading figure in the 'We The Leader' movement — Kumaran M.A.'s story is built brick by brick, with selfless public service at its core.",
     milestones: [
       {
         year: "1996",
@@ -99,7 +99,7 @@ export const site = {
       {
         year: "2021",
         title: "Founded AKR Social Welfare Trust",
-        body: "Founded the AKR Social Welfare Trust — named after his father Mr. Adikesavan and his late son Karthik Raja — to formalise his public service mission.",
+        body: "Founded the AKR Social Welfare Trust — named after his parents Shri Adhikesavan & Smt. Valliammal and his late son Karthik Raja — to formalise his public service mission.",
       },
       {
         year: "2022",
@@ -113,8 +113,8 @@ export const site = {
       },
       {
         year: "2026",
-        title: "Joined 'WE THE LEADER'",
-        body: "Joined the 'WE THE LEADER' movement under his political mentor Mr. Annamalai Kuppusamy, continuing the fight for clean, service-driven politics.",
+        title: "Leader in 'WE THE LEADER' Movement",
+        body: "Actively leading as a prominent force in the 'WE THE LEADER' movement under his political mentor Shri Annamalai Kuppusamy, continuing the fight for clean, service-driven politics.",
       },
     ],
   },
