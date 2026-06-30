@@ -94,40 +94,21 @@ export const Hero = () => {
 
         {/* Right - portrait */}
         <div className="lg:col-span-5 fade-up order-1 lg:order-2" style={{ animationDelay: "120ms" }}>
-          {/* Portrait Image Container */}
-          <div
-            className="relative w-full h-[460px] sm:h-[540px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-[#0A1128]/10"
-            style={{
-              background:
-                "linear-gradient(180deg, #FDFBF7 0%, #F5E9D6 55%, #EA580C 100%)",
-            }}
-          >
+          {/* Crystal Clear Portrait Image Container (Zero blur, zero dark overlay) */}
+          <div className="relative w-full h-[460px] sm:h-[540px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl border border-[#0A1128]/10 bg-[#FDFBF7]">
             <img
               src={h.image}
               alt="Kumaran M.A., Founder of AKR Social Welfare Trust"
               data-testid="hero-portrait"
               loading="eager"
               fetchPriority="high"
-              width="640"
-              height="640"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="w-full h-full object-cover"
               style={{ objectPosition: "center top" }}
             />
-            {/* Smooth bottom gradient overlay for the quote */}
-            <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-[#0A1128] via-[#0A1128]/70 to-transparent" />
-
-            <div className="absolute bottom-0 inset-x-0 p-6 sm:p-8 text-white">
-              <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#EA580C] mb-2">
-                {h.manifestoLabel}
-              </div>
-              <p className="font-serif-quote italic text-lg sm:text-xl text-white/95 leading-snug">
-                &ldquo;{h.manifestoQuote}&rdquo;
-              </p>
-            </div>
           </div>
 
-          {/* Editorial Founder & Chairman Title — Merged naturally into page background */}
-          <div className="mt-5 sm:mt-6 px-1">
+          {/* Editorial Founder & Chairman Title & Manifesto Quote — Merged cleanly into page background */}
+          <div className="mt-6 px-1">
             <h2 className="font-display font-black text-[#0A1128] text-2xl sm:text-3xl lg:text-[32px] tracking-tight leading-none uppercase">
               {isTa ? "குமரன் M.A." : "KUMARAN M.A."}
             </h2>
@@ -135,6 +116,16 @@ export const Hero = () => {
               <span className="h-0.5 w-8 bg-[#EA580C] shrink-0" />
               <p className="font-display font-bold text-[#EA580C] text-xs sm:text-sm uppercase tracking-[0.22em]">
                 {isTa ? "ஏ.கே.ஆர் சமூக நலத் தொண்டு நிறுவனத்தின் நிறுவனர் & தலைவர்" : "FOUNDER & CHAIRMAN OF AKR TRUST"}
+              </p>
+            </div>
+
+            {/* Manifesto Quote integrated below */}
+            <div className="mt-5 pt-4 border-t border-[#0A1128]/10 flex flex-col gap-1.5">
+              <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#EA580C]">
+                {h.manifestoLabel}
+              </span>
+              <p className="font-serif-quote italic text-lg sm:text-xl text-[#0A1128]/90 leading-snug">
+                &ldquo;{h.manifestoQuote}&rdquo;
               </p>
             </div>
           </div>
