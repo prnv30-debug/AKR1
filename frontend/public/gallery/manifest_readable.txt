@@ -1,0 +1,85 @@
+Slide Event                                     File                               Size
+----------------------------------------------------------------------------------------------------
+1     Profile-TitleSlide                        slide01_Profile-TitleSlide/img01.png5.91x9.02
+2     Profile-ContactInfo                       slide02_Profile-ContactInfo/img01.png4.24x6.36
+3     Water-Supply-Scarcity-Madhavaram          slide03_Water-Supply-Scarcity-Madhavaram/img01.png2.66x2.7
+3     Water-Supply-Scarcity-Madhavaram          slide03_Water-Supply-Scarcity-Madhavaram/img02.png4.16x2.53
+3     Water-Supply-Scarcity-Madhavaram          slide03_Water-Supply-Scarcity-Madhavaram/img03.png4.5x2.34
+3     Water-Supply-Scarcity-Madhavaram          slide03_Water-Supply-Scarcity-Madhavaram/img04.png1.19x1.71
+4     Water-For-Animals                         slide04_Water-For-Animals/img01.png4.22x2.67
+4     Water-For-Animals                         slide04_Water-For-Animals/img02.png3.75x2.25
+4     Water-For-Animals                         slide04_Water-For-Animals/img03.png3.62x2.3
+5     Food-CorporationWorkers-Covid             slide05_Food-CorporationWorkers-Covid/img01.jpeg3.76x2.82
+5     Food-CorporationWorkers-Covid             slide05_Food-CorporationWorkers-Covid/img02.jpeg3.62x2.71
+5     Food-CorporationWorkers-Covid             slide05_Food-CorporationWorkers-Covid/img03.jpeg3.62x2.82
+6     Aravanaikum-Karangal-Orphanage            slide06_Aravanaikum-Karangal-Orphanage/img01.png3.72x2.76
+6     Aravanaikum-Karangal-Orphanage            slide06_Aravanaikum-Karangal-Orphanage/img02.png3.34x2.72
+6     Aravanaikum-Karangal-Orphanage            slide06_Aravanaikum-Karangal-Orphanage/img03.png3.72x3.01
+7     Rice-Pension-Elders                       slide07_Rice-Pension-Elders/img01.png3.97x3.03
+7     Rice-Pension-Elders                       slide07_Rice-Pension-Elders/img02.png1.21x1.71
+7     Rice-Pension-Elders                       slide07_Rice-Pension-Elders/img03.png2.55x3.03
+7     Rice-Pension-Elders                       slide07_Rice-Pension-Elders/img04.png3.27x3.76
+7     Rice-Pension-Elders                       slide07_Rice-Pension-Elders/img05.png3.32x3.66
+8     Free-WaterCan-Members                     slide08_Free-WaterCan-Members/img01.png5.8x3.3
+8     Free-WaterCan-Members                     slide08_Free-WaterCan-Members/img02.png2.04x3.87
+8     Free-WaterCan-Members                     slide08_Free-WaterCan-Members/img03.png3.53x3.76
+9     Medical-Help-Handicapped                  slide09_Medical-Help-Handicapped/img01.png3.41x3.34
+9     Medical-Help-Handicapped                  slide09_Medical-Help-Handicapped/img02.png3.84x3.34
+9     Medical-Help-Handicapped                  slide09_Medical-Help-Handicapped/img03.png6.88x3.98
+9     Medical-Help-Handicapped                  slide09_Medical-Help-Handicapped/img04.png1.23x1.84
+10    Eye-Checkup-Camp                          slide10_Eye-Checkup-Camp/img01.png 3.94x2.38
+10    Eye-Checkup-Camp                          slide10_Eye-Checkup-Camp/img02.png 3.44x3.01
+10    Eye-Checkup-Camp                          slide10_Eye-Checkup-Camp/img03.png 3.05x2.49
+10    Eye-Checkup-Camp                          slide10_Eye-Checkup-Camp/img04.png 3.52x3.02
+10    Eye-Checkup-Camp                          slide10_Eye-Checkup-Camp/img05.png 1.21x1.81
+11    Valaikappu-Babyshower                     slide11_Valaikappu-Babyshower/img01.png6.14x4.26
+11    Valaikappu-Babyshower                     slide11_Valaikappu-Babyshower/img02.png3.9x2.31
+11    Valaikappu-Babyshower                     slide11_Valaikappu-Babyshower/img03.png3.23x2.34
+11    Valaikappu-Babyshower                     slide11_Valaikappu-Babyshower/img04.png1.28x1.92
+12    Tailoring-Machines-Women                  slide12_Tailoring-Machines-Women/img01.png4.84x3.21
+12    Tailoring-Machines-Women                  slide12_Tailoring-Machines-Women/img02.png4.94x3.26
+12    Tailoring-Machines-Women                  slide12_Tailoring-Machines-Women/img03.png1.22x1.83
+13    Tree-Sapling-Planting-Mathur              slide13_Tree-Sapling-Planting-Mathur/img01.png3.29x2.69
+13    Tree-Sapling-Planting-Mathur              slide13_Tree-Sapling-Planting-Mathur/img02.png3.52x4.49
+13    Tree-Sapling-Planting-Mathur              slide13_Tree-Sapling-Planting-Mathur/img03.png3.06x4.1
+13    Tree-Sapling-Planting-Mathur              slide13_Tree-Sapling-Planting-Mathur/img04.png1.27x1.91
+14    JanDhan-Yojana-BankAccounts               slide14_JanDhan-Yojana-BankAccounts/img01.png6.36x4.0
+14    JanDhan-Yojana-BankAccounts               slide14_JanDhan-Yojana-BankAccounts/img02.png3.4x2.43
+15    Pongal-Celebration-Rangoli                slide15_Pongal-Celebration-Rangoli/img01.png2.95x3.33
+15    Pongal-Celebration-Rangoli                slide15_Pongal-Celebration-Rangoli/img02.png3.31x3.19
+15    Pongal-Celebration-Rangoli                slide15_Pongal-Celebration-Rangoli/img03.png2.95x3.19
+16    Career-Start-BJP                          slide16_Career-Start-BJP/img01.png 4.91x3.89
+16    Career-Start-BJP                          slide16_Career-Start-BJP/img02.png 2.5x2.16
+17    Birthday-SyamaPrasadMukherjee             slide17_Birthday-SyamaPrasadMukherjee/img01.png4.24x3.17
+17    Birthday-SyamaPrasadMukherjee             slide17_Birthday-SyamaPrasadMukherjee/img02.jpeg1.68x2.16
+17    Birthday-SyamaPrasadMukherjee             slide17_Birthday-SyamaPrasadMukherjee/img03.png3.55x3.31
+17    Birthday-SyamaPrasadMukherjee             slide17_Birthday-SyamaPrasadMukherjee/img04.png2.71x3.17
+18    Birthday-AtalBihariVajpayee               slide18_Birthday-AtalBihariVajpayee/img01.jpeg1.61x2.16
+18    Birthday-AtalBihariVajpayee               slide18_Birthday-AtalBihariVajpayee/img02.png6.9x3.49
+18    Birthday-AtalBihariVajpayee               slide18_Birthday-AtalBihariVajpayee/img03.png4.41x3.35
+18    Birthday-AtalBihariVajpayee               slide18_Birthday-AtalBihariVajpayee/img04.png2.19x3.35
+19    Birthday-DrBRAmbedkar                     slide19_Birthday-DrBRAmbedkar/img01.jpeg1.87x2.16
+19    Birthday-DrBRAmbedkar                     slide19_Birthday-DrBRAmbedkar/img02.png5.18x3.67
+19    Birthday-DrBRAmbedkar                     slide19_Birthday-DrBRAmbedkar/img03.png5.44x3.37
+20    RSS-Rally-Mathur                          slide20_RSS-Rally-Mathur/img01.png 4.21x3.53
+20    RSS-Rally-Mathur                          slide20_RSS-Rally-Mathur/img02.png 2.54x3.53
+20    RSS-Rally-Mathur                          slide20_RSS-Rally-Mathur/img03.png 2.87x3.44
+20    RSS-Rally-Mathur                          slide20_RSS-Rally-Mathur/img04.jpeg1.83x2.22
+21    Welcoming-AmitShah                        slide21_Welcoming-AmitShah/img01.jpeg1.95x2.19
+21    Welcoming-AmitShah                        slide21_Welcoming-AmitShah/img02.png6.71x5.8
+22    AKR-Trust-AnnualWelfareFunction           slide22_AKR-Trust-AnnualWelfareFunction/img01.png3.48x3.28
+22    AKR-Trust-AnnualWelfareFunction           slide22_AKR-Trust-AnnualWelfareFunction/img02.png2.2x2.17
+22    AKR-Trust-AnnualWelfareFunction           slide22_AKR-Trust-AnnualWelfareFunction/img03.png2.78x3.28
+23    Birthday-Celebration-Karunagarajan-Priya  slide23_Birthday-Celebration-Karunagarajan-Priya/img01.png3.53x2.58
+23    Birthday-Celebration-Karunagarajan-Priya  slide23_Birthday-Celebration-Karunagarajan-Priya/img02.png6.11x3.79
+23    Birthday-Celebration-Karunagarajan-Priya  slide23_Birthday-Celebration-Karunagarajan-Priya/img03.png3.55x2.58
+24    Media-Coverage-1                          slide24_Media-Coverage-1/img01.png 2.66x4.4
+24    Media-Coverage-1                          slide24_Media-Coverage-1/img02.png 3.92x1.89
+24    Media-Coverage-1                          slide24_Media-Coverage-1/img03.png 3.92x2.19
+24    Media-Coverage-1                          slide24_Media-Coverage-1/img04.png 3.93x2.48
+24    Media-Coverage-1                          slide24_Media-Coverage-1/img05.png 2.47x1.86
+25    Media-Coverage-2                          slide25_Media-Coverage-2/img01.png 3.54x1.92
+25    Media-Coverage-2                          slide25_Media-Coverage-2/img02.png 2.55x1.92
+25    Media-Coverage-2                          slide25_Media-Coverage-2/img03.png 3.36x2.4
+25    Media-Coverage-2                          slide25_Media-Coverage-2/img04.png 6.63x2.99
+25    Media-Coverage-2                          slide25_Media-Coverage-2/img05.png 3.2x2.4

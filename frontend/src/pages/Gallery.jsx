@@ -37,254 +37,308 @@ const UI_TEXT = {
 
 const CATEGORIES = ["All", "Social Activities", "Political", "AKR Trust Events", "Media Coverage"];
 
-// 100% Unique non-duplicated image list with full Tamil & English translations
+// Sourced from gallery_output slide deck — one primary photo per event
 const GALLERY_ITEMS = [
-  // Political
+  // Top Priority Leadership
   {
-    id: 1,
-    src: "/kumaran_profile_images/slide21_img58.png",
+    id: 1001,
+    src: "/gallery/modiji.jpeg",
     fallbackSrc: "/journey_image.jpg",
     category: "Political",
-    titleEn: "Meeting Hon'ble Union Minister Amit Shah Ji",
-    titleTa: "மாண்புமிகு மத்திய உள்துறை அமைச்சர் அமித் ஷா சந்திப்பு",
-    descEn: "Strategic discussions on constituency development and public welfare roadmaps for Chennai West.",
-    descTa: "மேற்கு சென்னை மற்றும் மாதவரம் பகுதி மேம்பாடு குறித்த முக்கிய ஆலோசனைகள்."
+    titleEn: "With Hon’ble Prime Minister Shri Narendra Modi Ji",
+    titleTa: "மாண்புமிகு பாரதப் பிரதமர் திரு. நரேந்திர மோடி ஜி அவர்களுடன்",
+    descEn: "Inspired by the visionary leadership and service-first governance of Hon'ble Prime Minister Narendra Modi Ji.",
+    descTa: "மாண்புமிகு பாரதப் பிரதமர் நரேந்திர மோடி ஜி அவர்களின் தொலைநோக்குத் தலைமை மற்றும் மக்கள் சேவையால் ஈர்க்கப்பட்டு."
   },
   {
-    id: 2,
-    src: "/kumaran_profile_images/slide16_img46.png",
+    id: 1002,
+    src: "/gallery/amitshah ji.jpeg",
     fallbackSrc: "/journey_image.jpg",
     category: "Political",
-    titleEn: "Official Induction at State Headquarters",
-    titleTa: "மாநில தலைமையகத்தில் அதிகாரப்பூர்வ இணைப்பு",
-    descEn: "Formal entry into active politics in the presence of senior state leadership.",
-    descTa: "மாநில மூத்த தலைவர்கள் முன்னிலையில் இணைந்த வரலாற்று தருணம்."
-  },
-  {
-    id: 3,
-    src: "/kumaran_profile_images/slide18_img50.png",
-    fallbackSrc: "/journey_image.jpg",
-    category: "Political",
-    titleEn: "District Patha Sanchalan & Unity Procession",
-    titleTa: "மாவட்ட பத்த சஞ்சலன் மற்றும் ஒற்றுமை பேரணி",
-    descEn: "Leading disciplined cadre and volunteers through major thoroughfares in Chennai West.",
-    descTa: "மேற்கு சென்னை முழுவதும் தொண்டர்கள் மற்றும் பொதுமக்களுடன் மாபெரும் பேரணி."
-  },
-  {
-    id: 4,
-    src: "/kumaran_profile_images/slide19_img54.png",
-    fallbackSrc: "/journey_image.jpg",
-    category: "Political",
-    titleEn: "Public Address on Civic Infrastructure",
-    titleTa: "அடிப்படை கட்டமைப்பு வசதிகள் குறித்த பொதுக்கூட்டம்",
-    descEn: "Addressing public gatherings to demand better drainage and road facilities for North Chennai.",
-    descTa: "வட சென்னை மக்களின் அடிப்படை வசதிகளுக்காக குரல் கொடுத்த மாபெரும் பொதுக்கூட்டம்."
-  },
-  {
-    id: 5,
-    src: "/kumaran_profile_images/slide20_img56.png",
-    fallbackSrc: "/journey_image.jpg",
-    category: "Political",
-    titleEn: "District Executive Committee Meeting",
-    titleTa: "மாவட்ட செயற்குழு மற்றும் நிர்வாக ஆலோசனைக் கூட்டம்",
-    descEn: "Coordinating ward-level welfare programs to ensure schemes reach the grassroots.",
-    descTa: "அரசு நலத்திட்டங்கள் சாமானிய மக்களை சென்றடைவதை உறுதி செய்யும் ஆலோசனைக் கூட்டம்."
-  },
-  {
-    id: 6,
-    src: "/kumaran_profile_images/slide17_img48.png",
-    fallbackSrc: "/journey_image.jpg",
-    category: "Political",
-    titleEn: "Public Agitation for Municipal Rights",
-    titleTa: "மாநகராட்சி அடிப்படை உரிமைகளுக்கான ஆர்ப்பாட்டம்",
-    descEn: "Leading peaceful demonstrations holding authorities accountable for clean drinking water and sanitation.",
-    descTa: "சுத்தமான குடிநீர் மற்றும் சுகாதாரத்திற்காக அதிகாரிகளை வலியுறுத்தி ஜனநாயக ரீதியிலான ஆர்ப்பாட்டம்."
+    titleEn: "Welcoming Hon’ble Union Home Minister Amit Shah Ji",
+    titleTa: "மாண்புமிகு மத்திய உள்துறை அமைச்சர் அமித் ஷா ஜி வரவேற்பு",
+    descEn: "Receiving and welcoming Union Home Minister Amit Shah Ji during his visit to Chennai.",
+    descTa: "சென்னை வருகையின் போது மாண்புமிகு மத்திய உள்துறை அமைச்சர் அமித் ஷா ஜி அவர்களை வரவேற்ற தருணம்."
   },
 
-  // AKR Trust Events
+  // Post Office Insurance Card for Students
   {
-    id: 7,
-    src: "/kumaran_profile_images/slide22_img60.png",
-    fallbackSrc: "/9th_day_celebration.jpg",
-    category: "AKR Trust Events",
-    titleEn: "State President K. Annamalai Gracing AKR Event",
-    titleTa: "மாநில தலைவர் கே. அண்ணாமலை பங்கேற்பு",
-    descEn: "Commending 106 consecutive months of self-funded public welfare in Madhavaram.",
-    descTa: "மாதவரத்தில் தொடர்ந்து 106 மாதங்களாக நடைபெறும் மக்கள் சேவையை பாராட்டிய தருணம்."
+    id: 1003,
+    src: "/gallery/post1.jpeg",
+    fallbackSrc: "/agr_small2.jpg",
+    category: "Social Activities",
+    titleEn: "Post Office Accidental Insurance Cards for Students (Part 1)",
+    titleTa: "மாணவர்களுக்கு அஞ்சலக விபத்து காப்பீடு அட்டை (பகுதி 1)",
+    descEn: "Distributing Post Office Accidental Insurance cards to secure the financial future of school and college students.",
+    descTa: "பள்ளி மற்றும் கல்லூரி மாணவர்களின் எதிர்காலத்தைப் பாதுகாக்கும் வகையில் அஞ்சலக விபத்து காப்பீட்டு அட்டைகள் வழங்கிய நிகழ்வு."
   },
   {
-    id: 8,
-    src: "/kumaran_profile_images/slide23_img62.png",
-    fallbackSrc: "/9th_day_celebration.jpg",
-    category: "AKR Trust Events",
-    titleEn: "9th Foundation Day Grand Assembly",
-    titleTa: "9-வது ஆண்டு துவக்க விழா மாபெரும் மாநாடு",
-    descEn: "Thousands of beneficiaries and elders uniting to celebrate continuous community service.",
-    descTa: "ஆயிரக்கணக்கான பயனாளிகள் மற்றும் பெரியவர்கள் பங்கேற்ற மாபெரும் ஆண்டு விழா."
+    id: 1004,
+    src: "/gallery/post2.jpeg",
+    fallbackSrc: "/agr_small2.jpg",
+    category: "Social Activities",
+    titleEn: "Post Office Accidental Insurance Cards for Students (Part 2)",
+    titleTa: "மாணவர்களுக்கு அஞ்சலக விபத்து காப்பீடு அட்டை (பகுதி 2)",
+    descEn: "Organising registration and distribution drives for student accidental insurance coverage across Madhavaram.",
+    descTa: "மாதவரம் முழுவதும் உள்ள மாணவர்களுக்காக அஞ்சலக விபத்து காப்பீட்டு பதிவு மற்றும் விநியோக முகாம்."
   },
   {
-    id: 9,
-    src: "/kumaran_profile_images/slide23_img61.png",
-    fallbackSrc: "/9th_day_celebration.jpg",
-    category: "AKR Trust Events",
-    titleEn: "Welfare Aid Distribution Ceremony",
-    titleTa: "நலத்திட்ட உதவிகள் வழங்கும் விழா",
-    descEn: "Direct handover of financial assistance and household staples to marginalized families.",
-    descTa: "ஏழை எளிய குடும்பங்களுக்கு நிதி உதவி மற்றும் அத்தியாவசிய பொருட்கள் வழங்கிய நிகழ்வு."
-  },
-  {
-    id: 10,
-    src: "/kumaran_profile_images/slide14_img41.png",
-    fallbackSrc: "/event_livelihood.jpg",
-    category: "AKR Trust Events",
-    titleEn: "Livelihood Sewing Machine Handover",
-    titleTa: "வாழ்வாதார தையல் இயந்திரங்கள் வழங்குதல்",
-    descEn: "Equipping underprivileged women with tailoring machines for independent home-based income.",
-    descTa: "பெண்களின் சுயதொழில் மற்றும் பொருளாதார சுதந்திரத்திற்காக இலவச தையல் இயந்திரங்கள் வழங்கல்."
-  },
-  {
-    id: 11,
-    src: "/kumaran_profile_images/slide14_img42.png",
-    fallbackSrc: "/event_livelihood.jpg",
-    category: "AKR Trust Events",
-    titleEn: "Tricycle Aid for Differently-Abled",
-    titleTa: "மாற்றுத்திறனாளிகளுக்கு மூன்று சக்கர வாகனங்கள்",
-    descEn: "Providing specialized mobility tricycles to ensure self-reliance and dignified daily livelihoods.",
-    descTa: "மாற்றுத்திறனாளிகளின் வாழ்வாதாரத்தை மேம்படுத்த சிறப்பு வாகனங்கள் வழங்கிய நிகழ்வு."
+    id: 1005,
+    src: "/gallery/post3.jpeg",
+    fallbackSrc: "/agr_small2.jpg",
+    category: "Social Activities",
+    titleEn: "Post Office Accidental Insurance Cards for Students (Part 3)",
+    titleTa: "மாணவர்களுக்கு அஞ்சலக விபத்து காப்பீடு அட்டை (பகுதி 3)",
+    descEn: "Empowering youth and supporting families with accessible post office social security schemes.",
+    descTa: "இளைஞர்களை மேம்படுத்தி குடும்பங்களுக்கு உதவும் அஞ்சலக சமூக பாதுகாப்புத் திட்டம்."
   },
 
   // Social Activities
   {
-    id: 12,
-    src: "/kumaran_profile_images/slide07_img21.png",
-    fallbackSrc: "/event_pension.jpg",
+    id: 1,
+    src: "/gallery/slide03_Water-Supply-Scarcity-Madhavaram/img03.png",
+    fallbackSrc: "/agr_small2.jpg",
     category: "Social Activities",
-    titleEn: "Monthly Senior Citizen Pension Drive Crowd",
-    titleTa: "மாதாந்திர முதியோர் ஓய்வூதியத் திட்டம்",
-    descEn: "₹500 assistance and 5kg rice distributed on the 5th of every month to over 2,000 elders.",
-    descTa: "ஒவ்வொரு மாதமும் 5-ஆம் தேதி 2,000-க்கும் மேற்பட்ட முதியோர்களுக்கு ரூ.500 மற்றும் 5கிலோ அரிசி வழங்கல்."
+    titleEn: "Fighting Water Scarcity in Madhavaram",
+    titleTa: "மாதவரம் குடிநீர் தட்டுப்பாட்டுக்கு எதிரான போராட்டம்",
+    descEn: "Rallying residents and raising awareness when Madhavaram faced severe drinking-water shortages.",
+    descTa: "குடிநீர் பற்றாக்குறை காலத்தில் மாதவரம் மக்களை ஒன்றிணைத்து விழிப்புணர்வு ஏற்படுத்திய போராட்டம்."
   },
   {
-    id: 13,
-    src: "/kumaran_profile_images/slide07_img20.png",
-    fallbackSrc: "/event_pension.jpg",
+    id: 2,
+    src: "/gallery/slide04_Water-For-Animals/img01.png",
+    fallbackSrc: "/agr_small2.jpg",
     category: "Social Activities",
-    titleEn: "Personal Care & Blessings from Elders",
-    titleTa: "முதியோர்களின் அன்பும் ஆசீர்வாதமும்",
-    descEn: "Personally attending to elderly mothers and fathers during monthly distribution drives.",
-    descTa: "முதியோர்களை நேரில் சந்தித்து குறைகளைக் கேட்டு ஆசி பெற்ற நெகிழ்ச்சியான தருணம்."
+    titleEn: "Clean Water for Cattle & Street Animals",
+    titleTa: "கால்நடைகள் மற்றும் தெரு விலங்குகளுக்கு குடிநீர்",
+    descEn: "Setting up water points so cattle and neighbourhood animals are not left thirsty in summer.",
+    descTa: "வறுக்கும் காலத்தில் கால்நடைகளும் தெரு விலங்குகளும் தவிக்காமல் குடிநீர் வழங்கிய சேவை."
   },
   {
-    id: 14,
-    src: "/kumaran_profile_images/slide11_img34.png",
+    id: 3,
+    src: "/gallery/slide05_Food-CorporationWorkers-Covid/img01.jpeg",
+    fallbackSrc: "/agr_large.jpg",
+    category: "Social Activities",
+    titleEn: "COVID Relief for Food Corporation Workers",
+    titleTa: "உணவுக் கழக ஊழியர்களுக்கு கொரோனா நேர உதவி",
+    descEn: "Supporting Food Corporation of India staff with essentials during the pandemic lockdowns.",
+    descTa: "கொரோனா ஊரடங்கு காலத்தில் உணவுக் கழக ஊழியர்களுக்கு அத்தியாவசிய உதவிகள் வழங்கிய நிகழ்வு."
+  },
+  {
+    id: 4,
+    src: "/gallery/slide06_Aravanaikum-Karangal-Orphanage/img01.png",
+    fallbackSrc: "/agr_large.jpg",
+    category: "Social Activities",
+    titleEn: "Visit to Aravanaikum Karangal Orphanage",
+    titleTa: "அனாதை இல்லம் — குழந்தைகளுடன் சந்திப்பு",
+    descEn: "Spending time with children at the orphanage and extending food, supplies and encouragement.",
+    descTa: "அனாதை இல்லக் குழந்தைகளுடன் நேரம் செலவிட்டு உணவு மற்றும் தேவையான உதவிகள் வழங்கிய தருணம்."
+  },
+  {
+    id: 5,
+    src: "/gallery/slide07_Rice-Pension-Elders/img04.png",
+    fallbackSrc: "/event_pension.jpg",
+    category: "Social Activities",
+    titleEn: "Monthly Rice & Pension for Elders",
+    titleTa: "மாதாந்திர அரிசி மற்றும் ஓய்வூதியம் — முதியோர்",
+    descEn: "Personally handing ₹500 assistance and 5 kg rice to registered senior citizens each month.",
+    descTa: "ஒவ்வொரு மாதமும் பதிவு செய்த முதியோர்களுக்கு ரூ.500 உதவியும் 5 கிலோ அரிசியும் நேரில் வழங்கல்."
+  },
+  {
+    id: 6,
+    src: "/gallery/slide08_Free-WaterCan-Members/img01.png",
+    fallbackSrc: "/agr_small2.jpg",
+    category: "Social Activities",
+    titleEn: "Free 20L Water Cans for Members",
+    titleTa: "உறுப்பினர்களுக்கு இலவச 20 லிட்டர் குடிநீர் கேன்கள்",
+    descEn: "Distributing RO water cans to registered families on alternate days across Madhavaram.",
+    descTa: "மாதவரம் முழுவதும் பதிவு செய்த குடும்பங்களுக்கு மாற்று நாட்களில் சுத்தமான குடிநீர் கேன்கள் வழங்கல்."
+  },
+  {
+    id: 7,
+    src: "/gallery/slide09_Medical-Help-Handicapped/img03.png",
+    fallbackSrc: "/event_livelihood.jpg",
+    category: "Social Activities",
+    titleEn: "Medical Aid for Differently-Abled Citizens",
+    titleTa: "மாற்றுத்திறனாளிகளுக்கு மருத்துவ உதவி",
+    descEn: "Arranging treatment support, mobility aids and follow-up care for persons with disabilities.",
+    descTa: "மாற்றுத்திறனாளிகளுக்கு மருத்துவ சிகிச்சை, இயக்க உதவிகள் மற்றும் தொடர் பராமரிப்பு வழங்கல்."
+  },
+  {
+    id: 8,
+    src: "/gallery/slide10_Eye-Checkup-Camp/img02.png",
+    fallbackSrc: "/agr_large.jpg",
+    category: "Social Activities",
+    titleEn: "Free Eye Check-up Camp",
+    titleTa: "இலவச கண் பரிசோதனை முகாம்",
+    descEn: "Screening vision, distributing spectacles and referring patients for cataract surgery.",
+    descTa: "கண் பார்வை பரிசோதனை, மூக்குக்கண்ணாடி வழங்கல் மற்றும் அறுவை சிகிச்சை பரிந்துரை — இலவச முகாம்."
+  },
+  {
+    id: 9,
+    src: "/gallery/slide11_Valaikappu-Babyshower/img01.png",
     fallbackSrc: "/agr_small1.jpg",
     category: "Social Activities",
     titleEn: "Community Valaikappu (Baby Shower)",
-    titleTa: "சமுதாய வளைகாப்பு மற்றும் தாய்மை கொண்டாட்டம்",
-    descEn: "Honoring expectant mothers with traditional bangles, sarees, feast, and nutrition kits.",
-    descTa: "கர்ப்பிணித் தாய்மார்களுக்கு சீர்வரிசை, வளையல் மற்றும் சத்தான உணவு வழங்கி சிறப்பித்த நிகழ்வு."
+    titleTa: "சமூக வளைகாப்பு — தாய்மை கொண்டாட்டம்",
+    descEn: "Honouring expectant mothers with bangles, sarees, nutrition kits and a community feast.",
+    descTa: "கர்ப்பிணி தாய்மார்களுக்கு வளையல், சீர்வரிசை, சத்தான உணவு மற்றும் சமூக விருந்து வழங்கிய நிகழ்வு."
+  },
+  {
+    id: 10,
+    src: "/gallery/slide13_Tree-Sapling-Planting-Mathur/img01.png",
+    fallbackSrc: "/agr_large.jpg",
+    category: "Social Activities",
+    titleEn: "Tree Sapling Drive in Mathur",
+    titleTa: "மத்தூரில் மர நடவு — பசுமைப் பணி",
+    descEn: "Planting saplings with local volunteers to green Mathur and improve neighbourhood shade.",
+    descTa: "மத்தூர் பகுதியில் உள்ளூர் தொண்டர்களுடன் மர நடவு செய்து சுற்றுச்சூழலை பாதுகாத்த பணி."
+  },
+  {
+    id: 11,
+    src: "/gallery/slide14_JanDhan-Yojana-BankAccounts/img01.png",
+    fallbackSrc: "/agr_large.jpg",
+    category: "Social Activities",
+    titleEn: "Jan Dhan Yojana — Bank Account Camp",
+    titleTa: "ஜன் தன் யோஜனா — வங்கிக் கணக்கு முகாம்",
+    descEn: "Helping unbanked families open zero-balance accounts under the Jan Dhan Yojana scheme.",
+    descTa: "வங்கிக் கணக்கு இல்லாத குடும்பங்களுக்கு ஜன் தன் யோஜனா மூலம் கணக்கு தொடங்க உதவிய முகாம்."
+  },
+  {
+    id: 12,
+    src: "/gallery/slide15_Pongal-Celebration-Rangoli/img02.png",
+    fallbackSrc: "/agr_large.jpg",
+    category: "Social Activities",
+    titleEn: "Pongal Celebration & Rangoli Event",
+    titleTa: "பொங்கல் கொண்டாட்டம் மற்றும் கோலம் போட்டி",
+    descEn: "Community Pongal with rangoli competitions and festive provisions for local families.",
+    descTa: "உள்ளூர் குடும்பங்களுடன் பொங்கல் கொண்டாட்டம், கோலம் போட்டி மற்றும் பண்டிகை உதவிகள்."
+  },
+
+  // AKR Trust Events
+  {
+    id: 13,
+    src: "/gallery/slide12_Tailoring-Machines-Women/img01.png",
+    fallbackSrc: "/event_livelihood.jpg",
+    category: "AKR Trust Events",
+    titleEn: "Sewing Machines for Women’s Livelihood",
+    titleTa: "பெண்களுக்கு தையல் இயந்திரங்கள் — வாழ்வாதாரம்",
+    descEn: "AKR Trust handing tailoring machines so women can earn from home-based work.",
+    descTa: "ஏ.கே.ஆர் அறக்கட்டளை மூலம் பெண்கள் வீட்டிலிருந்தே வருமானம் ஈட்ட தையல் இயந்திரங்கள் வழங்கல்."
+  },
+  {
+    id: 14,
+    src: "/gallery/slide22_AKR-Trust-AnnualWelfareFunction/img01.png",
+    fallbackSrc: "/9th_day_celebration.jpg",
+    category: "AKR Trust Events",
+    titleEn: "AKR Trust Annual Welfare Function",
+    titleTa: "ஏ.கே.ஆர் அறக்கட்டளை ஆண்டு நல விழா",
+    descEn: "Annual gathering distributing food, livelihood aids and welfare support to thousands.",
+    descTa: "ஆயிரக்கணக்கான பயனாளிகளுக்கு உணவு, வாழ்வாதார உதவிகள் மற்றும் நலத்திட்டங்கள் வழங்கிய ஆண்டு விழா."
   },
   {
     id: 15,
-    src: "/kumaran_profile_images/slide03_img07.png",
-    fallbackSrc: "/agr_small2.jpg",
-    category: "Social Activities",
-    titleEn: "Daily 20L Pure Drinking Water Supply",
-    titleTa: "தினசரி 20 லிட்டர் சுத்தமான குடிநீர் விநியோகம்",
-    descEn: "Deploying dedicated transport vehicles to deliver RO water cans directly to doorsteps.",
-    descTa: "மாதவரம் முழுவதும் குடிநீர் தட்டுப்பாட்டை போக்க வீடுகளுக்கே சென்று குடிநீர் கேன்கள் விநியோகம்."
+    src: "/gallery/slide23_Birthday-Celebration-Karunagarajan-Priya/img02.png",
+    fallbackSrc: "/9th_day_celebration.jpg",
+    category: "AKR Trust Events",
+    titleEn: "Foundation Day Celebration with Beneficiaries",
+    titleTa: "அறக்கட்டளை ஆண்டு விழா — பயனாளிகளுடன்",
+    descEn: "Celebrating another year of AKR Trust service with elders, families and community leaders.",
+    descTa: "முதியோர், குடும்பங்கள் மற்றும் சமூகத் தலைவர்களுடன் அறக்கட்டளை சேவை ஆண்டு விழா கொண்டாட்டம்."
   },
+
+  // Political
   {
     id: 16,
-    src: "/kumaran_profile_images/slide03_img08.png",
-    fallbackSrc: "/agr_small2.jpg",
-    category: "Social Activities",
-    titleEn: "Door-to-Door Water Can Delivery",
-    titleTa: "இல்லங்கள் தோறும் குடிநீர் சேவை",
-    descEn: "Volunteers lifting and delivering heavy water cans inside homes of elderly residents.",
-    descTa: "முதியோர்கள் மற்றும் உழைக்கும் குடும்பங்களின் வீடுகளுக்கே சென்று குடிநீர் வழங்கும் தொண்டர்கள்."
+    src: "/gallery/slide16_Career-Start-BJP/img01.png",
+    fallbackSrc: "/journey_image.jpg",
+    category: "Political",
+    titleEn: "Beginning a Career in Public Service (BJP)",
+    titleTa: "பொது சேவையில் அரசியல் பயணத்தின் தொடக்கம்",
+    descEn: "Early years joining the BJP and committing to grassroots work in Madhavaram.",
+    descTa: "பா.ஜ.க-வில் இணைந்து மாதவரம் அடிப்படை மக்கள் பணிக்கு அர்ப்பணித்த தொடக்க காலம்."
   },
   {
     id: 17,
-    src: "/kumaran_profile_images/slide10_img29.png",
-    fallbackSrc: "/agr_large.jpg",
-    category: "Social Activities",
-    titleEn: "Free Medical & Eye Testing Camp",
-    titleTa: "இலவச மருத்துவ மற்றும் கண் பரிசோதனை முகாம்",
-    descEn: "Conducting diagnostic screenings, free spectacles distribution, and surgical referrals.",
-    descTa: "ஏழை எளிய மக்களுக்கு இலவச கண் பரிசோதனை, மூக்குக்கண்ணாடி மற்றும் அறுவை சிகிச்சை உதவி."
+    src: "/gallery/slide17_Birthday-SyamaPrasadMukherjee/img04.png",
+    fallbackSrc: "/journey_image.jpg",
+    category: "Political",
+    titleEn: "Shyama Prasad Mukherjee Jayanti Observance",
+    titleTa: "சியாமா பிரசாத் முகர்ஜி ஜெயந்தி நிகழ்வு",
+    descEn: "Paying tribute to Dr. Shyama Prasad Mukherjee with cadre and community programmes.",
+    descTa: "டாக்டர் சியாமா பிரசாத் முகர்ஜிக்கு அஞ்சலி — தொண்டர்கள் மற்றும் சமூக நிகழ்ச்சிகளுடன்."
   },
   {
     id: 18,
-    src: "/kumaran_profile_images/slide12_img36.png",
-    fallbackSrc: "/agr_large.jpg",
-    category: "Social Activities",
-    titleEn: "Grand Pongal Provision Distribution",
-    titleTa: "மாபெரும் பொங்கல் திருநாள் தொகுப்பு வழங்குதல்",
-    descEn: "Distributing raw rice, jaggery, and sugarcane so every household celebrates with joy.",
-    descTa: "அனைவரும் மகிழ்ச்சியாக பண்டிகையை கொண்டாட பல்லாயிரக்கணக்கான குடும்பங்களுக்கு பொங்கல் தொகுப்பு."
+    src: "/gallery/slide18_Birthday-AtalBihariVajpayee/img02.png",
+    fallbackSrc: "/journey_image.jpg",
+    category: "Political",
+    titleEn: "Atal Bihari Vajpayee Jayanti Celebration",
+    titleTa: "அடல் பிஹாரி வாஜ்பாய் ஜெயந்தி கொண்டாட்டம்",
+    descEn: "Commemorating former PM Atal Bihari Vajpayee with cultural programmes and public meetings.",
+    descTa: "முன்னாள் பிரதமர் அடல் பிஹாரி வாஜ்பாயை நினைவுகூரும் பொதுக்கூட்டம் மற்றும் நிகழ்ச்சிகள்."
   },
   {
     id: 19,
-    src: "/kumaran_profile_images/slide05_img13.jpg",
-    fallbackSrc: "/agr_large.jpg",
-    category: "Social Activities",
-    titleEn: "Educational Scholarship & Notebook Distribution",
-    titleTa: "மாணவர்களுக்கு கல்வி உதவித்தொகை மற்றும் நோட்டுப் புத்தகங்கள்",
-    descEn: "Providing school supplies and fee support to meritorious students from low-income families.",
-    descTa: "ஏழை மாணவர்களின் கல்வி கனவை நனவாக்க நோட்டுப் புத்தகங்கள் மற்றும் கல்வி உதவித்தொகை வழங்கல்."
+    src: "/gallery/slide19_Birthday-DrBRAmbedkar/img03.png",
+    fallbackSrc: "/journey_image.jpg",
+    category: "Political",
+    titleEn: "Dr. B.R. Ambedkar Jayanti Observance",
+    titleTa: "டாக்டர் பி.ஆர். அம்பேத்கர் ஜெயந்தி நிகழ்வு",
+    descEn: "Honouring Babasaheb Ambedkar’s legacy with community gatherings and welfare outreach.",
+    descTa: "பாபா சாஹेप் அம்பேத்கர் நினைவில் சமூக நிகழ்ச்சிகள் மற்றும் நலத்திட்ட பணிகள்."
+  },
+  {
+    id: 20,
+    src: "/gallery/slide20_RSS-Rally-Mathur/img03.png",
+    fallbackSrc: "/journey_image.jpg",
+    category: "Political",
+    titleEn: "RSS Rally in Mathur",
+    titleTa: "மத்தூரில் ஆர்.எஸ்.எஸ். பேரணி",
+    descEn: "Participating in an RSS path sanchalan rally through Mathur with local volunteers.",
+    descTa: "மத்தூர் பகுதியில் உள்ளூர் தொண்டர்களுடன் ஆர்.எஸ்.எஸ். பாத சஞ்சலன் பேரணியில் பங்கேற்பு."
   },
 
   // Media Coverage
   {
-    id: 20,
-    src: "/kumaran_profile_images/slide24_img63.png",
-    fallbackSrc: "/agr_large.jpg",
-    category: "Media Coverage",
-    titleEn: "Press Feature: Flood Rescue Operations",
-    titleTa: "பத்திரிகை செய்தி: வெள்ள மீட்புப் பணிகள்",
-    descEn: "Leading daily newspapers highlighting AKR Trust's boat rescue and food distribution during floods.",
-    descTa: "சென்னை பெருவெள்ளத்தின் போது படகுகள் மூலம் மீட்டு உணவு வழங்கிய சேவையைப் பாராட்டிய நாளிதழ்கள்."
-  },
-  {
-    id: 21,
-    src: "/kumaran_profile_images/slide24_img64.png",
-    fallbackSrc: "/agr_large.jpg",
-    category: "Media Coverage",
-    titleEn: "Press Report: 100th Monthly Pension Milestone",
-    titleTa: "பத்திரிகை செய்தி: 100-வது மாத முதியோர் ஓய்வூதியம்",
-    descEn: "Journalists documenting the historic milestone of 8+ years of unbroken elderly pension drives.",
-    descTa: "தொடர்ந்து 100 மாதங்களைக் கடந்து முதியோர்களுக்கு ஓய்வூதியம் வழங்கும் சாதனையைப் போற்றிய ஊடகங்கள்."
-  },
-  {
     id: 22,
-    src: "/kumaran_profile_images/slide25_img67.png",
-    fallbackSrc: "/journey_image.jpg",
+    src: "/gallery/slide24_Media-Coverage-1/img01.png",
+    fallbackSrc: "/agr_large.jpg",
     category: "Media Coverage",
-    titleEn: "State Television Debate on North Chennai",
-    titleTa: "தொலைக்காட்சி விவாதம்: வட சென்னை மேம்பாடு",
-    descEn: "Representing Madhavaram on news channels demanding better municipal amenities.",
-    descTa: "வட சென்னை மக்களின் உள்கட்டமைப்பு உரிமைகளுக்காக தொலைக்காட்சிகளில் குரல் கொடுத்த தருணம்."
+    titleEn: "Tamil Press — Welfare Work in Headlines",
+    titleTa: "தமிழ் நாளிதழ்கள் — நலப் பணி செய்திகள்",
+    descEn: "Regional dailies covering AKR Trust pension drives and community service in Madhavaram.",
+    descTa: "மாதவரம் நலப் பணிகள் மற்றும் முதியோர் ஓய்வூதியம் — தமிழ் நாளிதழ் செய்திகள்."
   },
   {
     id: 23,
-    src: "/kumaran_profile_images/slide25_img68.png",
-    fallbackSrc: "/journey_image.jpg",
+    src: "/gallery/slide24_Media-Coverage-1/img04.png",
+    fallbackSrc: "/agr_large.jpg",
     category: "Media Coverage",
-    titleEn: "News Interview on Livelihood Schemes",
-    titleTa: "செய்தித் தொலைக்காட்சி நேர்காணல்: வாழ்வாதாரத் திட்டங்கள்",
-    descEn: "Explaining the framework of AKR Trust's women empowerment programs on state broadcasts.",
-    descTa: "பெண்கள் மற்றும் ஆட்டோ ஓட்டுநர்களுக்கான சுயதொழில் திட்டங்கள் குறித்து விவரித்த நேர்காணல்."
+    titleEn: "GEM TV — Community Food Service",
+    titleTa: "GEM TV — சமூக உணவு வழங்கல் செய்தி",
+    descEn: "Television coverage of large-scale food distribution for residents during a community event.",
+    descTa: "சமூக நிகழ்வில் பல்லாயிரக்கணக்கான மக்களுக்கு உணவு வழங்கிய சேவை — தொலைக்காட்சி செய்தி."
   },
   {
     id: 24,
-    src: "/kumaran_profile_images/slide25_img70.png",
+    src: "/gallery/slide25_Media-Coverage-2/img04.png",
     fallbackSrc: "/journey_image.jpg",
     category: "Media Coverage",
-    titleEn: "Press Conference Addressing Ward Development",
-    titleTa: "பத்திரிகையாளர் சந்திப்பு: தொகுதி வளர்ச்சி பணிகள்",
-    descEn: "Briefing print and electronic media on upcoming grassroots welfare roadmaps.",
-    descTa: "எதிர்கால மக்கள் நலத்திட்டங்கள் மற்றும் தொகுதி மேம்பாடு குறித்து ஊடகங்களுக்கு அளித்த பேட்டி."
+    titleEn: "Press Briefing on Public Welfare",
+    titleTa: "மக்கள் நலம் குறித்த பத்திரிகையாளர் சந்திப்பு",
+    descEn: "Addressing reporters on ongoing welfare programmes and grassroots outreach in Chennai West.",
+    descTa: "மேற்கு சென்னையில் நடைபெறும் நலத்திட்டங்கள் குறித்து ஊடகங்களுக்கு விளக்கம்."
+  },
+  {
+    id: 25,
+    src: "/gallery/slide25_Media-Coverage-2/img02.png",
+    fallbackSrc: "/journey_image.jpg",
+    category: "Media Coverage",
+    titleEn: "Newspaper Feature — Grassroots Leadership",
+    titleTa: "நாளிதழ் சிறப்புக் கட்டுரை — களப் பணி",
+    descEn: "Print media highlighting decades of ward-level service and AKR Trust initiatives.",
+    descTa: "பல தசாப்தங்களின் களப் பணியும் ஏ.கே.ஆர் அறக்கட்டளை முயற்சிகளும் — நாளிதழ் சிறப்பு."
   }
 ];
 
