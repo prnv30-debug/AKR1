@@ -1,8 +1,10 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
-import { useSite } from "../../content/site.config";
+import { useSite, useLang } from "../../content/site.config";
 
 export const Hero = () => {
   const site = useSite();
+  const { lang } = useLang();
+  const isTa = lang === "ta";
   const h = site.hero;
   return (
     <section
@@ -124,6 +126,24 @@ export const Hero = () => {
                 <p className="font-serif-quote italic text-lg lg:text-xl leading-snug">
                   &ldquo;{h.manifestoQuote}&rdquo;
                 </p>
+              </div>
+            </div>
+
+            {/* Bold Founder & Chairman Badge */}
+            <div
+              className="relative z-10 mt-3 sm:mt-4 bg-[#0A1128] border-2 border-[#EA580C] px-5 py-4 shadow-xl flex items-center justify-between gap-4 transition-all duration-300 hover:border-[#EA580C]/80 group"
+              style={{ zIndex: 2 }}
+            >
+              <div>
+                <h3 className="font-display font-black text-white text-xl sm:text-2xl tracking-tight uppercase group-hover:text-[#EA580C] transition-colors">
+                  {isTa ? "குமரன் M.A." : "KUMARAN M.A."}
+                </h3>
+                <p className="font-display font-bold text-[#EA580C] text-xs sm:text-sm uppercase tracking-[0.15em] mt-1">
+                  {isTa ? "ஏ.கே.ஆர் அறக்கட்டளை நிறுவனர் & தலைவர்" : "FOUNDER & CHAIRMAN OF AKR TRUST"}
+                </p>
+              </div>
+              <div className="hidden sm:flex items-center justify-center w-10 h-10 rounded-full bg-[#EA580C]/15 border border-[#EA580C]/40 text-[#EA580C] font-black text-sm shrink-0">
+                ★
               </div>
             </div>
           </div>
