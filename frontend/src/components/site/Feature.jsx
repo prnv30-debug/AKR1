@@ -97,16 +97,6 @@ export const Feature = () => {
           />
           {/* Bottom navy fade so figure grounds into next section */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A1128] to-transparent lg:-mr-10" />
-
-          {/* Signature corner card */}
-          <div className="absolute top-6 right-6 lg:right-16 bg-[#0A1128] border border-[#EA580C]/40 px-5 py-4 max-w-[200px]">
-            <div className="text-[10px] uppercase tracking-[0.3em] text-[#EA580C] mb-1">Est. 2009</div>
-            <div className="font-display font-bold text-sm text-white leading-tight">
-              {site.brand.trustName}
-              <br />
-              <span className="text-white/60 font-normal">A movement for the people.</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
