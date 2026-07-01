@@ -153,7 +153,7 @@ export const Hero = () => {
       </div>
 
       {/* Ticker */}
-      <div className="mt-20 border-y border-[#0A1128]/10 overflow-hidden bg-white">
+      <div className="mt-20 border-y border-[#0A1128]/10 overflow-hidden bg-white w-full max-w-full">
         <div className="flex whitespace-nowrap animate-ticker py-4">
           {Array.from({ length: 2 }).map((_, k) => (
             <div key={k} className="flex items-center">

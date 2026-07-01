@@ -20,7 +20,7 @@ export const Navbar = () => {
   return (
     <header
       data-testid="site-navbar"
-      className={`fixed top-0 inset-x-0 z-50 transition-all ${
+      className={`fixed top-0 inset-x-0 z-50 transition-all w-full max-w-full ${
         scrolled
           ? "bg-white/80 backdrop-blur-xl border-b border-[#0A1128]/10"
           : "bg-transparent"

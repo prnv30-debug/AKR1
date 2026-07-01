@@ -45,12 +45,12 @@ export const Footer = () => {
   const site = useSite();
   const f = site.footer;
   return (
-    <footer data-testid="site-footer" className="bg-[#0A1128] text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+    <footer data-testid="site-footer" className="bg-[#0A1128] text-white overflow-hidden relative w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-16 sm:pt-20 pb-10 w-full overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 mb-12 sm:mb-16">
           <div className="lg:col-span-6">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-white flex items-center justify-center rounded-full overflow-hidden p-0.5 border border-white/20 shadow-sm">
+              <div className="w-12 h-12 bg-white flex items-center justify-center rounded-full overflow-hidden p-0.5 border border-white/20 shadow-sm shrink-0">
                 <img
                   src="/akr_logo.jpg"
                   alt="AKR Social Welfare Trust Logo - Chennai Tamil Nadu"
@@ -60,19 +60,19 @@ export const Footer = () => {
                   className="w-full h-full object-contain rounded-full"
                 />
               </div>
-              <div>
-                <div className="font-display font-black tracking-wider text-white text-base">
+              <div className="min-w-0">
+                <div className="font-display font-black tracking-wider text-white text-sm sm:text-base break-words">
                   AKR SOCIAL WELFARE TRUST
                 </div>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-white/50">
+                <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] text-white/50">
                   Registered Trust
                 </div>
               </div>
             </div>
             <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-4">{f.officeLabel || "Office"}</div>
-            <div className="flex items-start gap-3 text-white/80 mb-3">
+            <div className="flex items-start gap-3 text-white/80 mb-3 text-sm sm:text-base">
               <MapPin size={16} className="mt-1 shrink-0" />
-              <span>
+              <span className="break-words">
                 {f.address.map((l, i) => (
                   <span key={i}>
                     {l}
@@ -81,15 +81,15 @@ export const Footer = () => {
                 ))}
               </span>
             </div>
-            <div className="flex items-center gap-3 text-white/80">
-              <Mail size={16} />
-              <a href={`mailto:${f.email}`} className="hover:text-[#EA580C] transition-colors">
+            <div className="flex items-center gap-3 text-white/80 text-sm sm:text-base">
+              <Mail size={16} className="shrink-0" />
+              <a href={`mailto:${f.email}`} className="hover:text-[#EA580C] transition-colors break-all">
                 {f.email}
               </a>
             </div>
             {f.phone && (
-              <div className="flex items-center gap-3 text-white/80 mt-3">
-                <Phone size={16} />
+              <div className="flex items-center gap-3 text-white/80 mt-3 text-sm sm:text-base">
+                <Phone size={16} className="shrink-0" />
                 <a href={`tel:${f.phone}`} className="hover:text-[#EA580C] transition-colors">
                   {f.phone}
                 </a>
@@ -99,7 +99,7 @@ export const Footer = () => {
 
           <div className="lg:col-span-3">
             <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-4">{f.exploreLabel || "Explore"}</div>
-            <ul className="space-y-2 text-white/80">
+            <ul className="space-y-2 text-white/80 text-sm sm:text-base">
               {site.nav.links.map((l, i) => (
                 <li key={`${l.href}-${i}`}>
                   <a href={l.href} className="hover:text-[#EA580C] transition-colors">{l.label}</a>
@@ -112,7 +112,7 @@ export const Footer = () => {
             <div className="font-display uppercase tracking-[0.2em] text-xs text-[#EA580C] mb-4">{f.followLabel || "Follow"}</div>
             <div className="flex gap-3 flex-wrap">
               {f.social.map((s) => {
-                const Icon = ICONS[s.icon] || Facebook;
+                const Icon = ICONS[s.icon] || ICONS.Facebook;
                 return (
                   <a
                     key={s.label}
@@ -120,10 +120,10 @@ export const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     data-testid={`social-${s.label}`}
-                    className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-[#EA580C] hover:border-[#EA580C] transition-all"
+                    className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-[#EA580C] hover:border-[#EA580C] transition-all rounded-lg shrink-0"
                     aria-label={s.label}
                   >
-                    <Icon size={16} />
+                    <Icon />
                   </a>
                 );
               })}
@@ -132,10 +132,10 @@ export const Footer = () => {
         </div>
 
         {/* Massive name */}
-        <div className="border-t border-white/10 pt-10">
+        <div className="border-t border-white/10 pt-8 sm:pt-10 w-full overflow-hidden">
           <div
             data-testid="footer-name-lockup"
-            className="font-display font-black tracking-tighter leading-none text-[20vw] lg:text-[14vw] text-white/95 select-none"
+            className="font-display font-black tracking-tight sm:tracking-tighter leading-none text-[12.5vw] sm:text-[13vw] lg:text-[12vw] text-white/95 select-none w-full break-words text-center sm:text-left"
           >
             {site.brand.name.toUpperCase()}<span className="text-[#EA580C]">{site.brand.accent}</span>
           </div>
