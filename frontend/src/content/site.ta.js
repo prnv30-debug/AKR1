@@ -31,8 +31,7 @@ export const site = {
 
   // Hero
   hero: {
-    image:
-      "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/htnjn8mo_hero.jpeg",
+    image: "/hero_main.jpeg",
     headlineLine1: "வெறுப்பது யாராக",
     headlineLine2Prefix: "இருந்தாலும்",
     headlineItalic: "நேசிப்பது",
@@ -122,8 +121,7 @@ export const site = {
 
   // Featured banner
   feature: {
-    image:
-      "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/qtiemh4n_main.jpeg",
+    image: "/feature_main.jpeg",
     eyebrow: "வணக்கம் · ஒவ்வொரு குடிமகனுக்கும் ஒரு வணக்கம்",
     quote:
       "மக்களுக்காக உழையுங்கள், மக்களுக்கு சேவை செய்யுங்கள், மக்களை உயர்த்துங்கள்.",

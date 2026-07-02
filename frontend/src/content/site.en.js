@@ -30,8 +30,7 @@ export const site = {
 
   // Hero
   hero: {
-    image:
-      "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/htnjn8mo_hero.jpeg",
+    image: "/hero_main.jpeg",
     headlineLine1: "No matter who",
     headlineLine2Prefix: "hates you,",
     headlineItalic: "be the one",
@@ -121,8 +120,7 @@ export const site = {
 
   // Featured banner (between Journey and Vision)
   feature: {
-    image:
-      "https://customer-assets.emergentagent.com/job_impact-voice/artifacts/qtiemh4n_main.jpeg",
+    image: "/feature_main.jpeg",
     eyebrow: "Vanakkam · A salute to every citizen",
     quote:
       "Work for the people, serve the people, and uplift the people.",

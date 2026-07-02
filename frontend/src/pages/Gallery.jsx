@@ -52,7 +52,7 @@ const GALLERY_ITEMS = [
   },
   {
     id: 1002,
-    src: "/gallery/amitshah ji.jpeg",
+    src: "/gallery/amitshah_ji.jpeg",
     fallbackSrc: "/journey_image.jpg",
     category: "Political",
     titleEn: "Welcoming Hon’ble Union Home Minister Amit Shah Ji",
@@ -449,9 +449,11 @@ export const Gallery = () => {
                         height="450"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                         onError={(e) => {
-                          if (e.target.src !== window.location.origin + item.fallbackSrc) {
+                          if (!e.target.dataset.hasFallback) {
+                            e.target.dataset.hasFallback = "true";
                             e.target.src = item.fallbackSrc;
-                          } else {
+                          } else if (!e.target.dataset.hasUnsplash) {
+                            e.target.dataset.hasUnsplash = "true";
                             e.target.src = "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80";
                           }
                         }}
@@ -526,9 +528,11 @@ export const Gallery = () => {
                   alt={isTa ? currentItem.titleTa : currentItem.titleEn}
                   className="max-h-[40vh] sm:max-h-[55vh] w-auto object-contain rounded"
                   onError={(e) => {
-                    if (e.target.src !== window.location.origin + currentItem.fallbackSrc) {
+                    if (!e.target.dataset.hasFallback) {
+                      e.target.dataset.hasFallback = "true";
                       e.target.src = currentItem.fallbackSrc;
-                    } else {
+                    } else if (!e.target.dataset.hasUnsplash) {
+                      e.target.dataset.hasUnsplash = "true";
                       e.target.src = "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80";
                     }
                   }}
