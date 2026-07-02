@@ -59,7 +59,7 @@ export const site = {
 
   // About / Journey
   journey: {
-    image: "/journey_image.jpg",
+    image: "/new_annamalai.png",
     eyebrow: "01 — பயணம்",
     title:
       "திருவொற்றியூரின் ஒரு நடுத்தர குடும்பத்திலிருந்து பாஜக சென்னை மேற்கு தலைமை வரை.",

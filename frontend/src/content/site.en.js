@@ -58,7 +58,7 @@ export const site = {
 
   // About / Journey
   journey: {
-    image: "/journey_image.jpg",
+    image: "/new_annamalai.png",
     eyebrow: "01 — The Journey",
     title:
       "From a middle-class home in Tiruvottiyur to BJP's Chennai West leadership.",
